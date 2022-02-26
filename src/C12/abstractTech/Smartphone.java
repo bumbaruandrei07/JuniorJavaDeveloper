@@ -20,7 +20,22 @@ public class Smartphone {
     public Smartphone(int pixelsNo, int width, int length, int depth, int speakerMaxVol,
                       int speakerCrtVol, int microMaxVol, int microCrtVol) {
         this.theScreen = new Screen(pixelsNo, width, length, depth);
-        this.theCase = new Case();
+        this.theCase = new Case() {
+            @Override
+            public void pressPowerButton() {
+                System.out.println("Power button pressed!");
+            }
+
+            @Override
+            public void pressVolumeUp() {
+                System.out.println("Volume up button pressed!");
+            }
+
+            @Override
+            public void pressVolumeDown() {
+                System.out.println("Volume down button pressed!");
+            }
+        };
         this.theSpeaker = new Speaker(speakerMaxVol, speakerCrtVol);
         this.theMicrophone = new Microphone(microMaxVol, microCrtVol);
     }
@@ -28,12 +43,19 @@ public class Smartphone {
 
     // in this case we implement wrapper methods for all the methods we want to expose
     // i.e. for power button, volume UP and volume DOWN:
+
     public void pressPowerButton() {
         // delegate the responsibility to the object specific method
         // Obs: reusing the object functionality
         //System.out.println("class Smartphone: delegate to Case ->");
         this.theCase.pressPowerButton();
     }
+
+
+
+
+
+
 
     public void pressVolumeUp() {
         // delegate the responsibility to the object specific method

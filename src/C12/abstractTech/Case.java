@@ -1,18 +1,12 @@
 package C12.abstractTech;
 
-public class Case {
+public abstract class Case {
 
-    public void pressPowerButton() {
-        System.out.println("class Case: Power button pressed.");
-    }
+    public abstract void pressPowerButton();
 
-    public void pressVolumeUp() {
-        System.out.println("class Case: Volume UP pressed.");
-    }
+    public abstract void pressVolumeUp();
 
-    public void pressVolumeDown() {
-        System.out.println("class Case: Volume DOWN pressed.");
-    }
+    public abstract void pressVolumeDown();
 
     @Override
     public String toString() {
