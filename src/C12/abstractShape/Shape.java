@@ -1,6 +1,6 @@
 package C12.abstractShape;
 
-public class Shape {
+public abstract class Shape {
 
     private String text;
     private String material;
@@ -15,10 +15,7 @@ public class Shape {
         this.material = material;
     }
 
-    public double getSize() {
-        System.out.print("The area of the shape is by default: ");
-        return -1;
-    }
+    public abstract double getSize();
 
     @Override
     public String toString() {

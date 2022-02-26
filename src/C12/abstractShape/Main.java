@@ -2,22 +2,20 @@ package C12.abstractShape;
 
 import java.util.ArrayList;
 
+/* TODO - > Aminteste-ti aplicatia cu forme geometrice proiectata anterior: Exercitiu - Geometric Shapes. Actualizeaza ierarhia de clase folosind corect keyword-ul abstract pentru a:
+
+- restrictiona crearea de obiecte invalide (i.e. obiecte de tip Shape).
+- evita implementarea metodelor generice, care ar trebui sa fie (in mod corect) abstracte
+- forta programatorul care extinde clasa abstracta Shape sa implementeze toate metodele specifice unei forme propriu-zise
+
+ ***** solution -> we will make the class Shape abstract and the method getSize() from the class Shape *****
+
+ */
+
+
 public class Main {
 
     public static void main(String[] args) {
-
-        Shape firstGenericShape = new Shape("M", "Snow");
-        Shape secondGenericShape = new Shape("M", "Sand");
-        Shape testingSimpleShape = new Shape();
-        Shape fourthGenericShape = secondGenericShape;
-        System.out.println(firstGenericShape.getSize());
-        System.out.println(firstGenericShape);
-        System.out.println(testingSimpleShape.equals(firstGenericShape));    //corner case - comparing the shape object using default constructor
-        System.out.println("Generic shape two is equal to generic shape three? Answer: " + secondGenericShape.equals(fourthGenericShape));
-        System.out.println("Hashcode for shape one: " + firstGenericShape.hashCode());
-        System.out.println("Hashcode for the second generic shape: " + secondGenericShape.hashCode());
-        System.out.println("Hashcode for the third generic shape: " + fourthGenericShape.hashCode());
-        System.out.println("=====================================================");
 
         Rectangle r1 = new Rectangle(20, 12);
         Rectangle r2 = new Rectangle("Huge rectangle", "sand", 2, 3);
@@ -51,9 +49,7 @@ public class Main {
         System.out.println("Hashcode for the third triangle object: " + tr3.hashCode());
 
 
-        ArrayList<Shape> shapes = new ArrayList<Shape>();
-        shapes.add(firstGenericShape);
-        shapes.add(secondGenericShape);
+        ArrayList<Shape> shapes = new ArrayList<>();
         shapes.add(r1);
         shapes.add(r2);
         shapes.add(tr1);
