@@ -8,6 +8,7 @@ public class TestDevices {
 
          Solution : este recomandata evitarea abstractizarii, deoarece daca setam clasele "componente" clasei Smartphone ca fiind abstracte nu mai putem instantia componentele unui obiect de tip smartphone.
          NEW FEATURE : abstractizarea clasei "Case" si a metodelor sale specifice ce vor fi suprascrise in clasa Smartphone ce contine o componenta de tipul clasei "Case"
+                       Clasa Case poate fi considerata o clasa generala, contine doar metode care vor fi folosite prin delegare de catre clasa Smartphone
          */
 
 
