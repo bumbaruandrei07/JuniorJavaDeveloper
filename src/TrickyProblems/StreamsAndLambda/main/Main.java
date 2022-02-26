@@ -1,12 +1,10 @@
 package TrickyProblems.StreamsAndLambda.main;
 
-import C10.Homework.Rectangle;
 import TrickyProblems.StreamsAndLambda.classes.Sum;
 import TrickyProblems.StreamsAndLambda.interfaces.BinaryOperator;
 import TrickyProblems.StreamsAndLambda.interfaces.Moveable;
 import TrickyProblems.StreamsAndLambda.interfaces.UnaryOperator;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
