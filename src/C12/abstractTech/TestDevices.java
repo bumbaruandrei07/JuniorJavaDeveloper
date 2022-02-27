@@ -25,6 +25,7 @@ public class TestDevices {
         System.out.println("<><><><><><><><>");
         XiaomiRedmiNote9.pressPowerButton();
         System.out.println("<><><><><><><><>");
+        XiaomiRedmiNote9.decreaseMicrophoneVolume();
         System.out.println(XiaomiRedmiNote9);
 
         Smartphone SamsungS22 = new Smartphone(20, 25, 25, 25, 100, 56, 100, 25);
@@ -44,6 +45,8 @@ public class TestDevices {
         System.out.println(SamsungS22);
         SamsungS22.pressVolumeDown();
         SamsungS22.pressVolumeDown();
+        System.out.println(SamsungS22);
+        SamsungS22.setSilence();
         System.out.println(SamsungS22);
 
 

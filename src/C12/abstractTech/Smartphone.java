@@ -21,6 +21,7 @@ public class Smartphone {
                       int speakerCrtVol, int microMaxVol, int microCrtVol) {
         this.theScreen = new Screen(pixelsNo, width, length, depth);
         this.theCase = new Case() {
+            //suprascrierea metodelor abstracte din clasa "Case"
             @Override
             public void pressPowerButton() {
                 System.out.println("Power button pressed!");
@@ -52,11 +53,6 @@ public class Smartphone {
     }
 
 
-
-
-
-
-
     public void pressVolumeUp() {
         // delegate the responsibility to the object specific method
         // Obs: reusing the object functionality
@@ -70,7 +66,7 @@ public class Smartphone {
         // delegate the responsibility to the object specific method
         // Obs: reusing the object functionality
         // System.out.println("class Smartphone: delegate to Case ->");
-
+        this.theCase.pressVolumeDown();
         this.theSpeaker.decreaseVolume();
     }
 

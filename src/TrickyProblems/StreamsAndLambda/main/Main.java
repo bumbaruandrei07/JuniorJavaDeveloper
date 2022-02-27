@@ -98,7 +98,7 @@ public class Main {
 
 
         //STREAMS - Au aparut cu Java 8
-        //STREAMS - modalitate de prelucrare  in-memory pentru colectii... axata pe colectii, eu in memorie sa pot face filtrari, sortari, map-reduce
+        //STREAMS - modalitate de prelucrare  in-memory pentru colectii... axata pe colectii, in memorie sa pot face filtrari, sortari, map-reduce
         //sunt un fel de SQL aplicat pentru colectii
         //LINQ (Language Integreted Querry) - preluat de java de la C#
 

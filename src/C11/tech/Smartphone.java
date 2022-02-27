@@ -50,7 +50,7 @@ public class Smartphone {
         // delegate the responsibility to the object specific method
         // Obs: reusing the object functionality
         // System.out.println("class Smartphone: delegate to Case ->");
-
+        this.theCase.pressVolumeDown();
         this.theSpeaker.decreaseVolume();
     }
 
