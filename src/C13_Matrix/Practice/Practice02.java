@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Practice02 {
     public static void main(String[] args) {
 
-        // matrix dimensions:
+// matrix dimensions:
         int n = 5, m = 6;
 
 // 1. Defining a new bi-dimensional array, using ArrayList

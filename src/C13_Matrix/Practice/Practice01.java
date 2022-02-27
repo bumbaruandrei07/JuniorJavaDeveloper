@@ -8,7 +8,6 @@ public class Practice01 {
         // 2. Initializing the array (i.e. allocate memory for the (6) elements)
         int[][] numbers = new int[5][6]; // int[<NUMBER_OF_ROWS>][<NUMBER_OF_COLUMNS>]
 
-
         // 3. Updating values of elements
         numbers[2][1] = 101;  // Number is on line 2, column 1.
         // Note: numbering starts at 0 (as always).
@@ -44,11 +43,5 @@ public class Practice01 {
             }
             System.out.println();
         }
-
-
-
-
-
-
     }
 }

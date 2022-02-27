@@ -1,4 +1,4 @@
-package C13_Matrix.Homework;
+package C13_Matrix.Homework.Generator;
 
 import java.util.Scanner;
 
