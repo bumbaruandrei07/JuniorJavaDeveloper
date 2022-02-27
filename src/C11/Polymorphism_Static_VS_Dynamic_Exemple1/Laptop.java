@@ -2,7 +2,6 @@ package C11.Polymorphism_Static_VS_Dynamic_Exemple1;
 
 public class Laptop {
 
-
     private boolean statutoryHoliday;
     private final String productCode;
     private int price;
@@ -37,7 +36,7 @@ public class Laptop {
     }
 
     //overloading -> static polymorphism ->  at compile time
-    public void applyDiscount(LaptopType type) {
+    public void applyDiscount(LaptopType type, boolean statutoryHoliday) {
         if (statutoryHoliday) {
             if (type == LaptopType.BUSINESS) {
                 this.price -= 100;
@@ -48,15 +47,12 @@ public class Laptop {
             } else if (type == LaptopType.TwoInOne) {
                 this.price -= 1000;
                 System.out.println("The price is: " + this.price + " USD");
-            } else if(type == LaptopType.ULTRAPORTABLE) {
+            } else if (type == LaptopType.ULTRAPORTABLE) {
                 this.price -= 1500;
                 System.out.println("The price is: " + this.price + " USD");
-            }
-           else System.out.println("UNKNOWN TYPE");
-        }
-
+            } else System.out.println("UNKNOWN TYPE");
+        } else System.out.println("No discount!");
     }
-
 
     public void CPUTemperature() {
         System.out.println("Does not overheat");
@@ -70,7 +66,6 @@ public class Laptop {
     public void functions() {
         System.out.println("Universal");
     }
-
 
     @Override
     public String toString() {
