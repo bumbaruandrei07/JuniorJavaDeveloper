@@ -17,10 +17,7 @@ public abstract class Shape {
 
     public abstract double getSize();
 
-    @Override
-    public String toString() {
-        return "made of plastic, contains the text: \"Math is easy\".";
-    }
+    public abstract String toString();
 
     @Override
     public boolean equals(Object obj) {
