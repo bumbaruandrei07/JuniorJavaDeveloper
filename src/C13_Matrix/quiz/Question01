@@ -1,0 +1,6 @@
+Evalueaza valoarea de adevar a urmatoarelor doua afirmatii:
+I. In Java, se poate utiliza tipul array pentru construirea / reprezentarea oricarui tip de tablou (ex: vector, matrice, 3D, s.a.).
+II. Un tablou bidimensional, numit si matrice, poate fi implementat in Java folosind atat array cat si ArrayList.
+
+I. Adevarat
+II. Adevarat

@@ -1,0 +1,11 @@
+Incapsulare
+Sa aplicam corect principiul incapsularii si sa modificam exemplul anterior, astfel incat instantele clasei Book.Page sa nu mai fie accesibile decat intern. Pasii necesari sunt:
+
+modificatorul de acces al clasei interne devine private
+functionalitatea oferita de clasa Book.Page (ex: getText()) va fi oferita direct de clasa Book prin intermediul unei metode delegat (ex: getPageContent(pageNo))
+metodele clasei Book care returneaza sau primesc ca parametru entitati Page vor disparea (deoarece nu mai pot fi utilizate). Prin urmare, vom sterge metoda getPage(pageNo)
+modificam metoda main a clasei Bookkeeper in consecinta, apeland actiunile anterioare direct pe clasa Book.
+
+! Daca Page era clasa exterioara clasei book si foloseam un obiect de tipul page in book atunci aveam COMPUNERE, dar ca si inner class avem incapsulare !
+
+! Nu expunem direct o clasa interna, ci printr-o interfata !

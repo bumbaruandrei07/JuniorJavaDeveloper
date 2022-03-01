@@ -1,0 +1,26 @@
+i = 0 =>
+m[0][0] = 0
+
+i = 1
+1/ 4 = 0
+1 % 4 = 1
+m[0][1] = 1
+
+i = 2
+2/ 4 = 0
+2 % 4 = 2
+m[0][2] = 2
+
+
+Pattern - daca parcurgem toate elementele din matrice putem sa identificam unde ar fi ele amplasate in matrice
+Stim ca fiecare linie o sa aiba y elemente -> in functie de rest o sa obtinem coloana
+
+Accesam in ordine toate elementele si le setam la i+1, nu incepem de la 0 ci de la 1 (i+1)
+Fiecare linie aduce nr de coloane -> linia la care ma aflu * nr de coloane
+
+De exemplu:
+m[4][6]
+mat[i][j] = i * 6 + j
+
+int [n][m] => nr. total de elemente = n * m
+mat[i][j] = i * m + j

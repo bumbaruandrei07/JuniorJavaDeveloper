@@ -1,0 +1,18 @@
+Inner classes -> utila pentru incapsulare
+
+
+CLASE TOP-LEVEL
+
+
+  IShape[] shapes = new IShape[3]; // an array of shapes
+        shapes[0] = new Circle();
+        shapes[1] = new Triangle();
+        shapes[2] = new Rectangle();
+      -> Clasele Circle, Triangle si Rectangle vor fi utilizate, instantiate doar in interiorul acestui pachet (sunt package-private)
+      -> Doar IShape va putea fi folosit in afara pachetului pentru ca este public !
+      -> util pentru ascunderea functionalitatii
+
+
+! Java - etape : 1. compilare , 2. rulare
+! Cele 3 clase sunt compilate intr-un fisier separat !
+! Cand definim 3 clase si o interfata intr-un fisier, o sa ne genereze cate un fisier .class pentru fiecare clasa in parte!
