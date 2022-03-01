@@ -56,8 +56,6 @@ public class Multiplication {
             System.out.println();
 
         }
-
-
         sc.close();
     }
 }

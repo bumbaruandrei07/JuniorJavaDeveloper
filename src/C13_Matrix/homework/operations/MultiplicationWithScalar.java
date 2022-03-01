@@ -70,7 +70,6 @@ public class MultiplicationWithScalar {
             }
 
             System.out.println();
-
         }
 
 

@@ -1,4 +1,4 @@
-package C13_Matrix.Practice;
+package C13_Matrix.practice;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package C13_Matrix.Practice;
+package C13_Matrix.practice;
 
 public class Practice01 {
 
