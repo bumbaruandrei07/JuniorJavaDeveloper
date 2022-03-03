@@ -42,7 +42,7 @@ public class Bookkepper {
 
         // 2. Using an Interface to refer the internal object:
         IPage page4 = masterOfTheGame3.getPage(3);
-        System.out.println(page3.getText());
+        System.out.println(page4.getText());
 
     }
 }

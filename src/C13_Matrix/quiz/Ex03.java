@@ -6,13 +6,13 @@ package C13_Matrix.quiz;
 
 //TODO What is the output?
 public class Ex03 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         int dim = 4;
         int[][] temperatures = new int[dim][dim];
         int factor = 1;
 
-        for (int i=0; i<temperatures.length; i++) {
-            for (int j=0; j<temperatures[i].length; j++) {
+        for (int i = 0; i < temperatures.length; i++) {
+            for (int j = 0; j < temperatures[i].length; j++) {
 
                 factor++;
                 factor *= -1;
@@ -21,7 +21,7 @@ public class Ex03 {
             }
         }
 
-        for(int i=0; i<temperatures.length; i++) {
+        for (int i = 0; i < temperatures.length; i++) {
             for (int j = 0; j < temperatures[i].length; j++) {
                 System.out.print(temperatures[i][j] + " ");
             }
