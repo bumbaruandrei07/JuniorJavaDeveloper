@@ -42,9 +42,7 @@ public class Multiplication {
             for (int j = 0; j < columnsB; j++) {
                 for (int k = 0; k < columnsA; k++) {
                     matrixC[i][j] += matrixA[i][k] * matrixB[k][j];
-
                 }
-
             }
         }
 

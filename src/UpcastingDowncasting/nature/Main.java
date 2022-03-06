@@ -1,4 +1,4 @@
-package C09.nature;
+package UpcastingDowncasting.nature;
 
 import java.util.ArrayList;
 
@@ -63,13 +63,6 @@ public class Main {
 
         Terrestrial newTerrestrial = (Zebra) animalRef;
 
-
-
-
-
-
-
-
         Terrestrial terrestrialRef = new Zebra(false, 25, 40, "Mountain Zebra", 4, 2);
         System.out.println(terrestrialRef instanceof Zebra); // true
         System.out.println(terrestrialRef instanceof Terrestrial); //true
@@ -79,15 +72,15 @@ public class Main {
         System.out.println(terrestrialRef instanceof Object);
 
 
-        for(int i=0; i<zoo.size(); i++) {
+        for (int i = 0; i < zoo.size(); i++) {
             if (zoo.get(i) instanceof Rhino) {
-                Rhino rhinoRef = (Rhino)zoo.get(i);
+                Rhino rhinoRef = (Rhino) zoo.get(i);
                 rhinoRef.horn();
             } else if (zoo.get(i) instanceof Tiger) {
-                Tiger tigerRef = (Tiger)zoo.get(i);
+                Tiger tigerRef = (Tiger) zoo.get(i);
                 tigerRef.agility();
             } else if (zoo.get(i) instanceof Zebra) {
-                Zebra zebraRef = (Zebra)zoo.get(i);
+                Zebra zebraRef = (Zebra) zoo.get(i);
                 zebraRef.stripes();
             } else {
                 System.out.println("Error: unknown kind of animal");
@@ -96,7 +89,7 @@ public class Main {
 
         // Call only the specialCharacteristic() method
         // -> will execute the specific implementation for each type of object
-        for(Terrestrial terrestrial: zoo) {
+        for (Terrestrial terrestrial : zoo) {
             terrestrial.specialCharacteristic();
         }
 
@@ -108,15 +101,13 @@ public class Main {
     }
 
 
-
-
 //    static int dummyHash(String s){
 //        int prime = 31;
 //        int result = 1;
 //        for(int i = 0; i<s.length(); i++){
 //
 //        }
-    }
+}
 
 
 

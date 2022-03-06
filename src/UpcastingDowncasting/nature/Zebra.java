@@ -1,4 +1,4 @@
-package C09.nature;
+package UpcastingDowncasting.nature;
 
 public class Zebra extends Terrestrial {
 

@@ -65,6 +65,7 @@ public class Main {
             //  display the area for each shape from the arrayList
             System.out.println(shapes.get(i).getSize());
 
+
 //            Downcastig : we call the method specific to each form, depending on its origin class
 
             if (shapes.get(i) instanceof Triangle) {

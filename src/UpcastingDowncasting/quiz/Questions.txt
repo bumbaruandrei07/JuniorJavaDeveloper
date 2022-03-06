@@ -1,0 +1,28 @@
+ I. Atunci cand suprascriem o metoda nu este suficient sa respectam doar semnatura metodei (i.e. nume + lista de parametri)
+ ci trebuie ca metoda suprascrisa sa aiba si acelasi tip returnat sau noul tip de return sa mosteneasca tipul de return al metodei initiale.
+
+ Raspuns: Adevarat !
+
+ II. Este posibil ca o clasa sa mosteneasca mai multe clase, caz in care va cuprinde doar metodele si campurile comune claselor mostenite?
+
+ Raspuns : Fals !
+
+ III. In suprascrierea metodei equals() nu este obligatoriu sa comparam toate campurile obiectului this cu cele ale obiectului primit ca parametru.
+
+ Raspuns : Adevarat ! (unele field-uri nu au sens sa fie comparate in anumite contexte, trebuie sa gasim field-urile care identifica in mod unic obiectul pentru situatia noastra,
+                    practic tine de cum ne facem design-ul aplicatiei).
+
+ IV. Daca suprascriem (pentru o clasa) doar o metoda din perechea de metode hashCode() si equals(Object) se va produce automat o eroare (si in consecinta programul nu va rula).
+
+ Raspuns : Fals ! ( hashcode si equals sunt in stransa legatura -> daca sunt egale atunci trebuie sa aiba si acelasi hashcode, cand suprasciem equals suprascriem si hashcode in concordanta cu implementarea din equals, dar este doar o recomandare!)
+
+
+ V. Pentru clasa AppleTree, codul hash este calculat in functie de subsetul maxim de campuri posibil (luand in considerare implementarea metodei-pereche equals(Object).
+
+    Toate fieldurile verificate in equals sunt folosite in calcularea hashcode-ul -> subsetul maximal de campuri posibile daca toate field-urile verificate in equals sunt folosite in calcularea hashcode-ului!
+
+    Raspuns: Adevarat !
+
+ VI. Atunci cand implementam metoda suprascrisa equals(Object), este obligatoriu sa consideram cel mai generic tip de parametru (i.e. class Object). In caz contrar equals nu ar functiona corect pe toate cazurile.
+
+    Raspuns: Adevarat ! primeste ca parametru un obj pentru care ii facem explicit downcasting si acopera cazul generic (  object nu stie daca exista subclase pentru el).
