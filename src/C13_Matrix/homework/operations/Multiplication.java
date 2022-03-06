@@ -7,6 +7,7 @@ public class Multiplication {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        System.out.println("Tips : for successful realization of multiplying two matrices the number of columns of the first matrix is equal to the number of rows of the second matrix");
         System.out.println("First matrix - enter the number of rows: ");
         int rowsA = sc.nextInt();
         System.out.println("First matrix - enter the number of columns: ");

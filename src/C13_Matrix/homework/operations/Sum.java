@@ -6,13 +6,10 @@ public class Sum {
 
     public static void main(String[] args) {
 
-
         Scanner sc = new Scanner(System.in);
-
 
         System.out.println("Enter the number of rows and columns: ");
         int matrixDimension = sc.nextInt();
-
 
         System.out.println("Enter the elements of the main diagonal: ");  // i == j
         int mainDiagValueA = sc.nextInt();
@@ -39,7 +36,6 @@ public class Sum {
 
 
         int[][] A = new int[matrixDimension][matrixDimension]; //matrice patratice <-> nr de linii = nr. de coloane
-
 
         for (int i = 0; i < matrixDimension; i++) {
             for (int j = 0; j < matrixDimension; j++) {
@@ -69,9 +65,7 @@ public class Sum {
 
                 System.out.print(A[i][j] + "\t");
             }
-
             System.out.println();
-
         }
 
 
@@ -81,19 +75,6 @@ public class Sum {
             A[matrixDimension / 2][matrixDimension / 2] = centerValueA;
             System.out.println("The central element of the matrix is: " + centerValueA);
         }
-
-
-        for (int i = 0; i < matrixDimension; i++) {
-            for (int j = 0; j < matrixDimension; j++) {
-
-                System.out.print(A[i][j] + "\t");
-
-            }
-
-            System.out.println();
-
-        }
-
 
         int[][] B = new int[matrixDimension][matrixDimension];
 
@@ -155,24 +136,11 @@ public class Sum {
 
         }
 
-
         if (matrixDimension % 2 == 1) {
             System.out.println("Enter the value for the central element of the matrix: "); //  central element : [n/2][n/2], the dimension of the matrix must be an odd (impar) number
             int centerValueB = sc.nextInt();
             B[matrixDimension / 2][matrixDimension / 2] = centerValueB;
             System.out.println("The central element of the matrix is: " + centerValueB);
-        }
-
-
-        for (int i = 0; i < matrixDimension; i++) {
-            for (int j = 0; j < matrixDimension; j++) {
-
-                System.out.print(B[i][j] + "\t");
-
-            }
-
-            System.out.println();
-
         }
 
         int[][] C = new int[matrixDimension][matrixDimension]; //quadratic matrices used for sum and difference
@@ -188,7 +156,6 @@ public class Sum {
             System.out.println();
 
         }
-
         sc.close();
     }
 }

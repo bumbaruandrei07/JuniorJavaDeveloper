@@ -28,7 +28,7 @@ public class SieveOfEratosthenes {
         }
         System.out.println("\n");
 
-        System.out.print("Prime numbers :");
+        System.out.print("Prime numbers: ");
         for (int i = 2; i < prime.length; i++) {
             if (prime[i] == true) {
                 System.out.print(i + " ");

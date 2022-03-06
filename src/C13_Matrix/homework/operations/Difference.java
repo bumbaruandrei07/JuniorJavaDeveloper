@@ -177,7 +177,7 @@ public class Difference {
 
         int[][] C = new int[matrixDimension][matrixDimension];
 
-        System.out.println("The sum of the 2 matrices is:  " );
+        System.out.println("The difference between the 2 matrices is:  " );
         for (int i = 0; i < matrixDimension; i++) {
             for (int j = 0; j < matrixDimension; j++) {
 

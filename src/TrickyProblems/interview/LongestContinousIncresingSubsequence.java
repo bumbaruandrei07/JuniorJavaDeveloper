@@ -1,4 +1,4 @@
-package TrickyProblems.Interview;
+package TrickyProblems.interview;
 
 import java.util.Scanner;
 
