@@ -1,4 +1,4 @@
-package C14_InnerClasses_TopLevelClasses.library;
+package InnerClassesTopLevelClasses.library;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package C14_InnerClasses_TopLevelClasses.geometry;
+package InnerClassesTopLevelClasses.geometry;
 
 public interface IShape {
     void printShapeName();

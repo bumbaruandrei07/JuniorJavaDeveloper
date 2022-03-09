@@ -1,0 +1,21 @@
+Se cere sa se implementeze un sumator de numere (foarte) mari. Deoarece numerele pot fi oricat de mari, acestea vor fi reprezentate sub forma de array, unde fiecare element din vector reprezinta o cifra a numarului. Metoda de implementat va primi ca parametru 2 array-uri, reprezentand cele 2 numere de adunat si va returna un array, ce reprezinta rezultatul adunarii.
+
+Restrictii si precizari:
+
+ambele numere sunt pozitive
+numerele vor fi intotdeauna valide si nu vor fi precedate de 0-uri (ex: 21 si nu 0021 etc.)
+numarul 0 va fi reprezentat printr-un array de un element
+Exemplu
+Date de intrare
+op1: [2, 1, 7, 8]
+op2: [5, 9, 6]
+Date de iesire
+return: [2, 7, 7, 4]
+Explicatie
+Cele doua numere (de insumat) sunt: 2178 respectiv 596. Suma lor este 2178 + 596 == 2774.
+
+Tips : le putem inversa inainte sa le insumam!
+Cifrele de pe aceeasi pozitie vor avea asa acelasi indice
+
+Daca apare un overflow la final o sa fie mai usor sa aduc la finalul unui array o cifra in plus!
+

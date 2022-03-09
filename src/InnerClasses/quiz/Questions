@@ -1,0 +1,35 @@
+I. In Java, putem defini mai multe clase top-level public, in acelasi fisier. FALS (doar una este public si poarta numele fisierului)
+II. O clasa externa poate avea doar 2 modificatori de acces (i.e. public respectiv package-private) insa o clasa interna normala poate avea orice modificator de acces.
+Raspuns : Adevarat
+
+III. O clasa interna normala (i.e. regular inner class) are acces la toti membrii clasei externe, inclusiv cei marcati private.
+
+Raspuns : Adevarat (Page poate accesa un field privat a lui Book )
+
+IV.  Deoarece o clasa interna locala este un tip de clasa interna, aceasta poate avea orice modificator de acces.
+
+Raspuns: FALS -> Clasa interna locala e specifica blocului de instructiuni, doar acolo exista, odata ce contextul in care este definita dispare, aceasta nu mai poate fi referita
+
+V. Cati dintre urmatorii factori pot conduce la utilizarea unei clase interne (i.e. indiferent de tipul sau)?
+   1. Spargerea unei clase complexe, cu mai multe functionalitati, in sub-componente.
+
+   Raspuns: DA, realizam ca avem anumite parti ale clasei pe care incercam sa o cream si care ar putea de fapt sa fie obiecte de sine statatoare si le organizam in alte clase (top-level sau altele).
+   Identificam subcomponente care pot exista standalone, le putem reorganiza sa ne fie mai usor sa lucram cu ele
+
+   2. Limitarea vizibilitatii unor functionalitati, la nivel de clasa / metoda / bloc de instructiuni.
+   DA: putem sa ascundem implementarea , in interiorul clasei oferim functionalitate, in exterior expunem anumite lucruri, spargerea in subcomponente, expunem controlat in exterior a doar ce avem nevoie
+
+   3. Definirea unei entitati subordonate logic si utilizate doar local in cod (i.e. in cadrul unei clase / metode / bloc de instructiuni).
+   DA: organizarea eficienta
+
+   4. Implementarea unei entitati „ciorna“ (mockup) local, in vederea testarii (rapide) a unui feature, demonstrarea unei functionalitati etc.; entitate ce va fi inlocuita ulterior cu o implementare concreta / finala.
+   DA:   Cream o clasa interna, cream ceva temporar in ea pentru a testa.
+
+   Raspuns: Toti 4 !
+
+VI.  O clasa locala anonima nu poate defini constructori. Adevarat
+VII.  O clasa locala anonima poate fi instantiata atat in blocul de instructiuni in care a fost definita cat si in toate blocurile de instructiuni imbricate, definite ulterior in cadrul blocului
+Raspuns : Fals, pentru ca este anonima, vrem sa o instantiem o singura data, ulterior nu mai putem, poate doar sa o refefinim, sau nu o mai facem anonima ca sa putem apela constructorul de mai multe ori.
+
+
+

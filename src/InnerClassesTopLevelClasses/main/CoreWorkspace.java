@@ -1,9 +1,9 @@
-package C14_InnerClasses_TopLevelClasses.main;
+package InnerClassesTopLevelClasses.main;
 
 //import C14_InnerClasses.geometry.Circle;
 
-import C14_InnerClasses_TopLevelClasses.geometry.IShape;
-import C14_InnerClasses_TopLevelClasses.geometry.ShapeWorkspace;
+import InnerClassesTopLevelClasses.geometry.IShape;
+import InnerClassesTopLevelClasses.geometry.ShapeWorkspace;
 //import C14_InnerClasses.geometry.Rectangle;
 //import C14_InnerClasses.geometry.Triangle;
 

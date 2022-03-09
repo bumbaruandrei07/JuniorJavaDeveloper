@@ -1,7 +1,7 @@
 package UpcastingDowncasting.quiz.ex02;
 
 
-// TODO In continuare, se definesc metodele-pereche hashCode() si equals(Object) pentru fiecare clasa implementata anterior. Ce rezultate vor produce urmatoarele expresii?
+// TODO -> In continuare, se definesc metodele-pereche hashCode() si equals(Object) pentru fiecare clasa implementata anterior. Ce rezultate vor produce urmatoarele expresii?
 
 public class Test {
     public static void main(String[] args) {
@@ -21,13 +21,12 @@ public class Test {
 
         // ANOTHER EXERCISE:
 
-
         Tree treeA = new AppleTree(100, "Summerfree", 6.3, 80, true);
         Tree treeB = new Tree(100, "Summerfree", 6.3);
         AppleTree treeC = new AppleTree(100, "Melba", 12.8, 141, false);
 
-        System.out.println(treeA.toString()); //referinta de tipul tree catre un obiect de tipul AppleTree, afiseaza din apple Tree , metoda nu e statica
-        System.out.println(treeB); //treeB este o referinta de tipul Tree ( Tree treeB ) la un obiect de tipul Tree (100, "Summerfree", 6.3); -> apeleaza metoda din
+        System.out.println(treeA.toString()); //referinta de tipul tree catre un obiect de tipul AppleTree, afiseaza din AppleTree, metoda nu e statica.
+        System.out.println(treeB); //treeB este o referinta de tipul Tree ( Tree treeB ) la un obiect de tipul Tree (100, "Summerfree", 6.3); -> apeleaza metoda din Tree
         treeC.toString(); //apeleaza toString(), dar nu-l afiseaza, corect era:
         System.out.println(treeC.toString());
 

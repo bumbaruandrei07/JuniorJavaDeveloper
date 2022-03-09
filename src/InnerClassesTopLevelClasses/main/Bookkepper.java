@@ -1,8 +1,8 @@
-package C14_InnerClasses_TopLevelClasses.main;
+package InnerClassesTopLevelClasses.main;
 
-import C14_InnerClasses_TopLevelClasses.library.BetterBook;
-import C14_InnerClasses_TopLevelClasses.library.Book;
-import C14_InnerClasses_TopLevelClasses.library.IPage;
+import InnerClassesTopLevelClasses.library.BetterBook;
+import InnerClassesTopLevelClasses.library.Book;
+import InnerClassesTopLevelClasses.library.IPage;
 
 public class Bookkepper {
 

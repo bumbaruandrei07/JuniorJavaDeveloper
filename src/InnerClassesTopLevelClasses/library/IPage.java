@@ -1,4 +1,4 @@
-package C14_InnerClasses_TopLevelClasses.library;
+package InnerClassesTopLevelClasses.library;
 
 public interface IPage {
     String getText();
