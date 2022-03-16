@@ -11,7 +11,6 @@ public class Tree {
         this.species = species;
         this.sunAmount = sunAmount;
     }
-
     public static void movementSound() {
         System.out.println("Generic tree sound");
     }

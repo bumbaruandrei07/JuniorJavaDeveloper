@@ -4,6 +4,15 @@ import java.util.Scanner;
 
 public class Multiplication {
 
+    //helper method to display the elements of any matrix
+    public static void printMatrix(int matrix[][], int rowSize, int colSize) {
+        for (int i = 0; i < rowSize; i++) {
+            for (int j = 0; j < colSize; j++)
+                System.out.print(matrix[i][j] + " ");
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -19,9 +28,9 @@ public class Multiplication {
 
         int[][] matrixA = new int[rowsA][columnsA];
         int[][] matrixB = new int[rowsB][columnsB];
-        int[][] matrixC = new int[columnsA][rowsB];
+        int[][] matrixC = new int[rowsA][columnsB]; // matricea rezultata va avea numarul de linii a primei matrice si numarul de coloane a celei de-a doua matrice!
 
-        // Inmultire : numarul de coloane a primei matrice este egal cu numarul de linii a celei de-a doua matrice.
+        // Inmultire : numarul de coloane a primei matrice trebuie sa fie egal cu numarul de linii a celei de-a doua matrice.
 
 
         System.out.println("Enter the elements of matrix A: ");
@@ -37,23 +46,19 @@ public class Multiplication {
                 matrixB[i][j] = sc.nextInt();
             }
         }
-        System.out.println("Multiplication of Matrix: ");
-        for (int i = 0; i < rowsA; i++) {
-            for (int j = 0; j < columnsB; j++) {
-                for (int k = 0; k < columnsA; k++) {
-                    matrixC[i][j] += matrixA[i][k] * matrixB[k][j];
+
+        if (columnsA == rowsB) {
+            System.out.println("Multiplication of Matrix: ");
+            for (int i = 0; i < rowsA; i++) {
+                for (int j = 0; j < columnsB; j++) {
+                    for (int k = 0; k < rowsB; k++) {
+                        matrixC[i][j] += matrixA[i][k] * matrixB[k][j];
+                    }
                 }
             }
-        }
-
-        for (int i = 0; i < columnsA; i++) {
-            for (int j = 0; j < rowsB; j++) {
-
-                System.out.print(matrixC[i][j] + "\t");
-            }
-
-            System.out.println();
-
+            printMatrix(matrixC, rowsA, columnsB);
+        } else {
+            System.out.println("The two matrices cannot be multiplied");
         }
         sc.close();
     }
