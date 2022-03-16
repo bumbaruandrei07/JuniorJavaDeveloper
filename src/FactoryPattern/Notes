@@ -1,0 +1,3 @@
+- Avem o interfata care o sa stie sa genereze obiecte de tipul respectiv.
+- Util pt ca nu vrem sa lasam utilizatorul sa creeze obiecte cum doreste, ci sa-i impunem constrangeri stiind ca o sa le folosesca in mod corect (- Creem pentru cineva clase si i le servim).
+-

@@ -17,10 +17,6 @@ public class Rectangle extends Shape {
         this.height = height;
     }
 
-    public void displayRectangleHeight() {
-        System.out.println("Rectangle height is:" + this.height);
-    }
-
     @Override
     public double getSize() {
         double area = this.width * this.height;
@@ -59,5 +55,10 @@ public class Rectangle extends Shape {
         result = prime * result + width;
         result = prime * result + height;
         return result;
+    }
+
+    @Override
+    public void displayHeight() {
+        System.out.println("Rectangle height is:" + this.height);
     }
 }

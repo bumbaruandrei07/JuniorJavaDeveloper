@@ -3,6 +3,7 @@ package TrickyProblems.interview;
 import java.util.ArrayList;
 import java.util.Collections;
 
+
 public class BigNumbers {
 
     public int[] sum(int[] op1, int[] op2) {
@@ -42,7 +43,6 @@ public class BigNumbers {
                 result %= 10;
                 overflow = 1;
             }
-
             resArr.add(result);
             ++i;
         }
@@ -50,7 +50,6 @@ public class BigNumbers {
         if (overflow == 1) {
             resArr.add(overflow);
         }
-
         return transformResult(resArr);
     }
 

@@ -16,10 +16,6 @@ public class Triangle extends Shape {
         this.height = height;
     }
 
-    public void displayTriangleHeight() {
-        System.out.println("Triangle height is: " + this.height);
-    }
-
     @Override
     public double getSize() {
         System.out.print("The area of the triangle is: ");
@@ -61,5 +57,10 @@ public class Triangle extends Shape {
         result = prime * result + base;
         result = prime * result + height;
         return result;
+    }
+
+    @Override
+    public void displayHeight() {
+        System.out.println("Triangle height is: " + this.height);
     }
 }

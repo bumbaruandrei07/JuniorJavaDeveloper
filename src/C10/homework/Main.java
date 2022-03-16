@@ -6,24 +6,27 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Shape firstGenericShape = new Shape("M", "Snow");
-        Shape secondGenericShape = new Shape("M", "Sand");
-        Shape testingSimpleShape = new Shape();
-        Shape fourthGenericShape = secondGenericShape;
-        System.out.println(firstGenericShape.getSize());
-        System.out.println(firstGenericShape);
-        System.out.println(testingSimpleShape.equals(firstGenericShape));    //corner case - comparing the shape object using default constructor
-        System.out.println("Generic shape two is equal to generic shape three? Answer: " + secondGenericShape.equals(fourthGenericShape));
-        System.out.println("Hashcode for shape one: " + firstGenericShape.hashCode());
-        System.out.println("Hashcode for the second generic shape: " + secondGenericShape.hashCode());
-        System.out.println("Hashcode for the third generic shape: " + fourthGenericShape.hashCode());
-        System.out.println("=====================================================");
+        /**
+         *  Shape firstGenericShape = new Shape("M", "Snow");
+         *         Shape secondGenericShape = new Shape("M", "Sand");
+         *         Shape testingSimpleShape = new Shape();
+         *         Shape fourthGenericShape = secondGenericShape;
+         *         System.out.println(firstGenericShape.getSize());
+         *         System.out.println(firstGenericShape);
+         *         System.out.println(testingSimpleShape.equals(firstGenericShape));    //corner case - comparing the shape object using default constructor
+         *         System.out.println("Generic shape two is equal to generic shape three? Answer: " + secondGenericShape.equals(fourthGenericShape));
+         *         System.out.println("Hashcode for shape one: " + firstGenericShape.hashCode());
+         *         System.out.println("Hashcode for the second generic shape: " + secondGenericShape.hashCode());
+         *         System.out.println("Hashcode for the third generic shape: " + fourthGenericShape.hashCode());
+         *         System.out.println("=====================================================");
+         */
+
 
         Rectangle r1 = new Rectangle(20, 12);
         Rectangle r2 = new Rectangle("Huge rectangle", "sand", 2, 3);
         Rectangle r3 = r2;
-        r1.displayRectangleHeight();
-        r2.displayRectangleHeight();
+        r1.displayHeight();
+        r2.displayHeight();
         System.out.println(r1.getSize());
         System.out.println(r2.getSize());
         System.out.println(r1);
@@ -38,8 +41,8 @@ public class Main {
         Triangle tr1 = new Triangle(17, 19);
         Triangle tr2 = new Triangle("Unknown", "Unknown", 20, 12);
         Triangle tr3 = tr2;
-        tr1.displayTriangleHeight();
-        tr2.displayTriangleHeight();
+        tr1.displayHeight();
+        tr2.displayHeight();
         System.out.println(tr1);
         System.out.println(tr2);
         System.out.println(tr1.getSize());
@@ -52,8 +55,6 @@ public class Main {
 
 
         ArrayList<Shape> shapes = new ArrayList<Shape>();
-        shapes.add(firstGenericShape);
-        shapes.add(secondGenericShape);
         shapes.add(r1);
         shapes.add(r2);
         shapes.add(tr1);
@@ -69,14 +70,22 @@ public class Main {
 //            Downcastig : we call the method specific to each form, depending on its origin class
 
             if (shapes.get(i) instanceof Triangle) {
-                Triangle triangleRef = (Triangle) shapes.get(i);
-                triangleRef.displayTriangleHeight();
+                Triangle triangleRef = (Triangle) shapes.get(i); //downcasting
+                triangleRef.displayHeight();
             } else if (shapes.get(i) instanceof Rectangle) {
                 Rectangle rectangleRef = (Rectangle) shapes.get(i);
-                rectangleRef.displayRectangleHeight();
+                rectangleRef.displayHeight();
             } else {
                 System.out.println("Error: unknown type of shape...");
             }
+        }
+
+        //TODO - V2
+
+        System.out.println();
+        System.out.println("! Metoda displayHeight este suprascrisa in fiecare clasa pentru a evita instanceOf si downcasting! ");
+        for (Shape shape : shapes) {
+            shape.displayHeight();
         }
     }
 }

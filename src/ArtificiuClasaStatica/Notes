@@ -1,0 +1,7 @@
+clasa GatherSurprise nu ar trebui sa permita crearea instantelor si nici mostenirea, deoarece implementarea sa este definitiva si toate metodele sale sunt statice. Desi Java nu permite marcarea unei clase static, putem sa recurge la urmatoarele artificii:
+
+instantiere: putem crea un (singur) constructor, de forma, pe care sa il marcam private.
+Obs: Intr-un astfel de caz, trebuie sa avem grija ca toate entitatile clasei sa fie statice, altfel acestea nu vor putea fi accesate vreodata.
+mostenire: ce keyword folosim pentru a impiedica extiderea clasei? -> final
+
+FYI: o clasa nu putea fi in acelasi timp si final si abstract !!!
