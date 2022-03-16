@@ -21,7 +21,6 @@ public class Main {
          *         System.out.println("=====================================================");
          */
 
-
         Rectangle r1 = new Rectangle(20, 12);
         Rectangle r2 = new Rectangle("Huge rectangle", "sand", 2, 3);
         Rectangle r3 = r2;
@@ -81,7 +80,6 @@ public class Main {
         }
 
         //TODO - V2
-
         System.out.println();
         System.out.println("! Metoda displayHeight este suprascrisa in fiecare clasa pentru a evita instanceOf si downcasting! ");
         for (Shape shape : shapes) {

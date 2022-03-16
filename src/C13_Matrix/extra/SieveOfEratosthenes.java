@@ -20,14 +20,13 @@ public class SieveOfEratosthenes {
         for (int i = 2; i <= Math.sqrt(num); i++) {  // i * i <= num
 //            System.out.print(i + " ");  -> afiseaza numerele de la 2 pana la n a caror patrat este mai mic sau egal decat n -> pentru 50, 7 va fi ultimul i
 
-
             for (int j = i * i; j < num; j += i) {
                 System.out.print(j + " ");
                 prime[j] = false;
             }
         }
-        System.out.println("\n");
 
+        System.out.println("\n");
         System.out.print("Prime numbers: ");
         for (int i = 2; i < prime.length; i++) {
             if (prime[i] == true) {

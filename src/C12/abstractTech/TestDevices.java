@@ -3,14 +3,14 @@ package C12.abstractTech;
 public class TestDevices {
     public static void main(String[] args) {
 
-        /*
-        TODO -> Aminteste-ti arhitectura unui smartphone, implementata la capitolul Compunere si Agregare. Actualizeaza corespunzator aplicatia folosind cuvantul cheie abstract si argumenteaza cu trainerul deciziile de proiectare luate.
-
-         Solution : este recomandata evitarea abstractizarii, deoarece daca setam clasele "componente" clasei Smartphone ca fiind abstracte nu mai putem instantia componentele unui obiect de tip smartphone.
-         NEW FEATURE : abstractizarea clasei "Case" si a metodelor sale specifice ce vor fi suprascrise in clasa Smartphone ce contine o componenta de tipul clasei "Case"
-                       Clasa Case poate fi considerata o clasa generala, contine doar metode care vor fi folosite prin delegare de catre clasa Smartphone
+        /**
+         *
+         * TODO -> Aminteste-ti arhitectura unui smartphone, implementata la capitolul Compunere si Agregare. Actualizeaza corespunzator aplicatia folosind cuvantul cheie abstract si argumenteaza cu trainerul deciziile de proiectare luate.
+         * Solution : este recomandata evitarea abstractizarii, deoarece daca setam clasele "componente" clasei Smartphone ca fiind abstracte nu mai putem instantia componentele unui obiect de tip smartphone.
+         * NEW FEATURE : abstractizarea clasei "Case" si a metodelor sale specifice ce vor fi suprascrise in clasa Smartphone ce contine o componenta de tipul clasei "Case"
+         * Clasa Case poate fi considerata o clasa generala, contine doar metode care vor fi folosite prin delegare de catre clasa Smartphone
+         *
          */
-
 
         Smartphone XiaomiRedmiNote9 = new Smartphone(10, 20, 20, 15, 100, 10, 100, 50);
         XiaomiRedmiNote9.pressVolumeDown();
@@ -48,7 +48,5 @@ public class TestDevices {
         System.out.println(SamsungS22);
         SamsungS22.setSilence();
         System.out.println(SamsungS22);
-
-
     }
 }

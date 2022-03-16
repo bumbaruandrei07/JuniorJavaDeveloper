@@ -88,7 +88,6 @@ public class QuadraticMatrixGeneratorWithArrayList {
             }
             System.out.println();
         }
-
         sc.close();
     }
 }
