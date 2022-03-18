@@ -1,0 +1,12 @@
+Programarea functionala presupune definirea de functii care, in ordine:
+
+primesc un set de parametri
+proceseaza parametrii primiti in vederea obtinerii rezultatului (corp al functiei)
+returneaza un rezultat.
+
+- Parametrii se definesc in interfata, definim semnatura functiei, interfata o sa fie automat publica
+- Expresiile lambda respecta principiul KISS
+
+- Coliziunea de nume : avem 2 interfete ce contin aceeasi metoda si o clasa ce le implementeaza, pentru ca cele doua metode au exact aceeasi semnatura, atunci vom avea eroare de compilare
+- Daca una dintre metodele din exemplul de la curs ar fi avut un parametru, atunci coliziunea de nume disparea!
+
