@@ -26,20 +26,6 @@ public class Gaming extends Laptop {
         }
     }
 
-//    public void performanceExtra(Brand brand) {
-//        if (brand == Brand.ASUS_ROG)
-//            switch (GbRAM) {
-//                case 8:
-//                    System.out.println("One slot occuped");
-//                    break;
-//                case 16:
-//                    System.out.println("Two slots occuped");
-//                    break;
-//                default:
-//                    System.out.println(this.GbRAM + "GB RAM Occuped");
-//            }
-//    }
-
     public void performanceExtra() {
         if (this.videoCard.equals("NVIDIA") && this.GbRAM <= 8 && this.GbRAM > 0) {
             System.out.println("Low performance");

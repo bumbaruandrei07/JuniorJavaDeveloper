@@ -17,6 +17,7 @@ public abstract class Shape {
 
     public abstract double getSize();
 
+    // i can use this
     public abstract String toString();
 
     @Override
