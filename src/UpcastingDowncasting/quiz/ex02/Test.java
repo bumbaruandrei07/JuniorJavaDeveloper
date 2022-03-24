@@ -14,7 +14,7 @@ public class Test {
         System.out.println(tree2 == tree4);  // nu foloseste equals -> cu == comparam referinte (adrese), tree2 si tree4 prin vor fi egale (prin ==) daca sunt referinte la acelasi obiect, nu daca au aceleasi field-uri!
         //tree2 este referinta la obiectul AppleTree, tree4 este o referinta la un alt AppleTree
         // Raspuns : False !
-        System.out.println(tree3.equals(tree4)); //tree3 este o referinta la obiectul tree2 prin downcasting explicit , tree4 este obiectul AppleTree
+        System.out.println(tree3.equals(tree4)); //tree3 este o referinta la obiectul tree2 prin downcasting explicit, tree4 este obiectul AppleTree
         // Raspuns : True, pentru ca el verifica toate fieldurile in equals mai putin isBio, care nu sunt egale(false in tree2 si true in tree4) dar in equals nu se face aceasta verificare
         // orice instanta este o instanta a tuturor superclaselor, invers nu (Relatia Generic vs Specific)
 

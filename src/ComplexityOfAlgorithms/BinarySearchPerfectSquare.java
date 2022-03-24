@@ -13,7 +13,6 @@ public class BinarySearchPerfectSquare {
             System.out.println("Is perfect square!");
             return true;
         }
-
         int left = 1;
         int right = n / 2;
         while (left <= right) {
@@ -29,7 +28,6 @@ public class BinarySearchPerfectSquare {
         }
         System.out.println("The number isn't a perfect square!");
         return false;
-
     }
 
     public static void main(String[] args) {

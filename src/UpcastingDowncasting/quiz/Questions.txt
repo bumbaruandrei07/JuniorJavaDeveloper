@@ -25,4 +25,4 @@
 
  VI. Atunci cand implementam metoda suprascrisa equals(Object), este obligatoriu sa consideram cel mai generic tip de parametru (i.e. class Object). In caz contrar equals nu ar functiona corect pe toate cazurile.
 
-    Raspuns: Adevarat ! primeste ca parametru un obj pentru care ii facem explicit downcasting si acopera cazul generic (  object nu stie daca exista subclase pentru el).
+    Raspuns: Adevarat ! primeste ca parametru un obj pentru care ii facem explicit downcasting si acopera cazul generic (object nu stie daca exista subclase pentru el).
