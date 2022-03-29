@@ -14,7 +14,7 @@ public class Test {
 
         tree1.movementSound();  // apelam o metoda statica din tree !
         tree2.movementSound();  // apelam tot metoda statica din tree
-        tree3.movementSound(); // avand o referinta de tipul AppleTree vom apleca metoda movementSound() din clasa AppleTree
+        tree3.movementSound(); // avand o referinta de tipul AppleTree vom apela metoda movementSound() din clasa AppleTree
     }
 }
 

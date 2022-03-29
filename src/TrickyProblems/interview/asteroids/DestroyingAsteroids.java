@@ -4,29 +4,26 @@ import java.util.Arrays;
 
 public class DestroyingAsteroids {
 
-    public static void bubbleSortDoubleArray(int[] array) {
-        int n = array.length;
-        boolean swapped;
-        int aux;
+    public static void selectionSort(int[] arr) {
+        int n = arr.length;
 
-        do {
-            swapped = false;
-
-            for (int i = 1; i < n; i++) {
-
-                if (array[i - 1] > array[i]) {
-                    aux = array[i];
-                    array[i] = array[i - 1];
-                    array[i - 1] = aux;
-                    swapped = true;
+        for (int i = 0; i < n - 1; i++) {
+            int min = i;
+            for (int j = i + 1; j < n; j++) {
+                if (arr[j] < arr[min]) {
+                    min = j;
                 }
             }
-        } while (swapped);
+
+            int temp = arr[min];
+            arr[min] = arr[i];
+            arr[i] = temp;
+        }
     }
 
     public static boolean asteroidsDestroyed(int mass, int[] asteroids) {
         //sortam vectorul
-        bubbleSortDoubleArray(asteroids);
+        selectionSort(asteroids);
         System.out.println(Arrays.toString(asteroids));
         System.out.println();
         int n = asteroids.length;
@@ -42,17 +39,13 @@ public class DestroyingAsteroids {
         if(counter == n){
             return true;
         }
-
         return false;
-
     }
 
 
     public static void main(String[] args) {
         int[] arr = {4,9,23,4};
-        bubbleSortDoubleArray(arr);
+        selectionSort(arr);
         System.out.println(asteroidsDestroyed(5, arr));
     }
-
-
 }
