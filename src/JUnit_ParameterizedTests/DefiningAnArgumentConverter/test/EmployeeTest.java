@@ -1,12 +1,10 @@
-package JUnit.DefiningAnArgumentConverter.test;
+package JUnit_ParameterizedTests.DefiningAnArgumentConverter.test;
 
-import JUnit.RunningParameterizedTestsWithValueSource.main.Employee;
+import JUnit_ParameterizedTests.RunningParameterizedTestsWithValueSource.main.Employee;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.EmptySource;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.junit.jupiter.params.provider.NullSource;
 
 import javax.naming.InvalidNameException;
 import java.util.stream.Stream;
@@ -24,7 +22,7 @@ public class EmployeeTest {
     @DisplayName("Name Check")
     void nameTest(String lName) {
 
-        Employee employee = new JUnit.RunningParameterizedTestsWithValueSource.main.Employee("Brian", lName, 1011, 'M', "Tester", 50000.0, "Contract");
+        Employee employee = new JUnit_ParameterizedTests.RunningParameterizedTestsWithValueSource.main.Employee("Brian", lName, 1011, 'M', "Tester", 50000.0, "Contract");
         Assertions.assertThrows(InvalidNameException.class,
                 () -> {
                     employee.validateLastName();

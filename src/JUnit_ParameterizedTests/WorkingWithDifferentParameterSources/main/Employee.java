@@ -1,4 +1,4 @@
-package JUnit.RunningParameterizedTestsWithValueSource.main;
+package JUnit_ParameterizedTests.WorkingWithDifferentParameterSources.main;
 
 import javax.naming.InvalidNameException;
 import java.util.ArrayList;

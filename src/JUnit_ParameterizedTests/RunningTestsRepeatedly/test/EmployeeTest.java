@@ -1,6 +1,6 @@
-package JUnit.RunningTestsRepeatedly.test;
+package JUnit_ParameterizedTests.RunningTestsRepeatedly.test;
 
-import JUnit.RunningTestsRepeatedly.main.Employee;
+import JUnit_ParameterizedTests.RunningTestsRepeatedly.main.Employee;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;

@@ -1,4 +1,4 @@
-package JUnit.RunningTestsRepeatedly.main;
+package JUnit_ParameterizedTests.RunningTestsRepeatedly.main;
 
 import javax.naming.InvalidNameException;
 import java.util.ArrayList;

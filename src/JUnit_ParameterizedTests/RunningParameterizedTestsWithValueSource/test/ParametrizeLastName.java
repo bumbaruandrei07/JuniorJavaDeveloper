@@ -1,6 +1,6 @@
-package JUnit.RunningParameterizedTestsWithValueSource.test;
+package JUnit_ParameterizedTests.RunningParameterizedTestsWithValueSource.test;
 
-import JUnit.RunningParameterizedTestsWithValueSource.main.Employee;
+import JUnit_ParameterizedTests.RunningParameterizedTestsWithValueSource.main.Employee;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;

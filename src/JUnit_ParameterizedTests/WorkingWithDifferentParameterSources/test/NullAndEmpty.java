@@ -1,6 +1,6 @@
-package JUnit.WorkingWithDifferentParameterSources.test;
+package JUnit_ParameterizedTests.WorkingWithDifferentParameterSources.test;
 
-import JUnit.RunningParameterizedTestsWithValueSource.main.Employee;
+import JUnit_ParameterizedTests.RunningParameterizedTestsWithValueSource.main.Employee;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -16,7 +16,7 @@ public class NullAndEmpty {
     @NullAndEmptySource
     @DisplayName("Empty Name Check")
     void nameTest(String name) {
-        Employee employee = new JUnit.RunningParameterizedTestsWithValueSource.main.Employee(name, name, 1011, 'M', "Tester", 50000.0, "Contract");
+        Employee employee = new JUnit_ParameterizedTests.RunningParameterizedTestsWithValueSource.main.Employee(name, name, 1011, 'M', "Tester", 50000.0, "Contract");
         String fName = employee.getFirstName();
 
         //we check if first name is either equal to null or it is empty
@@ -33,7 +33,7 @@ public class NullAndEmpty {
     void nameTest2(String fName, String lName) {
 
         //trim() is used to remove whiteSpaces from fName and lName
-        Employee employee = new JUnit.RunningParameterizedTestsWithValueSource.main.Employee(fName.trim(), lName.trim(), 1011, 'M', "Tester", 50000.0, "Contract");
+        Employee employee = new JUnit_ParameterizedTests.RunningParameterizedTestsWithValueSource.main.Employee(fName.trim(), lName.trim(), 1011, 'M', "Tester", 50000.0, "Contract");
 
         Assertions.assertEquals(fName.trim(), employee.getFirstName());
         Assertions.assertEquals(lName.trim(), employee.getLastName());
@@ -47,7 +47,7 @@ public class NullAndEmpty {
     @DisplayName("Name Check")
 
     void nameTest3(String fName, String lName){
-        Employee employee = new JUnit.RunningParameterizedTestsWithValueSource.main.Employee(fName.trim(), lName.trim(), 1011, 'M', "Tester", 50000.0, "Contract");
+        Employee employee = new JUnit_ParameterizedTests.RunningParameterizedTestsWithValueSource.main.Employee(fName.trim(), lName.trim(), 1011, 'M', "Tester", 50000.0, "Contract");
         Assertions.assertEquals(fName.trim(), employee.getFirstName());
         Assertions.assertEquals(lName.trim(), employee.getLastName());
     }

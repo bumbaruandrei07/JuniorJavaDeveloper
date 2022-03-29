@@ -1,4 +1,4 @@
-package JUnit.DefiningAnArgumentConverter.test;
+package JUnit_ParameterizedTests.DefiningAnArgumentConverter.test;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.converter.ArgumentConversionException;

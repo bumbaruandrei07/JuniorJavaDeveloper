@@ -1,6 +1,6 @@
-package JUnit.WorkingWithDifferentParameterSources.test;
+package JUnit_ParameterizedTests.WorkingWithDifferentParameterSources.test;
 
-import JUnit.RunningParameterizedTestsWithValueSource.main.Employee;
+import JUnit_ParameterizedTests.RunningParameterizedTestsWithValueSource.main.Employee;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,7 +13,7 @@ public class EmployeeTest {
     @NullSource // a null value will be supplied
     @DisplayName("Null Name Check")
     void nullName (String name){
-       Employee employee = new JUnit.RunningParameterizedTestsWithValueSource.main.Employee(name, name, 1011, 'M', "Tester", 50000.0, "Contract");
+       Employee employee = new JUnit_ParameterizedTests.RunningParameterizedTestsWithValueSource.main.Employee(name, name, 1011, 'M', "Tester", 50000.0, "Contract");
         Assertions.assertNull(employee.getFirstName()); //first name will be null
         Assertions.assertNull(employee.getLastName()); // last name will be null
     }
@@ -22,7 +22,7 @@ public class EmployeeTest {
     @EmptySource // an empty value will be supplied
     @DisplayName("Empty Name Check")
     void emptyName (String name){
-        Employee employee = new JUnit.RunningParameterizedTestsWithValueSource.main.Employee(name, name, 1011, 'M', "Tester", 50000.0, "Contract");
+        Employee employee = new JUnit_ParameterizedTests.RunningParameterizedTestsWithValueSource.main.Employee(name, name, 1011, 'M', "Tester", 50000.0, "Contract");
         //verificam daca atat firstName, cat si lastName sunt empty strings (stringuri fara caractere)
         Assertions.assertEquals("", employee.getFirstName());
         Assertions.assertEquals("", employee.getLastName());

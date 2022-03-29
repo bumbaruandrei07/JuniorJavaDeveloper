@@ -1,6 +1,6 @@
-package JUnit.DefiningAnArgumentConverter.test;
+package JUnit_ParameterizedTests.DefiningAnArgumentConverter.test;
 
-import JUnit.DefiningAnArgumentConverter.main.Employee;
+import JUnit_ParameterizedTests.DefiningAnArgumentConverter.main.Employee;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;

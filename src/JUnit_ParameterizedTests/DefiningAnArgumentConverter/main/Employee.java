@@ -1,4 +1,4 @@
-package JUnit.DefiningAnArgumentConverter.main;
+package JUnit_ParameterizedTests.DefiningAnArgumentConverter.main;
 
 import javax.naming.InvalidNameException;
 import java.util.ArrayList;
