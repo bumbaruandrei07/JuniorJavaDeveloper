@@ -28,13 +28,15 @@ public class Generator {
 
         //generare numar random pozitiv intre 0 si 5
 
-        int p = Math.abs(random.nextInt(5));
-        System.out.println("Pozitive random number between 0 and 5: " + p);
+        int p = random.nextInt(5);
+        System.out.println("Random number between 0 and 5: " + p);
 
-
-
-
-
+        int c = random.nextInt();
+        int d = random.nextInt();
+        int e = c - d;
+        System.out.println("Diferenta dintre 2 numere random este: " + e);
+        System.out.print("Valoarea absoluta a diferentei dintre 2 numere random este: ");
+        System.out.println(Math.abs(e));
 
     }
 }

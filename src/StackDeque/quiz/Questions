@@ -1,0 +1,28 @@
+
+Evalueaza valoarea de adevar a urmatoarelor doua afirmatii:
+I. Intr-o coada se pot accesa elementul de la inceputul cozii si cel de la sfarsitul cozii -> Fals, putem accesa doar la inceputul cozii
+II. O stiva adera la principiul de LIFO. -> Adevarat
+
+2.
+I. Structura de date deque poate fi privita ca o generalizare a structurilor de date coada si stiva, deoarece permite inserarea, accesarea si scoaterea elementelor prin ambele capete.
+Adevarat, ofera libertate totala folsind un subbset de instructiuni di Qeque
+
+II. Pentru a citi/accesa un element oarecare intr-o stiva, este necesar sa scoatem mai intai din stiva toate elementele „de deasupra“ lui (i.e. cele dintre varf si elementul propriu-zis).
+Adevarat, nu putem accesa direct un elemenent de sub top, trebuie sa extragem din stiva pana ajungem la el.
+
+
+3.
+
+I. O coada respecta regula LIFO iar o stiva regula FIFO
+Fals - Cele 2 afirmatii sunt inversate. Corect: o coada respecta regula FIFO (First In First Out, adica primul venit primul servit) iar o stiva respecta regula LIFO (Last In First Out).
+
+II. Metoda peek(..) a unei stive sterge elementul curent din varf si il returneaza.
+Fals - Metoda 'peek(..)' doar acceseaza si implicit returneaza elementul din varful unei stive, fara a-l sterge.
+Metoda peek(..) a unei stive sterge elementul curent din varf si il returneaza. - il returneaza, nu-l si sterge, FALS
+
+III.Metoda enqueue(..) a unei cozi insereaza un nou element la inceputul acesteia.
+ Fals - Metoda 'enqueue(..)' a unei cozi insereaza un nou element la *sfarsitul* acesteia (i.e. si nu la inceputul cozii).
+
+IV. Accesarea elementului din varful stivei se face in O(n), unde n reprezinta numarul de elemente aflate la momentul respectiv in stiva.
+- Accesarea se face in O(1), pentru ca stim mereu cine este top-ul, putem sa-l returnam imediat in mod direct.
+Fals - Accesarea elementului din varful unei stive se realizeaza intotdeauna in timp constant, adica in O(1) (i.e. nu in O(n)).

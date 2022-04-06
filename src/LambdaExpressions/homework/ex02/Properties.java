@@ -1,7 +1,5 @@
 package LambdaExpressions.homework.ex02;
 
-import java.util.Scanner;
-
 public class Properties {
 
 

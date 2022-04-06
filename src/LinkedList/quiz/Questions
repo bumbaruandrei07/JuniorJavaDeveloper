@@ -1,2 +1,19 @@
-A / F
+I. Intr-o lista dublu inlantuita se pot insera eficient elemente atat la inceputul listei cat si la sfarsit.
+Adevarat
 
+II. Intr-o lista circulara dublu inlantuita ultimul nod il va referi pe primul (i.e. prin referinta next) si primul nod va referi anterior la null (i.e. referinta previous).
+Fals -> Intr-adevar, ultimul nod il va referi pe primul (i.e. prin referinta next), dar primul nod are referinta previous catre ultimul nod, pentru ca e circulara dublu inlantuita
+
+III. Accesarea unui element oarecare dintr-o lista inlantuita se face in timp liniar pe cand accesarea unui element oarecare intr-un array / ArrayList se face in timp unitar.
+Adevarat
+
+IV.Nu exista diferente de performanta (i.e. de timp) intre parcurgerea elementelor unei liste inlantuite (ex: LinkedList) si a unui vector (ex: ArrayList), deoarece ambele presupun parcurgerea (o singura data) a elementelor, pe rand.
+Fals
+
+V. Stergerea unui element de la sfarsitul unei liste simplu inlantuite se realizeaza eficient (i.e. in timp unitar).
+Fals, daca e lista simplu inlantuita avem referinta doar catre head si trebuie sa facem cautarea in toata lista in O(n), timp liniar.
+
+VI.Stergerea unui element de la inceputul unui array este la fel de eficienta ca stergerea unui element de pe ultima pozitie a acestuia, deoarece accesarea oricarui element in array se face instantaneu (i.e. in timp unitar).
+Fals! Este adevarat ca accesarea se realizeaza in timp unitar, dar este fals ca sunt la fel de eficiente ambele stergeri.
+Daca stergem de pe prima pozitie trebuie sa mutam toate celelalte elemente din array cu o pozitie mai la stanga si asta presupune timp liniar.
+Daca vrem sa facem asta pe tot array-ul, trebuie sa trecem prin toate elementele.
