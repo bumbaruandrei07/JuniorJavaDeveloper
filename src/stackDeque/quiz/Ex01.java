@@ -1,6 +1,7 @@
-package StackDeque;
+package stackDeque.quiz;
 
 import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -15,14 +16,14 @@ public class Ex01 {
         myQueue.offer("George");
         myQueue.offer("Mihai");
 
-        java.util.Deque<String> myStack = new ArrayDeque<String>();
+       Deque<String> myStack = new ArrayDeque<String>();
 
         int option = 0;
-        while (!myQueue.isEmpty()) {
+        while (!myQueue.isEmpty()) { //atata timp cat mai avem elemente in coada
             if (option < 2) {
                 myStack.push(myQueue.poll());
             } else {
-                myQueue.offer(myStack.peek());
+                myQueue.offer(myStack.peek()); //adaugam in coada varful stivei
             }
 
             option = (option + 1) % 3;
@@ -31,6 +32,4 @@ public class Ex01 {
         System.out.println(myStack);
 
     }
-
-
 }

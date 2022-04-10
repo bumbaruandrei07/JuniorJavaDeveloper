@@ -1,9 +1,6 @@
 package LinkedListCollection.course;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.ListIterator;
-import java.util.Scanner;
+import java.util.*;
 
 public class LinkedListCollection {
     public static void main(String[] args) {
@@ -82,9 +79,28 @@ public class LinkedListCollection {
         System.out.println();
 
 
-
-
         iterate(towns);
+
+        //cautarea unui element
+        System.out.println(towns.contains("Bacau"));
+        System.out.println(towns.contains("Cluj"));
+        System.out.println(towns.contains("brasov"));
+        //cautarea folosind un index -> return 4, "Brasov" se afla pe a 4 pozitie in lista noastra
+        System.out.println(towns.indexOf("Brasov"));
+
+
+        // Dureaza un timp unitar operatiile de cautare a elementelor in lista?
+        //Nu, deoarece toate aceste operatii presupun parcurgerea listei. Prin urmare, toate operatiile au complexitate liniara, fiind necesara iterarea listei.
+
+
+        System.out.println("Numarul de aparitii a orasului Bucuresti in lista este: ");
+        System.out.println(countOccurrences(towns, "Bucuresti"));
+
+        System.out.println("Numarul de aparitii a orasului X in lista este: ");
+        System.out.println(countOccurrences(towns, "X"));
+
+        System.out.println("Numarul de aparitii a orasului Cluj este: ");
+        System.out.println(countOccurrencesWithEnhancedFor(towns, "Cluj"));
 
     }
 
@@ -139,7 +155,7 @@ public class LinkedListCollection {
         printManual();
         boolean moveForward = true; //ne va spune daca directa de deplasare este in ordine sau invers
 
-        while(true) {
+        while (true) {
             int option = scanner.nextInt();
             switch (option) {
                 case 0:
@@ -183,4 +199,58 @@ public class LinkedListCollection {
             }
         }
     }
+
+    //numarul de aparitii folosind iterator
+    public static int countOccurrences(LinkedList<String> list, String key) {
+        int counter = 0;
+        for (Iterator<String> it = list.iterator(); it.hasNext(); ) { //initializare + conditia de oprire (hasNext())
+            if (it.next().equals(key)) {  //pasul are loc cand apelam next si ne returneaza obiectul in sine, pe obiectul returnat apelam equals() si comparam cu o cheie pe care o cautam
+                counter++;
+            }
+        }
+        return counter;
+    }
+
+    //numarul de aparitii folosind un enhanced for
+    public static int countOccurrencesWithEnhancedFor(LinkedList<String> list, String key) {
+        int counter = 0;
+        for (String el : list) {
+            if (el.equals(key)) {
+                counter++;
+            }
+        }
+        return counter;
+    }
+//    Implementeaza o metoda simpla care intoarce numarul de aparitii ale unui element intr-un ArrayList folosind Iterator pentru a parcurge colectia.
+
+    //implementarea coincide
+    public static int countOccurrencesWithArraylist(ArrayList<String> list, String key) {
+        int counter = 0;
+        for (Iterator<String> it = list.iterator(); it.hasNext(); ) { //initializare + conditia de oprire (hasNext())
+            if (it.next().equals(key)) {  //pasul are loc cand apelam next si ne returneaza obiectul in sine, pe obiectul returnat apelam equals() si comparam cu o cheie pe care o cautam
+                counter++;
+            }
+        }
+        return counter;
+    }
+
+    //Modifica doar semnatura metodei scrise anterior pentru a putea primi ca parametru atat un ArrayList cat si un LinkedList.
+    //Cum pot fi tratate cele 2 obiecte, dintr-o perspectiva comuna? Analizeaza paginile API pentru fiecare (Hint: inheritance).
+
+    //atat Arraylist cat si Linkedlist implementeaza interfata List, avem o interfata comunca prin care le putem referentia pe ambele prin upcasting, din perspectiva unei liste
+
+
+    //Putem utiliza interfata comuna List. Deoarece interfata List extinde Collection (i.e. o lista este o colectie de elemente cu cateva proprietati suplimentare), aceasta cuprinde metoda iterator().
+
+    public static int countOccurrencesOptimized(List<String> list, String key) {
+        int counter = 0;
+        for(String el : list) {
+            if (el.equals(key)) {
+                counter++;
+            }
+        }
+        return counter;
+    }
+
 }
+

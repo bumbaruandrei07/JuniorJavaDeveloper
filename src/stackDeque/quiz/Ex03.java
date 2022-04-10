@@ -1,4 +1,4 @@
-package StackDeque;
+package stackDeque.quiz;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -13,17 +13,17 @@ public class Ex03 {
         stack.push(3);
         stack.push(6);
         stack.push(7);
-        stack.push(0);
+        stack.push(0); //elementul top
 
-        while (stack.size() > 1) {
-            int op1 = stack.pop();
-            int op2 = stack.pop();
+        while (stack.size() > 1) { //atata timp cat avem cel putin 2 elemente in stiva noastra
+            int op1 = stack.pop(); //extrage varful stivei
+            int op2 = stack.pop(); //extrage elementul imediat sub varful stivei
             if (op1 < op2) {
                 stack.push(op1 + op2);
             } else {
                 stack.push(op1 - op2);
             }
         }
-        System.out.println(stack.peek());
+        System.out.println(stack.peek()); //afisam varful final al stivei
     }
 }

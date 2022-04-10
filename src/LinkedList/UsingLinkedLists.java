@@ -129,6 +129,8 @@ public class UsingLinkedLists {
     }
 
 
+
+
     public static void main(String[] args) {
         double[] values = {24.15, 24.15, 3.33, 1.01, 19.30, 16.11};
         Node<Double> listHead = makeList(values); //returneaza primul nod, transformând un array într-o listă simplu înlănțuită

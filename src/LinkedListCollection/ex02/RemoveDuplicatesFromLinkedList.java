@@ -1,27 +1,28 @@
-package LinkedListCollection.ex03;
+package LinkedListCollection.ex02;
 
-public class RemoveDuplicatesFromSortedList {
+public class RemoveDuplicatesFromLinkedList {
 
     /* function to remove duplicates from a
  sorted doubly linked list */
     public static void removeDuplicates(Node head) {
         /* if list is empty */
-        if (head == null)
+        if (head == null) {
             return;
-
+        }
         Node current = head;
 
         /* traverse the list till the last node */
         while (current.next != null) {
             /* Compare current node with next node */
-            if (current.data == current.next.data)
+            if (current.data == current.next.data) {
                 /* delete the node pointed to by
               ' current->next' */
                 deleteNode(head, current.next);
-
-                /* else simply move to the next node */
-            else
+            }
+            /* else simply move to the next node */
+            else {
                 current = current.next;
+            }
         }
 
     }
@@ -46,9 +47,9 @@ public class RemoveDuplicatesFromSortedList {
         }
         /* Change prev only if node to be deleted
        is NOT the first node */
-        if (del.prev != null)
+        if (del.prev != null) {
             del.prev.next = del.next;
-
+        }
     }
 
 
@@ -72,9 +73,9 @@ public class RemoveDuplicatesFromSortedList {
 
     /* Function to print nodes in a given doubly linked list */
     public static void printList(Node head) {
-        if (head == null)
+        if (head == null) {
             System.out.println("Doubly Linked list empty");
-
+        }
         while (head != null) {
             System.out.print(head.data + " ");
             head = head.next;

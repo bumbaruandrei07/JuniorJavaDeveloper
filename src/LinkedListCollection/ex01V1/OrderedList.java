@@ -1,4 +1,4 @@
-package LinkedListCollection.ex01;
+package LinkedListCollection.ex01V1;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -35,31 +35,9 @@ public class OrderedList<T extends Comparable<T>> {
     @Override
     public String toString() {
         String ret = "";
-        for(T el : elements) {
+        for (T el : elements) {
             ret += el + " ";
         }
         return ret;
-    }
-
-    public static void main(String[] args) {
-
-        OrderedList<String> orderedTownsList = new OrderedList<>();
-
-        // populate list with towns:
-        orderedTownsList.addInOrderedList("Suceava");
-        orderedTownsList.addInOrderedList("Cluj");
-        orderedTownsList.addInOrderedList("Targu Jiu");
-        orderedTownsList.addInOrderedList("Bucuresti");
-
-        System.out.println(orderedTownsList);
-
-        orderedTownsList.addInOrderedList("Brasov");
-        orderedTownsList.addInOrderedList("Bacau");
-        orderedTownsList.addInOrderedList("Suceava");
-        orderedTownsList.addInOrderedList("Bucuresti");
-        orderedTownsList.addInOrderedList("Brasov");
-        orderedTownsList.addInOrderedList("Brasov");
-
-        System.out.println(orderedTownsList);
     }
 }
