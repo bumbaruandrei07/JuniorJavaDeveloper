@@ -1,5 +1,6 @@
 package map;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -10,8 +11,10 @@ public class CarRentalSystem {
             new HashMap<String, String>(100, 0.5f); //default este 0,75, il suprscrie
 
     private HashMap<String, RentedCars> whoRented =
-            new HashMap<>(100, 0.5f);
+            new HashMap<String, RentedCars>(100, 0.5f);
 
+
+    private static ArrayList<String> cars = new ArrayList<>();
 
     private static String getPlateNo() {
         System.out.println("Introduceti numarul de inmatriculare:");
@@ -23,6 +26,45 @@ public class CarRentalSystem {
         return sc.nextLine();
     }
 
+    private static ArrayList<String> getCars() {
+
+        System.out.println("Introduceti numele masinii: ");
+        cars.add(sc.nextLine());
+        return cars;
+    }
+
+
+    //verificam existenta cheii ownerName in map-ul whoRented
+    private boolean isOwnerExisting(String ownerName) {
+        return whoRented.containsKey(ownerName);
+    }
+
+    private void addNewCar(String ownerName, RentedCars whoRentedCars) {
+
+        if (!isOwnerExisting(ownerName)) {
+            whoRented.put(ownerName, new RentedCars(getCars()));
+
+        } else {
+            System.out.println("Proprietarul exista deja in sistem!");
+        }
+    }
+
+    //get the car associated to an owner
+
+    private RentedCars getOwnerOfCar(String ownerName) {
+        if (!isOwnerExisting(ownerName)) {
+            return null;
+        } else {
+            return whoRented.get(ownerName);
+        }
+    }
+
+    private void getSize(String ownerName) {
+        if (isOwnerExisting(ownerName)) {
+            System.out.println("Numarul de masini inchiriate de catre proprietarul:" + ownerName + " este" + getOwnerOfCar(getOwnerName()));
+        }
+    }
+
     //daca o masina este inchiriata, returneaza rezultatul metodei containsKey, ne va spune daca este o pereche cu cheia plateNo data ca parametru
     //toate operatiile se realizeaza pe cheie, valoarea este asociata cheii
     // search for a key in hashtable
@@ -30,7 +72,7 @@ public class CarRentalSystem {
         return rentedCars.containsKey(plateNo);
     }
 
-    //cine a inchiriat masina
+    //cine a inchiriat masina, valoarea pentru cheie, cheia este plateNo, valoarea ownerName
     // get the value associated to a key
     private String getCarRent(String plateNo) {
         if (!isCarRent(plateNo)) {
@@ -46,7 +88,6 @@ public class CarRentalSystem {
         if (!isCarRent(plateNo)) {
             rentedCars.put(plateNo, ownerName);
             System.out.println("Masina a fost adaugata cu succes!");
-
         } else {
             System.out.println("Masina exista deja in sistem!");
         }

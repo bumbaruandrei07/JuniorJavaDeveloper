@@ -8,29 +8,42 @@ public class CountAndSay {
     public static String countAndSay(int n) {
 
         //creare arraylist initial la care adaugam primul element 1
-        ArrayList<Integer> seq = new ArrayList<>();
-        seq.add(1);
+        ArrayList<Integer> seq = new ArrayList<>(); //definim o secventa initiala pe care o folosim sa transformam, sa trecem de la un pas la altul
+        seq.add(1); //si aceasta secventa initiala o sa fie 1, pentru ca atat este countAndSay de 1, de la care pornim
 
-        //parcurgem de la 1 la nr. dat ca parametru in metoda
+        //iteram de la 1 la n ca sa ajungem practic pana la ultima secventa
         for (int step = 1; step < n; step++) {
             //creare arraylist auxiliar
-            ArrayList<Integer> nextSeq = new ArrayList<>();
+            ArrayList<Integer> nextSeq = new ArrayList<>(); //la fiecare pas o sa facem un nextSeq
+            //nextSeq reprezinta ce construim pentru pasul urmator, nextSeq este raspunsul pentru countAndSay de la pasul urmator
+            //daca avem countAndSay(1), cu nextSeq determinam countAndSay(2)
 
-            //initializare counter
-            int counter = 1;
 
-            //parcurgere arraylist initial
-            for (int i = 0; i < seq.size() - 1; i++) {
-                if (seq.get(i) == seq.get(i + 1)) { //daca elementul de pe pozitia i este egal cu elementul de pe pozitia urmatoare crestem counter-ul
-                    counter++;
+            int counter = 1; //pornim de la acel 1 simplu pe care il cunoastem
+
+            //sa gasim grupuri de cifre consecutive care au aceeasi valoare
+            for (int i = 0; i < seq.size() - 1; i++) { //mergem pana la seq.size() - 1 pentru ca o sa ne comparam cu cifra urmatoare
+                if (seq.get(i) == seq.get(i + 1)) { //daca cifra curenta este egala cu cifra urmatoare
+                    counter++; //crestem counter-ul
+                    //si facem treaba asta pana cand, la un moment dat, la o iteratie, nu o sa mai fie egale cele 2 cifre pe care le intalnim
+
                 } else {
-                    nextSeq.add(counter);
-                    nextSeq.add(seq.get(i));
-                    counter = 1;
+                    nextSeq.add(counter);  // si in nextSeq o sa adaugam ce au insemnat ele
+                    //daca am gasit 3, counter-ul meu a fost 3, si aceste cifre au fost toate 1 de exemplu, noi aici adaugam 3, care e counter-ul
+                    nextSeq.add(seq.get(i)); // si dupa adaugam cifra in sine
+                    //daca am 1 1 1 , acest algortim o sa ne puna 3 1
+                    counter = 1; //resetam counter-ul pentru ca trecem la o noua iteratie
+
                 }
             }
-            nextSeq.add(counter);
-            nextSeq.add(seq.get(seq.size() - 1));
+            //ideea e ca ultima secventa nu are cu ce sa o mai comparam ca sa o invalidam si sa putem sa o salvam si atunci mai trebuie sa facem un pas
+
+            //dupa toata iteratia mai trebuie sa facem un pas, aici ajungem cand suntem la ultimul element 
+            nextSeq.add(counter); //adaugam counter-ul curent
+            nextSeq.add(seq.get(seq.size() - 1)); //adaugam din ce a fost formata ultima secventa
+            //practic asa construim secventa urmatoare
+
+            //inlocuim secventa curenta cu secventa urmatoare si o luam de la capat
             seq = nextSeq;
         }
 

@@ -17,7 +17,12 @@ package subiecteExamen1;
  * Exemple:
  * 12 < 1 + 2 + 3 + 4 + 6
  * 18 < 1 + 2 + 3 + 6 + 9
+ *
+ * Operatori aritmetici
+ *
+ *
  */
+
 public class Ex01 {
 
     public static int type(int n) {

@@ -12,7 +12,7 @@ public class CircularQueue {
     private ArrayList<Integer> queue = new ArrayList<Integer>();
 
     // Constructor
-    CircularQueue(int size) {
+   private CircularQueue(int size) {
         this.size = size;
         this.front = this.rear = -1;
     }

@@ -1,0 +1,28 @@
+1. A/F ?
+I. O functie de hash este atat valida cat si performanta daca produce valori hash diferite pentru oricare 2 elemente, fie acestea si egale.
+Fals
+
+II. Performanta unui dictionar (implementat printr-o tabela de dispersie) scade odata cu cresterea numarului de coliziuni.
+Adevarat
+
+2. A/F?
+I. inserarea unui nou element - Adevarat
+II. inserarea unui nou element la inceputul dictionarului - Fals, nu avem inceput, sfarsit, e doar inserare
+III. cautarea unui element dupa cheie (key) - Adevarat
+IV. cautarea unui element dupa valoare (value) - fals, nu are sens, nu e specific dictionarului, specific este sa cautam o cheie dupa o valoare, poti sa cauti si dupa valoare dar o sa fie in O(n)
+ Valoarea asociata cheii
+V. inserarea mai multor elemente care au aceeasi valoare (dar chei diferite). - adevarat
+
+
+3. Atunci cand introducem un nou element (key, value) in dictionar, iar cheia deja exista in tabela:
+vom actualiza valoarea corespunzatoare cheii (deja existente in tabela) cu noua valoare din perechea (key, value)
+- face practic un update
+
+daca exista deja cheia, nu mai putem adauga noua pereche (key, value), deoarece dictionarul contine deja acea cheie cu o valoare asociata.
+Partial adevarat, nu putem adauga inca o data o pereche de genul acesta, dar trebuie sa actualizam perechea existenta
+
+4.I. Intr-o tabela de dispersie, unde coliziunile sunt tratate folosindu-se array-uri si avand o functie de hash care returneaza aceeasi valoare indiferent de element, cautarea unei chei se va realiza in timp liniar (O(n)).
+Adevarat, daca hash ne intoarce aceeasi valoare o sa introducem toate elementele in acelasi bucket, noi in interiorul unui bucket suntem in interiorul unei liste simple si nu putem cauta mai usor decat in timp liniar
+II. Daca am dispune de o functie hash ideala, atunci in dictionar nu ar aparea niciodata coliziuni, indiferent de numarul de elemente introduse.
+Fals - vezi cazul - functia ideala si array de dimensiune limitat
+

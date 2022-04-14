@@ -8,9 +8,12 @@ package TrickyProblems.interview;
 public class DoWhile {
     public static void main(String[] args) {
         int i = 2;
+        int counter = 0;
         do {
             System.out.println(i);
             i += i;
+           ++counter;
         } while (i < 10);
+        System.out.println("Valoare counter: " + counter);
     }
 }
