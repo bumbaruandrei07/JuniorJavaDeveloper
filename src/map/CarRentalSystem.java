@@ -26,31 +26,28 @@ public class CarRentalSystem {
         return sc.nextLine();
     }
 
-    private static ArrayList<String> getCars() {
-
-        System.out.println("Introduceti numele masinii: ");
-        cars.add(sc.nextLine());
-        return cars;
-    }
-
-
     //verificam existenta cheii ownerName in map-ul whoRented
     private boolean isOwnerExisting(String ownerName) {
         return whoRented.containsKey(ownerName);
     }
 
-    private void addNewCar(String ownerName, RentedCars whoRentedCars) {
-
+    private void addNewCar(String ownerName, String vehicleName) {
         if (!isOwnerExisting(ownerName)) {
-            whoRented.put(ownerName, new RentedCars(getCars()));
+            RentedCars newRentedCar = new RentedCars();
+            newRentedCar.addCar(vehicleName);
+            whoRented.put(ownerName, newRentedCar);
+            System.out.println("Proprietarul a fost adaugat cu succes!");
 
         } else {
-            System.out.println("Proprietarul exista deja in sistem!");
+            RentedCars rentedCars2;
+            rentedCars2 = whoRented.get(ownerName);
+            rentedCars2.addCar(vehicleName);
+            System.out.println("Masina prorpietarului existent deja in sistem a fost adaugata cu succes!");
         }
     }
 
-    //get the car associated to an owner
 
+    //get the car associated to an owner
     private RentedCars getOwnerOfCar(String ownerName) {
         if (!isOwnerExisting(ownerName)) {
             return null;
@@ -59,9 +56,13 @@ public class CarRentalSystem {
         }
     }
 
-    private void getSize(String ownerName) {
+    private int getSize(String ownerName) {
         if (isOwnerExisting(ownerName)) {
-            System.out.println("Numarul de masini inchiriate de catre proprietarul:" + ownerName + " este" + getOwnerOfCar(getOwnerName()));
+            System.out.print("Numarul de masini inchiriate de catre proprietarul " + ownerName + " este ");
+            return whoRented.get(ownerName).getSize();
+        } else {
+            System.out.println("Proprietarul nu este inregistrat in sistem!");
+            return 0;
         }
     }
 
@@ -129,6 +130,9 @@ public class CarRentalSystem {
                     rentCar(getPlateNo(), getOwnerName());
                     newSize++;
                     break;
+                case "add2":
+                    addNewCar(getOwnerName(), getPlateNo());
+                    break;
                 case "check":
                     System.out.println(isCarRent(getPlateNo()));
                     break;
@@ -140,10 +144,10 @@ public class CarRentalSystem {
                     System.out.println(getCarRent(getPlateNo()));
                     break;
                 case "getCarsNo":
-
+                    System.out.println(getSize(getOwnerName()));
                     break;
                 case "getCarsList":
-                    System.out.println();
+                    System.out.println(getOwnerOfCar(getOwnerName()));
                     break;
                 case "totalRented":
                     System.out.println("Numarul total de masini inchiriate in prezent este: " + newSize);

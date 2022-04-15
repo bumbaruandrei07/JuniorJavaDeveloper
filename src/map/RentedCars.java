@@ -11,6 +11,18 @@ public class RentedCars {
     private static Scanner sc = new Scanner(System.in);
     private ArrayList<String> cars;
 
+    public void addCar(String vehicleName) {
+        cars.add(vehicleName);
+    }
+
+    public int getSize(){
+        return cars.size();
+    }
+
+    public RentedCars() {
+        this.cars = new ArrayList<>();
+    }
+
     public RentedCars(ArrayList<String> cars) {
         this.cars = cars;
     }
@@ -25,8 +37,12 @@ public class RentedCars {
         return sc.nextLine();
     }
 
+    @Override
+    public String toString() {
+        return "Masinile inchiriate de catre proprietar sunt: " + this.cars;
+    }
 
-//    private static boolean isCarRent(String vehicleName) {
+    //    private static boolean isCarRent(String vehicleName) {
 //        return cars.contains(vehicleName);
 //    }
 //
