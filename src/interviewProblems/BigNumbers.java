@@ -1,15 +1,10 @@
-package LinkedListCollection.ex04;
+package interviewProblems;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
+
 public class BigNumbers {
-
-    //    public LinkedList<Integer> sum(LinkedList<Integer> op1, LinkedList<Integer> op2) {
-//
-//
-//    }
-
 
     public int[] sum(int[] op1, int[] op2) {
         ArrayList<Integer> op1Arr = reverseArray(op1);
@@ -80,7 +75,6 @@ public class BigNumbers {
         return transformedArr;
     }
 
-
     public static void main(String[] args) {
         int noTests = 6;
 
@@ -93,11 +87,11 @@ public class BigNumbers {
 
         int total = 0;
         for (int i = 0; i < noTests; i++) {
-            System.out.println("Test " + (i + 1) + ":");
+            System.out.println("Test " + (i+1) + ":");
             String op1S = noToString(op1[i]);
             String op2S = noToString(op2[i]);
 
-            interviewProblems.BigNumbers bn = new interviewProblems.BigNumbers();
+            BigNumbers bn = new BigNumbers();
             int[] rez = bn.sum(op1[i], op2[i]);
 
             String rezS = noToString(rez);
@@ -115,10 +109,9 @@ public class BigNumbers {
 
     private static String noToString(int[] no) {
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < no.length; i++) {
+        for(int i = 0; i < no.length; i++) {
             sb.append(no[i]);
         }
         return sb.toString();
     }
 }
-

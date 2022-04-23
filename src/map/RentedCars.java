@@ -27,20 +27,15 @@ public class RentedCars {
         this.cars = cars;
     }
 
-    private static String getOwnerName() {
-        System.out.println("Introduceti numele proprietarului:");
-        return sc.nextLine();
-    }
-
-    private static String getVehicleName() {
-        System.out.println("Introduceti numele masinii:");
-        return sc.nextLine();
-    }
-
     @Override
     public String toString() {
         return "Masinile inchiriate de catre proprietar sunt: " + this.cars;
     }
+
+
+
+
+
 
     //    private static boolean isCarRent(String vehicleName) {
 //        return cars.contains(vehicleName);

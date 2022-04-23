@@ -1,6 +1,6 @@
 package LambdaExpressions.anonymousClass_VS_LambdaExpressions;
 
-import LambdaExpressions.IAlsoFunctional;
+import LambdaExpressions.StreamsAndLambda.IAlsoFunctional;
 
 //TODO - Clasa AnonymousExample.java implementeaza interfata IAlsoFuncional folosind o clasa anonima,
 // care poate stoca informatii prin membrii sai. Acest aspect nu poate fi obtinut prin intermediul expresiilor lambda:

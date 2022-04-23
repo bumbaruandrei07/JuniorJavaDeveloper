@@ -1,8 +1,8 @@
 package map;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Scanner;
+import exceptions.course.NullPointerException;
+
+import java.util.*;
 
 public class CarRentalSystem {
 
@@ -16,14 +16,28 @@ public class CarRentalSystem {
 
     private static ArrayList<String> cars = new ArrayList<>();
 
-    private static String getPlateNo() {
-        System.out.println("Introduceti numarul de inmatriculare:");
-        return sc.nextLine();
+    private static String getPlateNo() throws InputMismatchException {
+        System.out.println("Introducere numar inmatriculare: ");
+        String search = sc.nextLine();
+        //daca stringul este format doar din cifre
+        if (search.matches("[0-9]+")) {
+            throw new InputMismatchException("Numele de inmatriculare nu poate fi format doar din cifre!");
+        }
+        return search;
     }
 
-    private static String getOwnerName() {
+    private static String getOwnerName() throws InputMismatchException {
         System.out.println("Introduceti numele proprietarului:");
-        return sc.nextLine();
+        String search = sc.nextLine();
+        //daca stringul este format doar din cifre
+        if (search.matches("[0-9]+")) {
+            throw new InputMismatchException("Numele proprietarului nu poate contine cifre!");
+        }
+        return search;
+    }
+
+    private int totalRented() {
+        return rentedCars.size();
     }
 
     //verificam existenta cheii ownerName in map-ul whoRented
@@ -46,25 +60,14 @@ public class CarRentalSystem {
         }
     }
 
-
-    //get the car associated to an owner
-    private RentedCars getOwnerOfCar(String ownerName) {
-        if (!isOwnerExisting(ownerName)) {
-            return null;
-        } else {
-            return whoRented.get(ownerName);
+    //get the cars associated to an owner
+    private RentedCars getOwnerOfCar(String ownerName) throws java.lang.NullPointerException {
+        if (!whoRented.containsKey(ownerName)) {
+            throw new java.lang.NullPointerException("Nu exista proprietarul in sistem!");
         }
+        return whoRented.get(ownerName);
     }
 
-    private int getSize(String ownerName) {
-        if (isOwnerExisting(ownerName)) {
-            System.out.print("Numarul de masini inchiriate de catre proprietarul " + ownerName + " este ");
-            return whoRented.get(ownerName).getSize();
-        } else {
-            System.out.println("Proprietarul nu este inregistrat in sistem!");
-            return 0;
-        }
-    }
 
     //daca o masina este inchiriata, returneaza rezultatul metodei containsKey, ne va spune daca este o pereche cu cheia plateNo data ca parametru
     //toate operatiile se realizeaza pe cheie, valoarea este asociata cheii
@@ -75,34 +78,49 @@ public class CarRentalSystem {
 
     //cine a inchiriat masina, valoarea pentru cheie, cheia este plateNo, valoarea ownerName
     // get the value associated to a key
-    private String getCarRent(String plateNo) {
+    private String getCarRent(String plateNo) throws RuntimeException {
         if (!isCarRent(plateNo)) {
-            return "Nu exista masina pentru care se cauta soferul";
-        } else {
-            return rentedCars.get(plateNo);
+            throw new RuntimeException("Masina nu exista in sistem!");
         }
+        return rentedCars.get(plateNo);
     }
 
     //adaugarea unei masini, adica a unei perechi<cheie,valoare>
     // add a new (key, value) pair
     private void rentCar(String plateNo, String ownerName) {
         if (!isCarRent(plateNo)) {
+            System.out.printf("Adaugare autoturism..." + "%nPlate No.: %s | Owner name: %s %n", plateNo, ownerName);
             rentedCars.put(plateNo, ownerName);
-            System.out.println("Masina a fost adaugata cu succes!");
+
+            //daca nu a mai inchiriat nicio masina
+            if (!isOwnerExisting(ownerName)) {
+                RentedCars listOfCars = new RentedCars(); //creez obiectul RentedCars care retine lista de masini inchiriate in prezent
+                listOfCars.addCar(plateNo); //adaugarea unei noi masini in obiectul creat
+                whoRented.put(ownerName, listOfCars); //salvarea asocierii dintre owner si lista lui de masini
+            } else {
+                whoRented.get(ownerName).addCar(plateNo);
+            }
         } else {
-            System.out.println("Masina exista deja in sistem!");
+            System.out.println("ERROR: Adaugarea autoturismului a esuat");
+            System.out.printf("Autoturismul cu numarul de inmatriculare " + " %s este inchiriat de catre %s.%n", plateNo, rentedCars.get(plateNo));
         }
     }
 
+    //obtinerea numarului de masini detinute de catre un proprietar
+    private int getCarsNo(String ownerName) throws java.lang.NullPointerException {
+        if (isCarRent(ownerName)) {
+            return whoRented.get(ownerName).getSize();
+        } else throw new java.lang.NullPointerException("Nu exista proprietarul in sistem!");
+    }
 
     //stergerea unei masini
     // remove an existing (key, value) pair
-    private void returnCar(String plateNo) {
+    private void returnCar(String plateNo) throws java.lang.NullPointerException {
         if (isCarRent(plateNo)) {
             rentedCars.remove(plateNo);
             System.out.println("Masina a fost eliminata din sistem cu succes!");
         } else {
-            System.out.println("Eroare: Masina nu exista in sistem!");
+            throw new java.lang.NullPointerException("Eroare: Masina nu exista in sistem!");
         }
     }
 
@@ -114,11 +132,12 @@ public class CarRentalSystem {
         System.out.println("getOwner     - Afiseaza proprietarul curent al masinii");
         System.out.println("quit         - Inchide aplicatia");
         System.out.println("totalRented  - Numarul total de masini inchiriate in prezent");
+        System.out.println("getCarsNo - Numarul de masini detinute de catre un proprietar");
+        System.out.println("getCarsList - Afiseaza lista de masini detinute de catre un proprietar");
     }
 
     public void run() {
         boolean quit = false;
-        int newSize = rentedCars.size();
         while (!quit) {
             System.out.println("Asteapta comanda: (help - Afiseaza lista de comenzi)");
             String command = sc.nextLine();
@@ -128,7 +147,6 @@ public class CarRentalSystem {
                     break;
                 case "add":
                     rentCar(getPlateNo(), getOwnerName());
-                    newSize++;
                     break;
                 case "add2":
                     addNewCar(getOwnerName(), getPlateNo());
@@ -138,19 +156,18 @@ public class CarRentalSystem {
                     break;
                 case "remove":
                     returnCar(getPlateNo());
-                    newSize--;
                     break;
                 case "getOwner":
                     System.out.println(getCarRent(getPlateNo()));
                     break;
                 case "getCarsNo":
-                    System.out.println(getSize(getOwnerName()));
+                    System.out.println(getCarsNo(getOwnerName()));
                     break;
                 case "getCarsList":
                     System.out.println(getOwnerOfCar(getOwnerName()));
                     break;
                 case "totalRented":
-                    System.out.println("Numarul total de masini inchiriate in prezent este: " + newSize);
+                    System.out.println("Numarul total de masini inchiriate in prezent este: " + totalRented());
                     break;
                 case "quit":
                     System.out.println("Aplicatia se inchide...");
@@ -163,8 +180,7 @@ public class CarRentalSystem {
         }
     }
 
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws NullPointerException {
         // create and run an instance (for test purpose)
         new CarRentalSystem().run();
 

@@ -13,7 +13,6 @@ public class MovingZerosToEnd {
                 counter++;
             }
         }
-
         while (counter < arr.length) {
             arr[counter] = 0;
             counter++;
