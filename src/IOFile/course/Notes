@@ -1,0 +1,15 @@
+Merged array algo:
+
+Java arraycopy() is the method of System class which belongs to java.lang package. It copies an array from the specified source array to the specified position of the destination array. The number of elements copied is equal to the length argument.
+
+public static void arraycopy(Object source, int source_position,
+Object destination, int destination_position, int length)
+Parameters
+
+source: It is a source array.
+source_position: Starting point in the source array.
+destination: It is a destination array.
+destination_position: Starting position in the destination array.
+length: The number of array elements to be copied
+
+It throws NullPointerException if the source or destination array is null. It also throws ArrayIndexOutOfBoundsException if:
