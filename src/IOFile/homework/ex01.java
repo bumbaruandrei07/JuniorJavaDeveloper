@@ -43,10 +43,9 @@ public class ex01 {
         } finally {
             try {
                 //Closing the resources
-
                 reader.close();
-
                 writer.close();
+                sc.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }

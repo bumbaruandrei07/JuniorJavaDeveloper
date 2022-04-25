@@ -1,4 +1,4 @@
-package LinkedListCollection.ex01V2;
+package LinkedListCollection.ex01;
 
 public class Town implements Comparable<Town> {
     private final String name;
@@ -9,7 +9,10 @@ public class Town implements Comparable<Town> {
         this.distance = distance;
     }
 
-    public int compareTo(Town newElement) {
+    public int compareTo(Town newElement) throws NullPointerException {
+        if(newElement == null){
+            throw new NullPointerException("The object doesn't exist!");
+        }
         if (distance == newElement.distance) {
             return 0;
         } else if (distance > newElement.distance) {

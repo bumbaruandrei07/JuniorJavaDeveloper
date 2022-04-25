@@ -1,10 +1,11 @@
-package LinkedListCollection.ex01V1;
+package LinkedListCollection.ex01;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
 
 public class OrderedList<T extends Comparable<T>> {
+
 
     private List<T> elements = new LinkedList<>();
 
@@ -39,5 +40,13 @@ public class OrderedList<T extends Comparable<T>> {
             ret += el + " ";
         }
         return ret;
+    }
+
+    public static void main(String[] args) {
+        OrderedList<Town> townOrderedList = new OrderedList<Town>();
+        townOrderedList.addInOrderedList(new Town("Bucuresti", 100));
+        townOrderedList.addInOrderedList(new Town("Iasi", 200));
+        townOrderedList.addInOrderedList(new Town("Sighisoara", 90));
+        System.out.println(townOrderedList);
     }
 }

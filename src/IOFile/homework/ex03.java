@@ -107,6 +107,7 @@ public class ex03 {
                 if (outputFile3 != null) {
                     outputFile3.close();
                 }
+                sc.close();
             } catch (IOException e) {
                 System.out.println("Exception raised when attempting to close the file");
                 e.printStackTrace();

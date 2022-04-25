@@ -47,7 +47,7 @@ public class ex02 {
 
                 reader.close();
                 writer.close();
-
+                sc.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
