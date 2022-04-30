@@ -43,4 +43,12 @@ public class Vehicle {
                 "\t\t - name: " + this.name
         );
     }
+
+
+
+    public static void main(String[] args){
+        Vehicle vehicle = new Vehicle("AASD", 0);
+        System.out.println(vehicle);
+    }
+
 }

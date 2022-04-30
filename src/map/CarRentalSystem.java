@@ -2,11 +2,14 @@ package map;
 
 import exceptions.course.NullPointerException;
 
+import java.io.*;
 import java.util.*;
 
-public class CarRentalSystem {
+public class CarRentalSystem implements Serializable {
 
+    private static final CarRentalSystem car = new CarRentalSystem();
     private static Scanner sc = new Scanner(System.in);
+    private static final long serialVersionUID = 1L;
     private HashMap<String, String> rentedCars = //primeste 2 parametri de tip, acestia sunt amandoi de tip string, dar ei pot sa difere
             new HashMap<String, String>(100, 0.5f); //default este 0,75, il suprscrie
 
@@ -108,7 +111,7 @@ public class CarRentalSystem {
 
     //obtinerea numarului de masini detinute de catre un proprietar
     private int getCarsNo(String ownerName) throws java.lang.NullPointerException {
-        if (isCarRent(ownerName)) {
+        if (whoRented.containsKey(ownerName)) {
             return whoRented.get(ownerName).getSize();
         } else throw new java.lang.NullPointerException("Nu exista proprietarul in sistem!");
     }
@@ -123,6 +126,42 @@ public class CarRentalSystem {
             throw new java.lang.NullPointerException("Eroare: Masina nu exista in sistem!");
         }
     }
+
+    public static void writeCarsRentedToBinaryFile(CarRentalSystem carRentalSystem) throws IOException {
+        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream("rentedCars.dat")))) {
+            objectOutputStream.writeObject(carRentalSystem);
+        }
+    }
+
+    public static CarRentalSystem readCarsRentedFromBinaryFile() throws IOException {
+        CarRentalSystem carRentalSystem = null;
+        try (ObjectInputStream binaryFileIn = new ObjectInputStream(
+                new BufferedInputStream(new FileInputStream("rentedCars.dat")))) {
+            carRentalSystem = (CarRentalSystem) binaryFileIn.readObject();
+        } catch (ClassNotFoundException e) {
+            System.out.println("A class not found exception: " + e.getMessage());
+        }
+        return carRentalSystem;
+    }
+
+    private static void writeOwnersToBinaryFile(CarRentalSystem carRentalSystem) throws IOException {
+        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(
+                new BufferedOutputStream(new FileOutputStream("whoRented.dat")))) {
+            objectOutputStream.writeObject(carRentalSystem);
+        }
+    }
+
+    private HashMap<String, RentedCars> readWhoRentedCarsFromBinaryFile() throws IOException {
+
+        HashMap<String, RentedCars> whoRented = null;
+        try (ObjectInputStream binaryFileIn = new ObjectInputStream(new BufferedInputStream(new FileInputStream("whoRented.dat")))) {
+            whoRented = (HashMap<String, RentedCars>) binaryFileIn.readObject();
+        } catch (ClassNotFoundException e) {
+            System.out.println("A class not found exception: " + e.getMessage());
+        }
+        return whoRented;
+    }
+
 
     private static void printCommandsList() {
         System.out.println("help         - Afiseaza aceasta lista de comenzi");
@@ -180,9 +219,4 @@ public class CarRentalSystem {
         }
     }
 
-    public static void main(String[] args) throws NullPointerException {
-        // create and run an instance (for test purpose)
-        new CarRentalSystem().run();
-
-    }
 }

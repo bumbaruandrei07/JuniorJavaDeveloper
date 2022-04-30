@@ -20,6 +20,7 @@ public class BigNumbers {
         int overflow = 0;
 
         while (op1.size() != 0 && op2.size() != 0) {
+            //luam valoarea calculata de la final si o adaugam la inceput
             int sum = op1.removeLast() + op2.removeLast() + overflow;
             overflow = 0;
 
@@ -27,6 +28,7 @@ public class BigNumbers {
                 sum %= 10;
                 overflow = 1;
             }
+            //adaugam la inceput
             resultLinkedList.addFirst(sum);
         }
 

@@ -1,12 +1,13 @@
 package map;
 
 
+import java.io.Serializable;
 import java.util.*;
 
 //proprietarul este key
 //masina este value
 //un proprietar poate sa detina mai multe masini in acelasi timp
-public class RentedCars {
+public class RentedCars implements Serializable {
 
     private static Scanner sc = new Scanner(System.in);
     private ArrayList<String> cars;

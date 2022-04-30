@@ -17,7 +17,7 @@
  Raspuns : Fals ! ( hashcode si equals sunt in stransa legatura -> daca sunt egale atunci trebuie sa aiba si acelasi hashcode, cand suprasciem equals suprascriem si hashcode in concordanta cu implementarea din equals, dar este doar o recomandare!)
 
 
- V. Pentru clasa AppleTree, codul hash este calculat in functie de subsetul maxim de campuri posibil (luand in considerare implementarea metodei-pereche equals(Object).
+ V. Pentru clasa AppleTree, codul hash este calculat in functie de subsetul maxim de campuri posibile (luand in considerare implementarea metodei-pereche equals(Object).
 
     Toate fieldurile verificate in equals sunt folosite in calcularea hashcode-ul -> subsetul maximal de campuri posibile daca toate field-urile verificate in equals sunt folosite in calcularea hashcode-ului!
 

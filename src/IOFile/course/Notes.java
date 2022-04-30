@@ -5,6 +5,9 @@ import java.util.Scanner;
 
 public class Notes {
 
+    private static final Scanner sc = new Scanner(System.in);
+
+
     private static void bubbleSort(int[] arr) {
         int n = arr.length;
         boolean swapped;
@@ -23,6 +26,28 @@ public class Notes {
             }
         } while (swapped);
     }
+
+
+    private static void removeDuplicate(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == arr[i + 1]) {
+                arr[i] = arr[1 + 1];
+            }
+        }
+    }
+
+    private static void getArray(int[] arr) {
+        System.out.println("Introduceti elementele array-ului: ");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+    }
+
 
     private static void mergeArrays(int[] A, int[] B) {
 

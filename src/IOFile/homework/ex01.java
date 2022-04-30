@@ -36,8 +36,8 @@ public class ex01 {
             //Rewriting the input text file with newContent
 
             writer = new FileWriter(fileToBeModified);
-
             writer.write(newContent);
+
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

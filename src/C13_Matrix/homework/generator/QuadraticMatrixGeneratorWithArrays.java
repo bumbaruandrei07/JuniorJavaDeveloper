@@ -92,7 +92,7 @@ public class QuadraticMatrixGeneratorWithArrays {
 
         }
 
-
+        //we can set the central element if our matrix isn't quadratic
         if (matrixDimension % 2 == 1) {
             System.out.println("Enter the value for the central element of the matrix: "); //  central element : [n/2][n/2], the dimension of the matrix must be an odd (impar) number
             int centerValue = sc.nextInt();
