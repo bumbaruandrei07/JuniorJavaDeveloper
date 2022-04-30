@@ -1,5 +1,6 @@
 package map;
 
+import C13_Matrix.Ex;
 import exceptions.course.NullPointerException;
 
 import java.io.*;
@@ -7,7 +8,7 @@ import java.util.*;
 
 public class CarRentalSystem implements Serializable {
 
-    private static final CarRentalSystem car = new CarRentalSystem();
+
     private static Scanner sc = new Scanner(System.in);
     private static final long serialVersionUID = 1L;
     private HashMap<String, String> rentedCars = //primeste 2 parametri de tip, acestia sunt amandoi de tip string, dar ei pot sa difere
@@ -144,24 +145,14 @@ public class CarRentalSystem implements Serializable {
         return carRentalSystem;
     }
 
-    private static void writeOwnersToBinaryFile(CarRentalSystem carRentalSystem) throws IOException {
-        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(
-                new BufferedOutputStream(new FileOutputStream("whoRented.dat")))) {
-            objectOutputStream.writeObject(carRentalSystem);
+    private void resetApp() {
+        try {
+            File file = new File("rentedCars.dat");
+            file.delete();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
-
-    private HashMap<String, RentedCars> readWhoRentedCarsFromBinaryFile() throws IOException {
-
-        HashMap<String, RentedCars> whoRented = null;
-        try (ObjectInputStream binaryFileIn = new ObjectInputStream(new BufferedInputStream(new FileInputStream("whoRented.dat")))) {
-            whoRented = (HashMap<String, RentedCars>) binaryFileIn.readObject();
-        } catch (ClassNotFoundException e) {
-            System.out.println("A class not found exception: " + e.getMessage());
-        }
-        return whoRented;
-    }
-
 
     private static void printCommandsList() {
         System.out.println("help         - Afiseaza aceasta lista de comenzi");
@@ -171,8 +162,9 @@ public class CarRentalSystem implements Serializable {
         System.out.println("getOwner     - Afiseaza proprietarul curent al masinii");
         System.out.println("quit         - Inchide aplicatia");
         System.out.println("totalRented  - Numarul total de masini inchiriate in prezent");
-        System.out.println("getCarsNo - Numarul de masini detinute de catre un proprietar");
-        System.out.println("getCarsList - Afiseaza lista de masini detinute de catre un proprietar");
+        System.out.println("getCarsNo    - Numarul de masini detinute de catre un proprietar");
+        System.out.println("getCarsList  - Afiseaza lista de masini detinute de catre un proprietar");
+        System.out.println("reset        - Sterge datele deja existente in sistem");
     }
 
     public void run() {
@@ -207,6 +199,10 @@ public class CarRentalSystem implements Serializable {
                     break;
                 case "totalRented":
                     System.out.println("Numarul total de masini inchiriate in prezent este: " + totalRented());
+                    break;
+                case "reset":
+                    resetApp();
+                    System.out.println("Stergerea datelor salvate in fisier a fost realizata cu succes!");
                     break;
                 case "quit":
                     System.out.println("Aplicatia se inchide...");
