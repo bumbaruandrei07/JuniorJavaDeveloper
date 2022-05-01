@@ -20,29 +20,29 @@ public class MergeTwoFiles {
             outputFile = new FileWriter("NumbersMerge.txt");
             int c = sc1.nextInt();
             int d = sc2.nextInt();
-            while (sc1.hasNextInt() && sc2.hasNextInt()) {
+            while (sc1.hasNext() && sc2.hasNext()) {
                 if (c < d) {
-                    outputFile.write(c);
+                    outputFile.write(Integer.toString(c) + " ");
                     sc1.nextLine();
                 } else if (c > d) {
-                    outputFile.write(d);
+                    outputFile.write(Integer.toString(d) + " ");
                     sc2.nextLine();
                 } else {
-                    outputFile.write(c);
-                    outputFile.write(d);
+                    outputFile.write(Integer.toString(c) + " ");
+                    outputFile.write(Integer.toString(d) + " ");
                     sc1.nextLine();
                     sc2.nextLine();
                 }
-                if (sc1.hasNextInt()) {
-                    outputFile.write(c);
-                    sc1.nextLine();
-                } else if (sc1.hasNextInt()) {
-                    outputFile.write(d);
-                    sc2.nextLine();
-                }
-                outputFile.flush();
             }
-
+            if (sc1.hasNext()) {
+                outputFile.write(Integer.toString(c) + " ");
+                sc1.nextLine();
+            }
+            if (sc2.hasNext()) {
+                outputFile.write(Integer.toString(d) + " ");
+                sc2.nextLine();
+            }
+            outputFile.flush();
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

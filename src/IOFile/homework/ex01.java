@@ -8,19 +8,13 @@ public class ex01 {
     private static final Scanner sc = new Scanner(System.in);
 
     private static void modifyFile(String filePath, String oldString, String newString) {
+
         File fileToBeModified = new File(filePath);
-
         StringBuilder oldContent = new StringBuilder();
-
-        BufferedReader reader = null;
-
         FileWriter writer = null;
 
-        try {
-            reader = new BufferedReader(new FileReader(fileToBeModified));
-
+        try (BufferedReader reader = new BufferedReader(new FileReader(fileToBeModified))) {
             //Reading all the lines of input text file into oldContent
-
             String line = reader.readLine();
 
             while (line != null) {
@@ -28,13 +22,10 @@ public class ex01 {
 
                 line = reader.readLine();
             }
-
             //Replacing oldString with newString in the oldContent
-
             String newContent = oldContent.toString().replaceAll(oldString, newString);
 
             //Rewriting the input text file with newContent
-
             writer = new FileWriter(fileToBeModified);
             writer.write(newContent);
 
@@ -43,7 +34,6 @@ public class ex01 {
         } finally {
             try {
                 //Closing the resources
-                reader.close();
                 writer.close();
                 sc.close();
             } catch (IOException e) {

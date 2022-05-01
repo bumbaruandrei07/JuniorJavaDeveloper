@@ -26,7 +26,7 @@ public abstract class Creatures implements ICreature, Comparable<Creatures> {
     }
 
 
-    //TODO COMPARARE A DOUA CREATURI FOLOSIND METODA ABILITITES
+    //TODO COMPARARE A DOUA CREATURI FOLOSIND METODA ABILITITES (prin delegare)
     @Override
     public int compareTo(Creatures other) {
         return this.abilities.compareTo(other.abilities);

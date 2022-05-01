@@ -8,16 +8,12 @@ public class ex02 {
     private static final Scanner sc = new Scanner(System.in);
 
     private static void modifyFile(String filePath, String oldString, String newString) {
+
         File fileToBeModified = new File(filePath);
-
         StringBuilder oldContent = new StringBuilder();
-
-        BufferedReader reader = null;
-
         FileWriter writer = null;
 
-        try {
-            reader = new BufferedReader(new FileReader(fileToBeModified));
+        try (BufferedReader reader = new BufferedReader(new FileReader(fileToBeModified))) {
 
             //Reading all the lines of input text file into oldContent
 
@@ -44,8 +40,6 @@ public class ex02 {
         } finally {
             try {
                 //Closing the resources
-
-                reader.close();
                 writer.close();
                 sc.close();
             } catch (IOException e) {

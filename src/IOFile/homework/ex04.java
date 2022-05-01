@@ -1,5 +1,6 @@
 package IOFile.homework;
 
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.InputMismatchException;
@@ -91,9 +92,10 @@ public class ex04 {
 
 
     public static void main(String[] args) throws IOException {
-        FileWriter outputFile = new FileWriter("results.txt");
+//        FileWriter outputFile = new FileWriter("results.txt");
         String[] arr = getArray();
-        try {
+        //optimizare : try-with-resources + utilizarea unui BufferedWriter
+        try(BufferedWriter outputFile = new BufferedWriter(new FileWriter("results.txt"))) {
             outputFile.write("The shortest string in the array: " + smallest(arr) +
                     "\n" + "The longest word in the array:  " + longest(arr) +
                     "\n" + "The first word in alphabetical order: " + getFirstAlphabeticalWord(arr) +
@@ -102,13 +104,8 @@ public class ex04 {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            try {
-                outputFile.close();
-                sc.close();
-                System.out.println("The data has been successfully saved");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            sc.close();
+            System.out.println("The data has been successfully saved");
         }
 
     }

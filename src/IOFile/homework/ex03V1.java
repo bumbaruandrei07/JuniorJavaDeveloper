@@ -1,13 +1,11 @@
 package IOFile.homework;
 
-import java.io.BufferedWriter;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ex03 {
+public class ex03V1 {
 
     private static final Scanner sc = new Scanner(System.in);
 
