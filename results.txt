@@ -1,0 +1,5 @@
+The shortest string in the array: ana
+The longest word in the array:  andrei
+The first word in alphabetical order: ana
+The last word in alphabetical order: andrei
+Total words number: 2

@@ -3,52 +3,64 @@ package IOFile.homework;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class MergeTwoFiles {
 
 
-    public static void main(String[] args) throws IOException {
-        FileWriter outputFile;
+    public static void main(String[] args) {
         Scanner sc1 = null;
         Scanner sc2 = null;
+        PrintWriter pw = null;
+        int c = 0, d = 0;
         try {
-            //citirea fisierului se realizeaza folosind o instanta a clasei Scanner si in loc de System.in pentru citirea de la consola,
-            // vom crea un FileReader ce primeste ca parametru numele fisierului din care vom citi
             sc1 = new Scanner(new FileReader("Numbers1.txt"));
             sc2 = new Scanner(new FileReader("Numbers2.txt"));
-            outputFile = new FileWriter("NumbersMerge.txt");
-            int c = sc1.nextInt();
-            int d = sc2.nextInt();
-            while (sc1.hasNext() && sc2.hasNext()) {
-                if (c < d) {
-                    outputFile.write(Integer.toString(c) + " ");
-                    sc1.nextLine();
-                } else if (c > d) {
-                    outputFile.write(Integer.toString(d) + " ");
-                    sc2.nextLine();
-                } else {
-                    outputFile.write(Integer.toString(c) + " ");
-                    outputFile.write(Integer.toString(d) + " ");
-                    sc1.nextLine();
-                    sc2.nextLine();
+            pw = new PrintWriter(new FileWriter("NumbersMerge.txt"));
+
+            if (sc1.hasNextInt() && sc2.hasNextInt()) {
+
+                c = sc1.nextInt();
+                d = sc2.nextInt();
+
+
+                while (sc1.hasNextInt() && sc2.hasNextInt()) {
+                    if (c < d) {
+                        pw.print(String.format("%d ", c));
+                        c = sc1.nextInt();
+                    } else if (c > d) {
+                        pw.print(String.format("%d ", d));
+                        d = sc2.nextInt();
+                    } else {
+                        pw.print(String.format("%d ", c));
+                        pw.print(String.format("%d ", d));
+                        c = sc1.nextInt();
+                        d = sc2.nextInt();
+                    }
                 }
             }
-            if (sc1.hasNext()) {
-                outputFile.write(Integer.toString(c) + " ");
-                sc1.nextLine();
+
+            while (sc1.hasNextInt()) {
+                c = sc1.nextInt();
+                pw.print(String.format("%d ", c));
             }
-            if (sc2.hasNext()) {
-                outputFile.write(Integer.toString(d) + " ");
-                sc2.nextLine();
+
+            while (sc2.hasNext()) {
+                d = sc2.nextInt();
+                pw.print(String.format("%d ", d));
             }
-            outputFile.flush();
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (sc1 != null && sc2 != null) {
+            if (sc1 != null) {
                 sc1.close();
+            }
+            if (sc2 != null) {
                 sc2.close();
+            }
+            if (pw != null) {
+                pw.close();
             }
         }
     }

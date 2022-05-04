@@ -12,10 +12,11 @@ public abstract class Creatures implements ICreature, Comparable<Creatures> {
         this.score = score;
     }
 
+
     @Override
     public void updateScore(long amount) throws NumberFormatException {
         if (amount < 0) {
-            throw new NumberFormatException("Expecting positive bonus value, got: <AMOUNT>");
+            throw new NumberFormatException("Expecting positive bonus value, got:" + amount);
         }
         this.score += amount;
     }
@@ -30,5 +31,12 @@ public abstract class Creatures implements ICreature, Comparable<Creatures> {
     @Override
     public int compareTo(Creatures other) {
         return this.abilities.compareTo(other.abilities);
+    }
+
+    @Override
+    public String toString() {
+        return "Nickname:" + this.nickname + "\n"
+                + "Score: " + this.score + "\n"
+                + "Abilities: Player has a power of: " + this.abilities;
     }
 }

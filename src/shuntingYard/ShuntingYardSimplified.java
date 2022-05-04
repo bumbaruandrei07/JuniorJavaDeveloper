@@ -12,10 +12,15 @@ public class ShuntingYardSimplified {
             if (s.equals("/") || s.equals("*") || s.equals("+") || s.equals("-")) {
                 int a = st.pop();
                 int b = st.pop();
-                if (s.equals("/")) st.push((int) b / a);
-                else if (s.equals("*")) st.push(a * b);
-                else if (s.equals("+")) st.push(a + b);
-                else if (s.equals("-")) st.push(b - a);
+                if (s.equals("/")) {
+                    st.push((int) b / a);
+                } else if (s.equals("*")) {
+                    st.push(a * b);
+                } else if (s.equals("+")) {
+                    st.push(a + b);
+                } else if (s.equals("-")) {
+                    st.push(b - a);
+                }
 
             } else st.push(Integer.parseInt(s));
         }

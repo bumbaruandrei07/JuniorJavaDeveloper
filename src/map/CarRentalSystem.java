@@ -8,7 +8,6 @@ import java.util.*;
 
 public class CarRentalSystem implements Serializable {
 
-
     private static Scanner sc = new Scanner(System.in);
     private static final long serialVersionUID = 1L;
     private HashMap<String, String> rentedCars = //primeste 2 parametri de tip, acestia sunt amandoi de tip string, dar ei pot sa difere
@@ -145,7 +144,13 @@ public class CarRentalSystem implements Serializable {
         return carRentalSystem;
     }
 
-    private void resetApp() {
+    private void clearCache() {
+        whoRented.clear();
+        rentedCars.clear();
+    }
+
+
+    private void deleteFile() {
         try {
             File file = new File("rentedCars.dat");
             file.delete();
@@ -164,7 +169,8 @@ public class CarRentalSystem implements Serializable {
         System.out.println("totalRented  - Numarul total de masini inchiriate in prezent");
         System.out.println("getCarsNo    - Numarul de masini detinute de catre un proprietar");
         System.out.println("getCarsList  - Afiseaza lista de masini detinute de catre un proprietar");
-        System.out.println("reset        - Sterge datele deja existente in sistem");
+        System.out.println("deleteFile   - Sterge fisierul ce contine datele salvate in sistem");
+        System.out.println("reset        - Sterge datele din sistem");
     }
 
     public void run() {
@@ -200,8 +206,12 @@ public class CarRentalSystem implements Serializable {
                 case "totalRented":
                     System.out.println("Numarul total de masini inchiriate in prezent este: " + totalRented());
                     break;
+                case "deleteFile":
+                    deleteFile();
+                    System.out.println("Stergerea fisierului ce contine datele a fost realizata cu succes!");
+                    break;
                 case "reset":
-                    resetApp();
+                    clearCache();
                     System.out.println("Stergerea datelor salvate in fisier a fost realizata cu succes!");
                     break;
                 case "quit":
@@ -214,5 +224,4 @@ public class CarRentalSystem implements Serializable {
             }
         }
     }
-
 }

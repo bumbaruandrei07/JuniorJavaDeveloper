@@ -26,5 +26,4 @@ public class TestQueue {
             System.out.println(theQueue.servePerson());
         }
     }
-
 }

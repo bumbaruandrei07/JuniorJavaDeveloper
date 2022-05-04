@@ -14,5 +14,6 @@ public class Runner {
         carRentalSystem.run();
         CarRentalSystem.writeCarsRentedToBinaryFile(carRentalSystem);
 
+
     }
 }

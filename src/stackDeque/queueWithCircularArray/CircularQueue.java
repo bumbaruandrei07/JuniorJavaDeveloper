@@ -8,7 +8,7 @@ public class CircularQueue {
     // Declaring the class variables.
     private int size, front, rear;
 
-    // Declaring array list of integer type.
+    //    // Declaring array list of integer type.
     private ArrayList<Integer> queue = new ArrayList<Integer>();
 
     // Constructor
@@ -49,12 +49,11 @@ public class CircularQueue {
         }
     }
 
-    // Function to dequeue an element
-// form th queue.
+    // Function to dequeue an element form the queue.
     public int deQueue() {
         int temp;
 
-        // Condition for empty queue.
+        // Condition for empty queue
         if (front == -1) {
             System.out.print("Queue is Empty");
 
