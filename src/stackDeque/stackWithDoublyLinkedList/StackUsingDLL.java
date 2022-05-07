@@ -2,22 +2,25 @@ package stackDeque.stackWithDoublyLinkedList;
 
 public class StackUsingDLL {
 
+    //componeneta de tipul doubly linked list ce ca fi folosita pentru implementarea stivei
     private DLL list = null;
 
+    //constructor
     public StackUsingDLL() {
         this.list = new DLL();
     }
-
+    //metoda pentru adaugare
     public void push(int data) {
         list.add(data);
         System.out.println(data + " inserted into stack");
     }
-
+    //metoda pentru stergerea unui element din stiva
     public void pop() {
         if (isEmpty()) {
             System.out.println("Stack is Empty");
             return;
         }
+        //get the peek of stack
         int data = peek();
         list.remove(size() - 1);
         System.out.println(data + " removed from stack");
@@ -60,5 +63,4 @@ public class StackUsingDLL {
         System.out.println("Is Stack EMpty : " + s.isEmpty());
 
     }
-
 }

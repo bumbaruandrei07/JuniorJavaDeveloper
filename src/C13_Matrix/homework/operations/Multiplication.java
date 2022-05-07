@@ -32,7 +32,6 @@ public class Multiplication {
 
         // Inmultire : numarul de coloane a primei matrice trebuie sa fie egal cu numarul de linii a celei de-a doua matrice.
 
-
         System.out.println("Enter the elements of matrix A: ");
         for (int i = 0; i < rowsA; i++) {
             for (int j = 0; j < columnsA; j++) {

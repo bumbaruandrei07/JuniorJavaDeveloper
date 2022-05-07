@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class ex04 {
+public class ex03 {
 
     private static final Scanner sc = new Scanner(System.in);
 

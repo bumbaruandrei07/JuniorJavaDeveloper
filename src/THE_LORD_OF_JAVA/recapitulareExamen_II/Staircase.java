@@ -1,4 +1,4 @@
-package recapitulareExamen_II;
+package THE_LORD_OF_JAVA.recapitulareExamen_II;
 
 public class Staircase {
 

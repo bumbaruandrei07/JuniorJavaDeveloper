@@ -36,7 +36,8 @@ public class CountAndSay {
 
                 }
             }
-            //ideea e ca ultima secventa nu are cu ce sa o mai comparam ca sa o invalidam si sa putem sa o salvam si atunci mai trebuie sa facem un pas
+            //ideea e ca ultima secventa nu are cu ce sa o mai comparam ca sa o invalida
+            // m si sa putem sa o salvam si atunci mai trebuie sa facem un pas
 
             //dupa toata iteratia mai trebuie sa facem un pas, aici ajungem cand suntem la ultimul element 
             nextSeq.add(counter); //adaugam counter-ul curent
@@ -53,7 +54,6 @@ public class CountAndSay {
         }
         return sb.toString();
     }
-
     public static void main(String[] args) {
         System.out.println(countAndSay(1));
         System.out.println(countAndSay(2));
@@ -61,7 +61,6 @@ public class CountAndSay {
         System.out.println(countAndSay(4));
         System.out.println(countAndSay(5));
         System.out.println(countAndSay(15));
-
 
         ArrayList<Integer> arrayList1 = new ArrayList<>();
         arrayList1.add(1);
@@ -71,7 +70,5 @@ public class CountAndSay {
         arrayList2.add(3);
         arrayList1 = arrayList2; //mutam elementele din 2 in 1, array-ul 1 va avea elementele celui de-al doilea array
         System.out.println(Arrays.asList(arrayList1));
-
-
     }
 }

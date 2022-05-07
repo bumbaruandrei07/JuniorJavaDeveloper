@@ -11,11 +11,13 @@ public class Main {
         teraCreature.move(10); //   OK - call the 'Terrestrial'-overridden method 'move(int)'
         teraCreature.fight(); // OK - call the 'Terrestrial'-specific method 'fight()'
         System.out.println();
-//Desi atunci cand referim un animal terestru printr-un parinte (ex: Animal, Object) nu mai putem accesa anumite metode / campuri specifice obiectului,
+
+    //Desi atunci cand referim un animal terestru printr-un parinte (ex: Animal, Object) nu mai putem accesa anumite metode / campuri specifice obiectului,
 // putem oricand sa referim obiectul din nou cu o referinta Terrestrial (i.e. prin downcasting) si sa accesam intreaga functionalitate.
 // Case I - Upcasting:
-// We can treat the object 'Reptiles' as an 'Animal', by
+// We can treat the object 'animalRef' as an 'Animal', by
 // referring the object using an 'Animal' reference
+
         Animal animalRef = teraCreature; // upcasting
         animalRef.move(10); // OK - call the 'Terrestrial'-overridden method 'move(int)'
 //        animalRef.fight(); // ERROR - even if the object is a 'Terrestrial' and implicitly

@@ -7,7 +7,8 @@ public class BinarySearch1 {
     public static int binarySearchI(int[] sortedList, int key) {
         // setam capetele si din dreapta, cautam in intreg array-ul
         int left = 0, right = sortedList.length - 1;
-        //conditie de oprire: capatul din stanga sa fie mai mic sau egal decat cel din dreapta, daca cele doua capete se invserseaza, atunci oprim cautarea, nu am gasit elementul
+        //conditie de oprire: capatul din stanga sa fie mai mic sau egal decat cel din dreapta,
+        // daca cele doua capete se invserseaza, atunci oprim cautarea, nu am gasit elementul
         while (left <= right) {
             int middle = (left + right) / 2; //calculam elementul din mijloc
             if (key == sortedList[middle]) { //daca este egal cu cel din mijloc il returnez
@@ -30,6 +31,5 @@ public class BinarySearch1 {
         System.out.println(binarySearchI(array, key)); // output = -1
         System.out.println();
         System.out.println(binarySearchI(array, key2)); // output = 2 (2 means the location of the key in my array)
-
     }
 }

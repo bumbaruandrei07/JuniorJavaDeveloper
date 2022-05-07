@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ex03V1 {
+public class FillFileAscending {
 
     private static final Scanner sc = new Scanner(System.in);
 

@@ -31,6 +31,4 @@ public class JewelsAndStonesHashSet {
         System.out.println(numJewelsInStones("z", "ZZ"));
         System.out.println(numJewelsInStones("Oo", "OOOo"));
     }
-
-
 }

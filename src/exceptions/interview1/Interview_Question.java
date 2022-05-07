@@ -1,6 +1,6 @@
-package exceptions.interview;
+package exceptions.interview1;
 
-public class ADP_Question {
+public class Interview_Question {
     public static void main (String[] args)
     {
         try

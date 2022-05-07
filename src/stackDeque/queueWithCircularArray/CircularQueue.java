@@ -5,28 +5,27 @@ import java.util.ArrayList;
 
 public class CircularQueue {
 
-    // Declaring the class variables.
+
     private int size, front, rear;
 
-    //    // Declaring array list of integer type.
     private ArrayList<Integer> queue = new ArrayList<Integer>();
 
     // Constructor
-   private CircularQueue(int size) {
+    private CircularQueue(int size) {
         this.size = size;
         this.front = this.rear = -1;
     }
 
-    // Method to insert a new element in the queue.
+    //metoda pentru adaugarea unui element nou in coada
     public void enQueue(int data) {
 
-        // Condition if queue is full.
+        // daca dimensiunea cozii este plina
         if ((front == 0 && rear == size - 1) ||
                 (rear == (front - 1) % (size - 1))) {
             System.out.print("Queue is Full");
         }
 
-        // condition for empty queue.
+        // daca coada este goala
         else if (front == -1) {
             front = 0;
             rear = 0;
@@ -37,33 +36,31 @@ public class CircularQueue {
         } else {
             rear = (rear + 1);
 
-            // Adding a new element if
+            //adaugam un nou element daca front este mai mic sau egal decat rear (back)
             if (front <= rear) {
                 queue.add(rear, data);
             }
 
-            // Else updating old value
+            // daca nu atunci doar actualizam vechea valoare din coada
             else {
                 queue.set(rear, data);
             }
         }
     }
 
-    // Function to dequeue an element form the queue.
+    //metoda pentru a extrage un element din coada si a-l returna
     public int deQueue() {
         int temp;
 
-        // Condition for empty queue
+        // daca coada este goala
         if (front == -1) {
             System.out.print("Queue is Empty");
-
-            // Return -1 in case of empty queue
             return -1;
         }
-
+        //variabila preia primul elementul front al cozii
         temp = queue.get(front);
 
-        // Condition for only one element
+        // daca coada contine doar un element atunci front = rear
         if (front == rear) {
             front = -1;
             rear = -1;
@@ -73,29 +70,27 @@ public class CircularQueue {
             front = front + 1;
         }
 
-        // Returns the dequeued element
+        // returnam elementul extras
         return temp;
     }
 
-    // Method to display the elements of queue
+    // metoda pentru afisarea elementelor cozii
     public void displayQueue() {
 
-        // Condition for empty queue.
+        // daca coada este goala
         if (front == -1) {
             System.out.print("Queue is Empty");
             return;
         }
 
-        // If rear has not crossed the max size
-        // or queue rear is still greater then
-        // front.
+//       Dacă spatele nu a depasit dimensiunea maxima
+//        sau daca rear este mai mare sau egal decat front
         System.out.print("Elements in the " +
                 "circular queue are: ");
 
         if (rear >= front) {
 
-            // Loop to print elements from
-            // front to rear.
+           //afisam elementele de la front pana la rear
             for (int i = front; i <= rear; i++) {
                 System.out.print(queue.get(i));
                 System.out.print(" ");
@@ -103,19 +98,16 @@ public class CircularQueue {
             System.out.println();
         }
 
-        // If rear crossed the max index and
-        // indexing has started in loop
+       // Dacă spatele a depasit indicele maxim
         else {
 
-            // Loop for printing elements from
-            // front to max size or last index
+            //afisarea elementelor de la front la dimensiunea cozii
             for (int i = front; i < size; i++) {
                 System.out.print(queue.get(i));
                 System.out.print(" ");
             }
 
-            // Loop for printing elements from
-            // 0th index till rear position
+           //afisarea elementelor de la 0 la rear
             for (int i = 0; i <= rear; i++) {
                 System.out.print(queue.get(i));
                 System.out.print(" ");
@@ -124,11 +116,8 @@ public class CircularQueue {
         }
     }
 
-    // Driver code
     public static void main(String[] args) {
 
-        // Initialising new object of
-        // CircularQueue class.
         CircularQueue q = new CircularQueue(5);
 
         q.enQueue(14);
@@ -140,7 +129,7 @@ public class CircularQueue {
 
         int x = q.deQueue();
 
-        // Checking for empty queue.
+        // verificam daca coada este goala
         if (x != -1) {
             System.out.print("Deleted value = ");
             System.out.println(x);
@@ -148,7 +137,7 @@ public class CircularQueue {
 
         x = q.deQueue();
 
-        // Checking for empty queue.
+        // verificam daca coada este goala
         if (x != -1) {
             System.out.print("Deleted value = ");
             System.out.println(x);

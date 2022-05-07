@@ -13,7 +13,8 @@ import java.util.Scanner;
 /**
  * Sa consideram un program care are complexitatea temporala si spatiala O(n2):
  * <p>
- * Scrie un program care genereaza o matrice patratica, bordata cu valorile citite de la tastatura. Se va citi initial numarul de elemente urmat de fiecare valoare, in ordine.
+ * Scrie un program care genereaza o matrice patratica, bordata cu valorile citite de la tastatura.
+ * Se va citi initial numarul de elemente urmat de fiecare valoare, in ordine.
  * Bordarea se face dinspre exteriorul matricei spre interior.
  * O(1) adaugat la cv este useless, nu modfica ordinul
  */

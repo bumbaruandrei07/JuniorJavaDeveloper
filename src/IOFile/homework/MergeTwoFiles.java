@@ -8,46 +8,114 @@ import java.util.Scanner;
 
 public class MergeTwoFiles {
 
-
     public static void main(String[] args) {
         Scanner sc1 = null;
         Scanner sc2 = null;
         PrintWriter pw = null;
         int c = 0, d = 0;
+        boolean isLeftConsumed = true;
+        boolean isRightConsumed = true;
         try {
             sc1 = new Scanner(new FileReader("Numbers1.txt"));
             sc2 = new Scanner(new FileReader("Numbers2.txt"));
             pw = new PrintWriter(new FileWriter("NumbersMerge.txt"));
 
-            if (sc1.hasNextInt() && sc2.hasNextInt()) {
+            //Keep reading as long as both files have numbers left
+            while (sc1.hasNextInt() && sc2.hasNextInt()) {
 
-                c = sc1.nextInt();
-                d = sc2.nextInt();
+                //Reading the number from the first file only if this has been consumed or on the first read
+                if (isLeftConsumed) {
+                    c = sc1.nextInt();
+                    isLeftConsumed = false;
+                }
 
+                //Reading the number from the second file only if this has been consumed or on the first read
+                if (isRightConsumed) {
+                    d = sc2.nextInt();
+                    isRightConsumed = false;
+                }
 
-                while (sc1.hasNextInt() && sc2.hasNextInt()) {
-                    if (c < d) {
-                        pw.print(String.format("%d ", c));
-                        c = sc1.nextInt();
-                    } else if (c > d) {
-                        pw.print(String.format("%d ", d));
-                        d = sc2.nextInt();
-                    } else {
-                        pw.print(String.format("%d ", c));
-                        pw.print(String.format("%d ", d));
-                        c = sc1.nextInt();
-                        d = sc2.nextInt();
-                    }
+                if (c < d) {
+                    pw.print(String.format("%d ", c));
+                    isLeftConsumed = true;
+                } else if (c > d) {
+                    pw.print(String.format("%d ", d));
+                    isRightConsumed = true;
+                } else {
+                    pw.print(String.format("%d ", c));
+                    pw.print(String.format("%d ", d));
+                    isLeftConsumed = true;
+                    isRightConsumed = true;
                 }
             }
 
+            //Writing the remaining numbers from the first file
             while (sc1.hasNextInt()) {
-                c = sc1.nextInt();
+
+                //Reading the number from the first file only if this has been consumed or on the first read
+                if (isLeftConsumed) {
+                    c = sc1.nextInt();
+                    isLeftConsumed = false;
+                }
+
+                //If the last number from the second file hasn't been written yet, then we keep checking whether it can be added or not
+                if (!isRightConsumed) {
+                    if (c < d) {
+                        pw.print(String.format("%d ", c));
+                        isLeftConsumed = true;
+                    } else if (c > d) {
+                        pw.print(String.format("%d ", d));
+                        isRightConsumed = true;
+                    } else {
+                        pw.print(String.format("%d ", c));
+                        pw.print(String.format("%d ", d));
+                        isLeftConsumed = true;
+                        isRightConsumed = true;
+                    }
+                } else {
+                    //Case where the last number from the second file has been written and there are still numbers left from the first file
+                    pw.print(String.format("%d ", c));
+                    isLeftConsumed = true;
+                }
+            }
+
+            //Writing the remaining numbers from the second file
+            while (sc2.hasNext()) {
+
+                //Reading the number from the second file only if this has been consumed or on the first read
+                if (isRightConsumed) {
+                    d = sc2.nextInt();
+                    isRightConsumed = false;
+                }
+
+                //If the last number from the first file hasn't been written yet, then we keep checking whether it can be added or not
+                if (!isLeftConsumed) {
+                    if (c < d) {
+                        pw.print(String.format("%d ", c));
+                        isLeftConsumed = true;
+                    } else if (c > d) {
+                        pw.print(String.format("%d ", d));
+                        isRightConsumed = true;
+                    } else {
+                        pw.print(String.format("%d ", c));
+                        pw.print(String.format("%d ", d));
+                        isLeftConsumed = true;
+                        isRightConsumed = true;
+                    }
+                } else {
+                    //Case where the last number from the first file has been written and there are still numbers left from the second file
+                    pw.print(String.format("%d ", d));
+                    isRightConsumed = true;
+                }
+            }
+
+            //Checking whether the last number from the first file hasn't been written yet (case of the greatest of all)
+            if (!isLeftConsumed) {
                 pw.print(String.format("%d ", c));
             }
 
-            while (sc2.hasNext()) {
-                d = sc2.nextInt();
+            //Checking whether the last number from the second file hasn't been written yet (case of the greatest of all)
+            if (!isRightConsumed) {
                 pw.print(String.format("%d ", d));
             }
         } catch (IOException e) {
@@ -65,15 +133,5 @@ public class MergeTwoFiles {
         }
     }
 }
-
-//            while (sc1.hasNextLine() && sc2.hasNextLine()) {
-//                int nextInt1 = sc1.nextInt();
-//                int nextInt2 = sc2.nextInt();
-//                System.out.print(nextInt1 + " ");
-//                System.out.print(nextInt2 + " ");
-//                outputFile.write(nextInt1);
-//                outputFile.write(nextInt2);
-//               // outputFile.flush();
-//            }
 
 

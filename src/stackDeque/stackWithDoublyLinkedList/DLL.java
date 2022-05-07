@@ -236,21 +236,24 @@ public class DLL {
         DLL ls = new DLL();
         ls.add(40);
         ls.add(30);
-//		ls.add(10);
-//		ls.add(20);
+
         System.out.println(ls);
         ls.reverse();
+        System.out.println("Elements of doubly linked list: ");
         System.out.println(ls);
         System.out.println("Index of 10 will be " + ls.indexOf(10));
         System.out.println("Last Index of 10 will be " + ls.lastIndexOf(10));
         System.out.println("Is 20 contains in the List " + ls.contains(20));
         System.out.println("Size of the List will be " + ls.size());
-        // ls.clear();
-        // System.out.println("After clear the List: Size of the List will be
-        // "+ls.size());
-        // System.out.println(ls);
-        // System.out.println("Is List Empty : "+ ls.isEmpty());
+        ls.clear();
+        System.out.println("After clear the List: Size of the List will be " + ls.size());
+        System.out.println(ls);
+        System.out.println("Is List Empty : " + ls.isEmpty());
         ls.set(50, 3);
+        System.out.println(ls);
+        ls.add(10);
+        ls.add(20);
+        System.out.println("Elements of doubly linked list: ");
         System.out.println(ls);
 
     }

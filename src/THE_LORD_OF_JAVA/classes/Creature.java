@@ -1,17 +1,16 @@
 package THE_LORD_OF_JAVA.classes;
 
-public abstract class Creatures implements ICreature, Comparable<Creatures> {
+public abstract class Creature implements ICreature, Comparable<Creature> {
 
     private Abilities abilities;
     private String nickname;
     private long score;
 
-    public Creatures(double stamina, double speed, int agility, String nickname, long score) {
+    public Creature(double stamina, double speed, int agility, String nickname, long score) {
         this.abilities = new Abilities(stamina, speed, agility);
         this.nickname = nickname;
         this.score = score;
     }
-
 
     @Override
     public void updateScore(long amount) throws NumberFormatException {
@@ -22,6 +21,16 @@ public abstract class Creatures implements ICreature, Comparable<Creatures> {
     }
 
     @Override
+    public String getNickname() {
+        return this.nickname;
+    }
+
+    @Override
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    @Override
     public void powerUp(double stamina, double speed, int agility) {
         abilities.update(stamina, speed, agility);
     }
@@ -29,7 +38,7 @@ public abstract class Creatures implements ICreature, Comparable<Creatures> {
 
     //TODO COMPARARE A DOUA CREATURI FOLOSIND METODA ABILITITES (prin delegare)
     @Override
-    public int compareTo(Creatures other) {
+    public int compareTo(Creature other) {
         return this.abilities.compareTo(other.abilities);
     }
 

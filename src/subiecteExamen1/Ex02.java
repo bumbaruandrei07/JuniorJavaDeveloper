@@ -10,6 +10,4 @@ public class Ex02 {
         //sub forma de string
 
     }
-
-
 }

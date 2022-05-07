@@ -12,7 +12,8 @@ public class ShapesIndexing {
             if (index.containsKey(shapes[i])) {
                 int newVal = index.get(shapes[i]) + 1; //crestem cu 1 nr. lui de aparitii
                 index.put(shapes[i], newVal); //punem noua pereche actualizata pentru aceeasi cheie
-                result = result > newVal ? result : newVal; //result - nr. maxim de aparitii, retine si actualizeaza care este numarul de aparitii al acestui element
+                result = result > newVal ? result : newVal; //result - nr. maxim de aparitii, retine si actualizeaza
+                // care este numarul de aparitii al acestui element
             } else {
                 index.put(shapes[i], 1);
             }
