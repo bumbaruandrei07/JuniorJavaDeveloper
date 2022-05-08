@@ -29,7 +29,7 @@ V. Cati dintre urmatorii factori pot conduce la utilizarea unei clase interne (i
 
 VI.  O clasa locala anonima nu poate defini constructori. Adevarat
 VII.  O clasa locala anonima poate fi instantiata atat in blocul de instructiuni in care a fost definita cat si in toate blocurile de instructiuni imbricate, definite ulterior in cadrul blocului
-Raspuns : Fals, pentru ca este anonima, vrem sa o instantiem o singura data, ulterior nu mai putem, poate doar sa o refefinim, sau nu o mai facem anonima ca sa putem apela constructorul de mai multe ori.
+Raspuns : Fals, pentru ca este anonima, vrem sa o instantiem o singura data, ulterior nu mai putem, poate doar sa o referim, sau nu o mai facem anonima ca sa putem apela constructorul de mai multe ori.
 
 
 

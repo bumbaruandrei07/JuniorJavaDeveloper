@@ -82,7 +82,6 @@ public class RadixSortDescending {
         //fill buckets, going through the powers of 10
 
         for (int powerOf10 = 1; powerOf10 <= maxBase; powerOf10 *= 10) {
-            //examing the values in the array
             for (int i = 0; i < arr.length; i++) {
                 //queueing into the array whatever digits there are
                 int digit = getDigit(arr[i], powerOf10);
@@ -129,7 +128,5 @@ public class RadixSortDescending {
         int maxBase = RadixSortDescending.getMaxBase(arr, arr.length);
 
         sortID(arr, maxBase);
-
-
     }
 }

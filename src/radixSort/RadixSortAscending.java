@@ -75,7 +75,6 @@ public class RadixSortAscending {
         return temp;
     }
 
-
     public static void sortID(int[] arr, int maxBase) {
 
         //create a queue for 10 buckets
