@@ -1,7 +1,7 @@
 package THE_LORD_OF_JAVA.classes;
 
 
-//clasa Parameters stocheaza toti parametrii jocului
+//clasa Parameters stocheaza toti parametrii jocului -> denumite si metadate pentru orice aplicatie
 public class Parameters {
 
     private String OS;
@@ -23,7 +23,4 @@ public class Parameters {
                 "Credentials: " + this.credentials + "\n" +
                 "No. lives remaining: " + this.noLives;
     }
-
-
-
 }

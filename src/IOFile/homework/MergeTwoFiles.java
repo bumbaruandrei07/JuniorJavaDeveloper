@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+//2. Se dau 2 fisiere ce contin fiecare cate un sir de numere ordonate, separate prin spatiu.
+// Scrie un program care produce un al treilea fisier ce va contine sirul de numere ordonat crescator.
+// In cadrul rezolvarii, nu ai voie sa folosesti niciun tip de colectie.
 public class MergeTwoFiles {
 
     public static void main(String[] args) {

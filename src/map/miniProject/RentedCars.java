@@ -1,4 +1,4 @@
-package map;
+package map.miniProject;
 
 
 import java.io.Serializable;
@@ -85,13 +85,4 @@ public class RentedCars implements Serializable {
 //            System.out.println("value: " + rentedCars.get(key));
 //        }
 //    }
-
-    public static void main(String[] args) {
-
-//        System.out.println(addCar(getVehicleName()));
-//        System.out.println(addCar(getVehicleName()));
-//        System.out.println(addCar(getVehicleName()));
-//        System.out.println();
-//        returnCar(getVehicleName());
-    }
 }

@@ -3,61 +3,30 @@ package IOFile.homework;
 import java.io.*;
 import java.util.Scanner;
 
+// 1.1. Modifica implementarea anterioara astfel:
+//
+//textul se va scrie in alt fisier (ex: TextOutput.txt)
+//programul nu va stoca tot textul si va face „conversia“ textului linie cu linie, urmand pasii:
+//se citeste o noua linie din fisierul de intrare
+//se inlocuieste cuvantul cheie
+//se scrie in fisierul de output linia curenta
 public class ex02 {
 
     private static final Scanner sc = new Scanner(System.in);
 
-    private static void modifyFile(String filePath, String oldString, String newString) {
-
-        File fileToBeModified = new File(filePath);
-        StringBuilder oldContent = new StringBuilder();
-        FileWriter writer = null;
-
-        try (BufferedReader reader = new BufferedReader(new FileReader(fileToBeModified))) {
-
-            //Reading all the lines of input text file into oldContent
-
-            String line = reader.readLine();
-
-            while (line != null) {
-                oldContent.append(line).append(System.lineSeparator());
-
-                line = reader.readLine();
-            }
-
-            //Replacing oldString with newString in the oldContent
-
-            String newContent = oldContent.toString().replaceAll(oldString, newString);
-
-            //Rewriting the input text file with newContent
-
-            writer = new FileWriter("TextOutput.txt");
-
-            writer.write(newContent);
-            System.out.println("Modificarile au fost salvate cu succes!");
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                //Closing the resources
-                writer.close();
-                sc.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
 
     public static void main(String[] args) throws IOException {
+        String fileText = "";
+        try (Scanner sc = new Scanner(new BufferedReader(new FileReader("TextInput.txt")))) {
+            while (sc.hasNextLine()) {
+                String nextLine = sc.nextLine();
+                fileText += nextLine + "\n";
+            }
+        }
+        System.out.println(fileText.replace("sah", "fotbal"));
 
-        System.out.println("Introduceti cuvantul care va fi inlocuit: ");
-        String oldString = sc.nextLine();
-
-        System.out.println("Introduceti cuvantul care sa inlocuiasca cuvantul de inlocuit: ");
-        String newString = sc.nextLine();
-
-
-        modifyFile("C:\\Users\\andrei.bumbaru\\Desktop\\{dev}mind\\TextInput.txt", oldString, newString);
+        try (BufferedWriter outputFile = new BufferedWriter(new FileWriter("TextOutput.txt"))) {
+            outputFile.write(fileText.replace("sah", "fotbal"));
+        }
     }
-
 }

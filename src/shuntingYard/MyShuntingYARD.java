@@ -48,7 +48,7 @@ public class MyShuntingYARD {
                     charToBeRemoved = myStack.removeFirst();
                     postFixQueue.addLast(charToBeRemoved);
                     if (myStack.isEmpty() && charToBeRemoved != '(') {
-                        throw new InvalidException("Parateze gresite!");
+                        throw new InvalidException("Paranteze gresite!");
                     }
                 }
                 myStack.removeFirst();

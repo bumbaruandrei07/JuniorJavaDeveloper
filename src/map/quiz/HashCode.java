@@ -5,7 +5,8 @@ import java.util.HashMap;
 
 /**
  *
- * Se dau urmatoarele elemente ce trebuie introduse intr-un hashtable gol, respectiv functia de hash. Care va fi numarul maxim de elemente per bucket?
+ * Se dau urmatoarele elemente ce trebuie introduse intr-un Hashtable gol, respectiv functia de hash.
+ * Care va fi numarul maxim de elemente per bucket?
  *
  *
  */

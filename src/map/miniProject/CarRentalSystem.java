@@ -1,12 +1,11 @@
-package map;
-
-import C13_Matrix.Ex;
-import exceptions.course.NullPointerException;
+package map.miniProject;
 
 import java.io.*;
 import java.util.*;
 
 public class CarRentalSystem implements Serializable {
+
+    public static CarRentalSystem myRentalCar = new CarRentalSystem();
 
     private static Scanner sc = new Scanner(System.in);
     private static final long serialVersionUID = 1L;
@@ -15,6 +14,23 @@ public class CarRentalSystem implements Serializable {
 
     private HashMap<String, RentedCars> whoRented =
             new HashMap<String, RentedCars>(100, 0.5f);
+
+    private void getRentedCarsHashMap() {
+        rentedCars.clear();
+    }
+
+    private void getWhoRentedCarsHashMap() {
+        whoRented.clear();
+    }
+
+    private void resetApp() {
+        if (rentedCars.size() > 0) {
+            myRentalCar.getRentedCarsHashMap();
+        }
+        if (whoRented.size() > 0) {
+            myRentalCar.getWhoRentedCarsHashMap();
+        }
+    }
 
 
     private static ArrayList<String> cars = new ArrayList<>();
@@ -144,12 +160,6 @@ public class CarRentalSystem implements Serializable {
         return carRentalSystem;
     }
 
-    private void clearCache() {
-        whoRented.clear();
-        rentedCars.clear();
-    }
-
-
     private void deleteFile() {
         try {
             File file = new File("rentedCars.dat");
@@ -162,6 +172,7 @@ public class CarRentalSystem implements Serializable {
     private static void printCommandsList() {
         System.out.println("help         - Afiseaza aceasta lista de comenzi");
         System.out.println("add          - Adauga o noua pereche (masina, sofer)");
+        System.out.println("add2         - Adauga o noua pereche (sofer, masina)");
         System.out.println("check        - Verifica daca o masina este deja luata");
         System.out.println("remove       - Sterge o masina existenta din hashtable");
         System.out.println("getOwner     - Afiseaza proprietarul curent al masinii");
@@ -211,7 +222,7 @@ public class CarRentalSystem implements Serializable {
                     System.out.println("Stergerea fisierului ce contine datele a fost realizata cu succes!");
                     break;
                 case "reset":
-                    clearCache();
+                    resetApp();
                     System.out.println("Stergerea datelor salvate in fisier a fost realizata cu succes!");
                     break;
                 case "quit":
@@ -223,5 +234,12 @@ public class CarRentalSystem implements Serializable {
                     printCommandsList();
             }
         }
+    }
+
+    public static void main(String[] args) throws IOException {
+        myRentalCar = readCarsRentedFromBinaryFile();
+        myRentalCar.run();
+        writeCarsRentedToBinaryFile(myRentalCar);
+
     }
 }

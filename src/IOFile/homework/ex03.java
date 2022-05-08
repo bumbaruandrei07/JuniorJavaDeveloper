@@ -6,6 +6,16 @@ import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+//3. Se citeste de la tastatura o lista de cuvinte (i.e. siruri de caractere fara spatii), separate prin newline (\n). Sa se genereze un fisier result.txt care sa contina:
+//
+//cel mai scurt cuvant
+//cel mai lung cuvant
+//primul cuvant in ordine alfabetica
+//ultimul cuvant in ordine alfabetica
+//numarul total de cuvinte
+//Fiecare informatie mentionata anterior va fi scrisa pe o linie individuala, alaturi de un mesaj relevant.
+
+
 public class ex03 {
 
     private static final Scanner sc = new Scanner(System.in);
