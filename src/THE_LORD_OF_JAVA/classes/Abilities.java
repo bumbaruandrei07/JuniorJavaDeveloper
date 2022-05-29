@@ -54,6 +54,6 @@ public class Abilities implements Comparable<Abilities> {
 
     @Override
     public String toString() {
-        return "Player has a power of: " + this.stamina + ", the speed: " + this.speed + " and the agility: " + this.agility + ".";
+        return this.stamina + ", the speed: " + this.speed + " and the agility: " + this.agility + ".";
     }
 }

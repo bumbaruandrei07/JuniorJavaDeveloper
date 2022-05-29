@@ -1,0 +1,3 @@
+Which access modifier makes a member available only to classes within the same package or subclasses?
+
+Answer: Protected

@@ -2,7 +2,13 @@ package C04.quiz;
 
 public class Ex04 {
 
-
+//Se da urmatoarea secventa de cod.
+// Pentru ce valoare a String-ului name (dintre urmatoarele variante)
+// se va afisa Case 3?
+//    Johny Smith
+//    David Snowman
+//    John Snow
+//    In cel putin 2 dintre variantele anterioare.
     public static String printString(String name){
         if (name.startsWith("John")){
             System.out.println("Case 1");

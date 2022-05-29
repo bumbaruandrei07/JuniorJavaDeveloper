@@ -1,6 +1,6 @@
 package THE_LORD_OF_JAVA.classes;
 
-public class Warg extends Creature{
+public class Warg extends Creature implements IBite {
 
     private double bitePower;
 
@@ -12,6 +12,16 @@ public class Warg extends Creature{
 
     @Override
     public void powerUp(double newStamina, double newSpeed, int newAgility) {
-        super.powerUp(newStamina / 2, newSpeed * 4, newAgility );
+        super.powerUp(newStamina / 2, newSpeed * 4, newAgility);
+    }
+
+    @Override
+    public double getBitePower() {
+        return this.bitePower;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nBite Power: " + this.bitePower;
     }
 }

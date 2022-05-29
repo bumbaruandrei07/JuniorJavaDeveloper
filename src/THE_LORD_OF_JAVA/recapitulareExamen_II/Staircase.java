@@ -7,7 +7,7 @@ public class Staircase {
 
         String[][] stairCase = new String[n][n];
         for (int i = 0; i < stairCase.length; i++) {
-            for (int j = 0; j < stairCase[0].length; j++) {
+            for (int j = 0; j < stairCase[i].length; j++) {
 //             Formula pentru elementele de sub diagonala secundara pe o matrice pătratică
                 if (i + j >= n - 1) {
                     stairCase[i][j] = "#";

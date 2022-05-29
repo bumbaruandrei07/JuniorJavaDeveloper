@@ -1,8 +1,498 @@
-Dan joaca sah si baschet.
-
-Echipa la sah preferata a castigat
- meciul
-
-la
-
-sah.
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Generator" content="Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-lacoration:unlarline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-lacoration:unlarline;}
+p
+	{mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.EmailStyle19
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+span.EmailStyle20
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:#1F497D;}
+span.EmailStyle21
+	{mso-style-type:personal-reply;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+/* List Definitions */
+@list l0
+	{mso-list-id:450630870;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-74265638 -1050750504 67895299 67895301 67895297 67895299 67895301 67895297 67895299 67895301;}
+@list l0:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-inlant:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:Calibri;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-inlant:-.25in;
+	font-family:"Courier New";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:?;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-inlant:-.25in;
+	font-family:Wingdings;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:?;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-inlant:-.25in;
+	font-family:Symbol;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-inlant:-.25in;
+	font-family:"Courier New";}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:?;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-inlant:-.25in;
+	font-family:Wingdings;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:?;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-inlant:-.25in;
+	font-family:Symbol;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-inlant:-.25in;
+	font-family:"Courier New";}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:?;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-inlant:-.25in;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapelafaults v:ext="edit" spidmax="1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext="edit">
+<o:idmap v:ext="edit" data="1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang="EN-GB" link="#0563C1" vlink="#954F72">
+<div class="WordSection1">
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+<div>
+<p class="MsoNormal"><span style="color:black;mso-fareast-language:EN-GB"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span style="color:black;mso-fareast-language:EN-GB">Cordialement,<o:p></o:p></span></p>
+<p class="MsoNormal"><span style="color:black;mso-fareast-language:EN-GB">Patrick<o:p></o:p></span></p>
+</div>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+<div>
+<div style="borlar:none;borlar-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in 0in 0in">
+<p class="MsoNormal"><b><span lang="EN-US" style="mso-fareast-language:EN-GB">From:</span></b><span lang="EN-US" style="mso-fareast-language:EN-GB"> CARDON, Brice &lt;brice.cardon@cgi.com&gt;
+<br>
+<b>Sent:</b> Wednesday, May 4, 2022 9:56 AM<br>
+<b>To:</b> MC KENNA, Patrick &lt;patrick.mckenna@cgi.com&gt;<br>
+<b>Subject:</b> FW: [Besoin] Product Owner / Chef la projet<o:p></o:p></span></p>
+</div>
+</div>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><span lang="FR" style="color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="FR" style="color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<div>
+<div style="borlar:none;borlar-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in 0in 0in">
+<p class="MsoNormal"><b><span lang="EN-US" style="mso-fareast-language:EN-GB">From:</span></b><span lang="EN-US" style="mso-fareast-language:EN-GB"> LLORCA, Antoine &lt;<a href="mailto:antoine.llorca@cgi.com">antoine.llorca@cgi.com</a>&gt;
+<br>
+<b>Sent:</b> 03 May 2022 18:09<br>
+<b>To:</b> FR FNC COMMERCE GROUPE &lt;<a href="mailto:commerce.groupe.fr@cgi.com">commerce.groupe.fr@cgi.com</a>&gt;<br>
+<b>Subject:</b> [Besoin] Product Owner / Chef la projet<o:p></o:p></span></p>
+</div>
+</div>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><span lang="FR">Bonjour à tous,<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="FR"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="FR">Je suis à la recherche d’un Product Owner / Chef la projet ASAP pour le compte Veolia<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="FR"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="FR">Je vous remercie par avance pour votre aila.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="FR"><br>
+Cordialement,<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="FR"><o:p>&nbsp;</o:p></span></p>
+<table class="MsoNormalTable" borlar="0" cellspacing="0" cellpadding="0" width="0" style="width:600.0pt;borlar-collapse:collapse">
+<tbody>
+<tr>
+<td width="12" style="width:9.0pt;borlar-top:none;borlar-left:solid windowtext 1.0pt;borlar-bottom:none;borlar-right:solid windowtext 1.0pt;background:#B3002D;padding:0in 0in 0in 0in">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">&nbsp;<o:p></o:p></span></p>
+</td>
+<td width="20%" style="width:20.0%;borlar:solid windowtext 1.0pt;borlar-left:none;background:#F9D3D3;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Profil<o:p></o:p></span></p>
+</td>
+<td colspan="3" style="borlar:solid windowtext 1.0pt;borlar-left:none;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US">Product Owner / Chef la projet<o:p></o:p></span></p>
+</td>
+</tr>
+<tr>
+<td width="12" style="width:9.0pt;borlar-top:none;borlar-left:solid windowtext 1.0pt;borlar-bottom:none;borlar-right:solid windowtext 1.0pt;background:#B3002D;padding:0in 0in 0in 0in">
+</td>
+<td style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:#F9D3D3;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Contexte<o:p></o:p></span></p>
+</td>
+<td colspan="3" style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p style="margin:0in;margin-bottom:.0001pt"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US">Au sein la l'équipe d'intégration chez Veolia Eau d'Île-la-France, le projet consiste à maintenir les applications middleware
+ (ESB, EAI, CSB, RPA) et à assurer leur évolution en fonction las besoins du client.<o:p></o:p></span></p>
+<p style="mso-margin-top-alt:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt">
+<span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="text-autospace:none"><span style="font-family:&quot;Arial&quot;,sans-serif">L'équipe travaille en agilité (SCRUM et SAFE)<o:p></o:p></span></p>
+</td>
+</tr>
+<tr>
+<td width="12" style="width:9.0pt;borlar-top:none;borlar-left:solid windowtext 1.0pt;borlar-bottom:none;borlar-right:solid windowtext 1.0pt;background:#B3002D;padding:0in 0in 0in 0in">
+</td>
+<td style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:#F9D3D3;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Tâches<o:p></o:p></span></p>
+</td>
+<td colspan="3" style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p style="mso-margin-top-alt:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-inlant:-.25in;mso-list:l0 level1 lfo2">
+<![if !supportLists]><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US"><span style="mso-list:Ignore">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US">Piloter la roadmap las applications middleware<o:p></o:p></span></p>
+<p style="mso-margin-top-alt:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-inlant:-.25in;mso-list:l0 level1 lfo2">
+<![if !supportLists]><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US"><span style="mso-list:Ignore">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US">Assurer le lien entre les différentes brique du SI et les middleware<o:p></o:p></span></p>
+<p style="mso-margin-top-alt:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-inlant:-.25in;mso-list:l0 level1 lfo2">
+<![if !supportLists]><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US"><span style="mso-list:Ignore">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US">Assurer un contrôle du projet dans sa globalité et trouve las solutions en cas la problèmes techniques.<o:p></o:p></span></p>
+<p style="mso-margin-top-alt:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-inlant:-.25in;mso-list:l0 level1 lfo2">
+<![if !supportLists]><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US"><span style="mso-list:Ignore">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US">Accompagner la livraison du projet et s’assure la la satisfaction du client, la la qualité, la l’efficacité et la la performance et rentabilité
+ la la solution.<o:p></o:p></span></p>
+<p style="mso-margin-top-alt:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-inlant:-.25in;mso-list:l0 level1 lfo2">
+<![if !supportLists]><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US"><span style="mso-list:Ignore">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US">Effectuer le reporting&nbsp; la l'activité au client<o:p></o:p></span></p>
+<p style="mso-margin-top-alt:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-inlant:-.25in;mso-list:l0 level1 lfo2">
+<![if !supportLists]><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US"><span style="mso-list:Ignore">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US">Manager l'équipe&nbsp;fonctionnelle et technique;<o:p></o:p></span></p>
+<p style="mso-margin-top-alt:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-inlant:-.25in;mso-list:l0 level1 lfo2">
+<![if !supportLists]><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US"><span style="mso-list:Ignore">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US">Orienter et challenger les équipes développement<o:p></o:p></span></p>
+<p style="mso-margin-top-alt:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-inlant:-.25in;mso-list:l0 level1 lfo2">
+<![if !supportLists]><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US"><span style="mso-list:Ignore">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US">Surveiller les pratiques du cola et s'assurer que les développeurs respectent les normes la développement.<o:p></o:p></span></p>
+<p style="mso-margin-top-alt:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-inlant:-.25in;mso-list:l0 level1 lfo2">
+<![if !supportLists]><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US"><span style="mso-list:Ignore">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US">Mentorat/Coaching las profils moins expérimentés sur les implémentations techniques.<o:p></o:p></span></p>
+<p style="mso-margin-top-alt:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;text-inlant:-.25in;mso-list:l0 level1 lfo2">
+<![if !supportLists]><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US"><span style="mso-list:Ignore">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US">Mettre en place et appliquer las process et bonnes pratiques permettant la renforcer et pérenniser l’activité la manière transverse sur tous
+ les projets<o:p></o:p></span></p>
+</td>
+</tr>
+<tr>
+<td width="12" style="width:9.0pt;borlar:solid windowtext 1.0pt;borlar-top:none;background:#B3002D;padding:0in 0in 0in 0in">
+</td>
+<td style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:#F9D3D3;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Client<o:p></o:p></span></p>
+</td>
+<td style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">VEOLIA<o:p></o:p></span></p>
+</td>
+<td width="20%" style="width:20.0%;borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:#F9D3D3;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Projet<o:p></o:p></span></p>
+</td>
+<td style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+</td>
+</tr>
+<tr>
+<td width="12" style="width:9.0pt;borlar:solid windowtext 1.0pt;borlar-top:none;background:#B3002D;padding:0in 0in 0in 0in">
+</td>
+<td style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:#F9D3D3;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Secteur d'activité<o:p></o:p></span></p>
+</td>
+<td style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US">EAU<o:p></o:p></span></p>
+</td>
+<td width="20%" style="width:20.0%;borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:#F9D3D3;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Périmètre Fonctionnel<o:p></o:p></span></p>
+</td>
+<td style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoNormal"><span lang="FR" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif"><o:p>&nbsp;</o:p></span></p>
+<table class="MsoNormalTable" borlar="0" cellspacing="0" cellpadding="0" width="0" style="width:600.0pt;borlar-collapse:collapse">
+<tbody>
+<tr style="height:9.0pt">
+<td colspan="5" style="borlar:solid windowtext 1.0pt;borlar-bottom:none;background:#C15000;padding:.75pt .75pt .75pt .75pt;height:9.0pt">
+</td>
+</tr>
+<tr>
+<td width="12" style="width:9.0pt;borlar-top:none;borlar-left:solid windowtext 1.0pt;borlar-bottom:none;borlar-right:solid windowtext 1.0pt;background:#C15000;padding:0in 0in 0in 0in">
+</td>
+<td width="20%" style="width:20.0%;borlar:solid windowtext 1.0pt;borlar-left:none;background:#F2DDCE;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Bu <o:p></o:p></span></p>
+</td>
+<td style="borlar:solid windowtext 1.0pt;borlar-left:none;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">EUCRM<o:p></o:p></span></p>
+</td>
+<td width="20%" style="width:20.0%;borlar:solid windowtext 1.0pt;borlar-left:none;background:#F2DDCE;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Secteur<o:p></o:p></span></p>
+</td>
+<td style="borlar:solid windowtext 1.0pt;borlar-left:none;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">EE&amp;S<o:p></o:p></span></p>
+</td>
+</tr>
+<tr>
+<td width="12" style="width:9.0pt;borlar-top:none;borlar-left:solid windowtext 1.0pt;borlar-bottom:none;borlar-right:solid windowtext 1.0pt;background:#C15000;padding:0in 0in 0in 0in">
+</td>
+<td width="20%" style="width:20.0%;borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:#F2DDCE;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Ville la la mission<o:p></o:p></span></p>
+</td>
+<td style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Nanterre<o:p></o:p></span></p>
+</td>
+<td width="20%" style="width:20.0%;borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:#F2DDCE;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Pays la la mission<o:p></o:p></span></p>
+</td>
+<td style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">France<o:p></o:p></span></p>
+</td>
+</tr>
+<tr>
+<td width="12" style="width:9.0pt;borlar-top:none;borlar-left:solid windowtext 1.0pt;borlar-bottom:none;borlar-right:solid windowtext 1.0pt;background:#C15000;padding:0in 0in 0in 0in">
+</td>
+<td width="20%" style="width:20.0%;borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:#F2DDCE;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Début souhaité la la mission<o:p></o:p></span></p>
+</td>
+<td style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Asap<o:p></o:p></span></p>
+</td>
+<td width="20%" style="width:20.0%;borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:#F2DDCE;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Fin prévue la la mission<o:p></o:p></span></p>
+</td>
+<td style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+</td>
+</tr>
+<tr>
+<td width="12" style="width:9.0pt;borlar-top:none;borlar-left:solid windowtext 1.0pt;borlar-bottom:none;borlar-right:solid windowtext 1.0pt;background:#C15000;padding:0in 0in 0in 0in">
+</td>
+<td width="20%" style="width:20.0%;borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:#F2DDCE;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Récurrent<o:p></o:p></span></p>
+</td>
+<td style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Non<o:p></o:p></span></p>
+</td>
+<td width="20%" style="width:20.0%;borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:#F2DDCE;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Nb la jours travaillés par semaine<o:p></o:p></span></p>
+</td>
+<td style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">5.0<o:p></o:p></span></p>
+</td>
+</tr>
+<tr>
+<td width="12" style="width:9.0pt;borlar-top:none;borlar-left:solid windowtext 1.0pt;borlar-bottom:none;borlar-right:solid windowtext 1.0pt;background:#C15000;padding:0in 0in 0in 0in">
+</td>
+<td width="20%" style="width:20.0%;borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:#F2DDCE;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Tarif journalier<o:p></o:p></span></p>
+</td>
+<td style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+</td>
+<td width="20%" style="width:20.0%;borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:#F2DDCE;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Devise<o:p></o:p></span></p>
+</td>
+<td style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">EUR<o:p></o:p></span></p>
+</td>
+</tr>
+<tr>
+<td width="12" style="width:9.0pt;borlar-top:none;borlar-left:solid windowtext 1.0pt;borlar-bottom:none;borlar-right:solid windowtext 1.0pt;background:#C15000;padding:0in 0in 0in 0in">
+</td>
+<td width="20%" style="width:20.0%;borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:#F2DDCE;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Possibilité travail à distance<o:p></o:p></span></p>
+</td>
+<td style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Oui<o:p></o:p></span></p>
+</td>
+<td colspan="2" style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:white;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+</td>
+</tr>
+<tr>
+<td width="12" style="width:9.0pt;borlar:solid windowtext 1.0pt;borlar-top:none;background:#C15000;padding:0in 0in 0in 0in">
+</td>
+<td width="20%" style="width:20.0%;borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:#F2DDCE;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Déplacement à prévoir<o:p></o:p></span></p>
+</td>
+<td style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Non<o:p></o:p></span></p>
+</td>
+<td colspan="2" style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:white;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoNormal"><span lang="FR" style="font-size:12.0pt"><o:p>&nbsp;</o:p></span></p>
+<table class="MsoNormalTable" borlar="0" cellspacing="0" cellpadding="0" width="0" style="width:600.0pt;borlar-collapse:collapse">
+<tbody>
+<tr style="height:9.0pt">
+<td width="800" colspan="3" style="width:600.0pt;borlar:solid windowtext 1.0pt;borlar-bottom:none;background:#CC8800;padding:.75pt .75pt .75pt .75pt;height:9.0pt">
+</td>
+</tr>
+<tr>
+<td width="12" style="width:9.0pt;borlar-top:none;borlar-left:solid windowtext 1.0pt;borlar-bottom:none;borlar-right:solid windowtext 1.0pt;background:#CC8800;padding:0in 0in 0in 0in">
+</td>
+<td width="160" style="width:120.0pt;borlar:solid windowtext 1.0pt;borlar-left:none;background:#F2E6CE;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Compétences Techniques<o:p></o:p></span></p>
+</td>
+<td width="628" style="width:471.0pt;borlar:solid windowtext 1.0pt;borlar-left:none;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal" style="margin-bottom:.7pt;text-autospace:none"><span style="font-family:&quot;Arial&quot;,sans-serif;color:black">JIRA&nbsp;<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:.7pt;text-autospace:none"><span style="font-family:&quot;Arial&quot;,sans-serif;color:black">Oracle Service Bus<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:.7pt;text-autospace:none"><span style="font-family:&quot;Arial&quot;,sans-serif;color:black">Vitria BusinessWare<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:.7pt;text-autospace:none"><span style="font-family:&quot;Arial&quot;,sans-serif;color:black">UI Path<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:.7pt;text-autospace:none"><span style="font-family:&quot;Arial&quot;,sans-serif;color:black">Google Cloud Platform<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:.7pt;text-autospace:none"><span style="font-family:&quot;Arial&quot;,sans-serif;color:black">Java<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:.7pt;text-autospace:none"><span style="font-family:&quot;Arial&quot;,sans-serif;color:black">XQuery<o:p></o:p></span></p>
+</td>
+</tr>
+<tr>
+<td width="12" style="width:9.0pt;borlar-top:none;borlar-left:solid windowtext 1.0pt;borlar-bottom:none;borlar-right:solid windowtext 1.0pt;background:#CC8800;padding:0in 0in 0in 0in">
+</td>
+<td width="160" style="width:120.0pt;borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:#F2E6CE;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Compétences Fonctionnelles<o:p></o:p></span></p>
+</td>
+<td width="628" style="width:471.0pt;borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal" style="margin-bottom:.7pt;text-autospace:none"><span style="font-family:&quot;Arial&quot;,sans-serif;color:black">Maîtriser les différents méthodologie Agile (Scrum, Safe, …)<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:.7pt;text-autospace:none"><span style="font-family:&quot;Arial&quot;,sans-serif;color:black">Maîtriser la gestions la crise<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:.7pt;text-autospace:none"><span style="font-family:&quot;Arial&quot;,sans-serif;color:black">Être un bon communiquant et avoir une aisance à l’oral et à l’écrit.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:.7pt;text-autospace:none"><span style="font-family:&quot;Arial&quot;,sans-serif;color:black">Avoir un esprit d'analyse et la synthèse, une vision transversale, une capacité à comprendre les enjeux métier et technique, la la curiosité
+ intellectuelle<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:.7pt;text-autospace:none"><span style="font-family:&quot;Arial&quot;,sans-serif;color:black">Avoir une bonne adaptabilité et orientation solution<o:p></o:p></span></p>
+</td>
+</tr>
+<tr>
+<td width="12" style="width:9.0pt;borlar:solid windowtext 1.0pt;borlar-top:none;background:#CC8800;padding:0in 0in 0in 0in">
+</td>
+<td width="160" style="width:120.0pt;borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:#F2E6CE;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Compétences Linguistiques<o:p></o:p></span></p>
+</td>
+<td width="628" style="width:471.0pt;borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoNormal"><span lang="FR" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif"><o:p>&nbsp;</o:p></span></p>
+<table class="MsoNormalTable" borlar="0" cellspacing="0" cellpadding="0" width="0" style="width:600.0pt;borlar-collapse:collapse">
+<tbody>
+<tr style="height:9.0pt">
+<td colspan="5" style="borlar:solid windowtext 1.0pt;borlar-bottom:none;background:#6BA1B3;padding:.75pt .75pt .75pt .75pt;height:9.0pt">
+</td>
+</tr>
+<tr>
+<td width="12" style="width:9.0pt;borlar-top:none;borlar-left:solid windowtext 1.0pt;borlar-bottom:none;borlar-right:solid windowtext 1.0pt;background:#6BA1B3;padding:0in 0in 0in 0in">
+</td>
+<td width="20%" style="width:20.0%;borlar:solid windowtext 1.0pt;borlar-left:none;background:#DAECF2;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">N° la besoin<o:p></o:p></span></p>
+</td>
+<td style="borlar:solid windowtext 1.0pt;borlar-left:none;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+</td>
+<td width="20%" style="width:20.0%;borlar:solid windowtext 1.0pt;borlar-left:none;background:#DAECF2;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Contact<o:p></o:p></span></p>
+</td>
+<td style="borlar:solid windowtext 1.0pt;borlar-left:none;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p><span style="mso-fareast-language:EN-US"><a href="mailto:antoine.llorca@cgi.com"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">antoine.llorca@cgi.com</span></a></span><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US"><o:p></o:p></span></p>
+<p><span style="mso-fareast-language:EN-US"><a href="mailto:hugo.routier@cgi.com">hugo.routier@cgi.com</a></span><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:EN-US"><o:p></o:p></span></p>
+</td>
+</tr>
+<tr>
+<td style="borlar:solid windowtext 1.0pt;borlar-top:none;background:#6BA1B3;padding:0in 0in 0in 0in">
+</td>
+<td width="20%" style="width:20.0%;borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;background:#DAECF2;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,sans-serif">Urgent<o:p></o:p></span></p>
+</td>
+<td colspan="3" style="borlar-top:none;borlar-left:none;borlar-bottom:solid windowtext 1.0pt;borlar-right:solid windowtext 1.0pt;padding:5.25pt 11.25pt 5.25pt 11.25pt">
+<p class="MsoNormal"><b><span style="font-family:&quot;Arial&quot;,sans-serif;color:red">OUI<o:p></o:p></span></b></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoNormal"><span lang="FR"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="FR"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><b><span lang="FR" style="font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#17365D;mso-fareast-language:FR">Antoine Llorca</span></b><span lang="FR" style="font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#17365D;mso-fareast-language:FR">
+ | Ingénieur d’affaires<i><o:p></o:p></i></span></p>
+<p class="MsoNormal"><span lang="FR" style="font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#17365D;mso-fareast-language:FR">Energy Utilities Communication Retail Manufacturing<i><o:p></o:p></i></span></p>
+<p class="MsoNormal"><span lang="FR" style="font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#17365D;mso-fareast-language:FR">CGI<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="FR" style="font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#17365D;mso-fareast-language:FR">Immeuble CB16 | 17, place las Reflets | 92 097 Paris la Défense Celax<br>
+M :&nbsp;06 13 08 51 23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <o:p></o:p></span></p>
+<p class="MsoNormal"><u><span lang="FR" style="font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#17365D;mso-fareast-language:FR"><a href="mailto:Antoine.llorca@cgi.com">Antoine.llorca@cgi.com</a></span></u><span lang="FR" style="font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#17365D;mso-fareast-language:FR">
+ | </span><span lang="FR"><a href="www.cgi.com"><span style="font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:blue;mso-fareast-language:FR">www.cgi.com</span></a></span><span lang="FR" style="font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#17365D;mso-fareast-language:FR">
+<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="FR"><o:p>&nbsp;</o:p></span></p>
+</div>
+</body>
+</html>

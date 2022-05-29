@@ -2,7 +2,7 @@ package ComplexityOfAlgorithms;
 
 //varianta recursiva
 public class BinarySearch1 {
-    //are complexitate logaritmica , pentru ca injumatatim intervalul de cautare la fiecare pas -> O(log2n)
+    //are complexitate logaritmica, pentru ca injumatatim intervalul de cautare la fiecare pas -> O(log2n)
     //primeste un array si un key pe care il cautam in array
     public static int binarySearchI(int[] sortedList, int key) {
         // setam capetele si din dreapta, cautam in intreg array-ul

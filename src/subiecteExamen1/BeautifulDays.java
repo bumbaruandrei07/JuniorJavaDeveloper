@@ -1,6 +1,6 @@
 package subiecteExamen1;
 
-public class CopyElem {
+public class BeautifulDays {
     public static int beautifulDays(int i, int j, int k) {
         int nrInvers;
         int xCopy, ultimaCifra;
@@ -21,8 +21,9 @@ public class CopyElem {
         }
         return counter;
     }
+
     public static void main(String[] args) {
-        System.out.println(beautifulDays(20,23,6));
+        System.out.println(beautifulDays(20, 23, 6));
     }
 
 }

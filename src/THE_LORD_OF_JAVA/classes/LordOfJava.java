@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class LordOfJava {
     private Parameters parameters;
-    private Cohort<Dragon> dragons;
-    private Cohort<Warg> wargs;
-    private Cohort<Mumakil> mumakils;
+    private Cohort<Dragon> dragons = new Cohort<Dragon>();
+    private Cohort<Warg> wargs = new Cohort<Warg>();
+    private Cohort<Mumakil> mumakils = new Cohort<Mumakil>();
 
     public LordOfJava(String OS, String gamePATH, String credentials, int noLives) {
         this.parameters = new Parameters(OS, gamePATH, credentials, noLives);
@@ -21,7 +21,7 @@ public class LordOfJava {
      * Hint: pentru a obtine numele clasei de care apartine o instanta se poate utiliza: object.getClass().getName()
      */
 
-    private void addCreature(Creature creature, String address) {
+    public void addCreature(Creature creature, String address) {
         //trebuie sa facem downcasting fortat la tipul creaturii si o adaugam in cohortul fiecareia
         //daca primim o creatura care nu e in niciuna din cele 3 tipuri aruncam exceptia IllegalArgumentException
         if (creature instanceof Dragon) {
@@ -47,7 +47,7 @@ public class LordOfJava {
      * Scorul final al bataliei este dat de suma tuturor duelurilor. Intutiv, semnul rezultatului va indica hoarda castigatoare iar valoarea in modul va reprezenta magnitudinea victoriei (i.e. o valoare mai mare va reprezenta o victorie zdrobitoare).
      */
 
-    private int battleDragonsWargs() {
+    public int battleDragonsWargs() {
         if (dragons.size() < wargs.size()) {
             return -1;
         } else if (dragons.size() > wargs.size()) {
@@ -60,7 +60,7 @@ public class LordOfJava {
         int score = 0;
         for (int i = 0; i < wargs.size(); i++) {
             int duelResult = dragonsToFight.get(i).compareTo(wargToFight.get(i));
-            score += duelResult > 0 ? + 1 : duelResult < 0 ? -1 : 0;
+            score += duelResult > 0 ? +1 : duelResult < 0 ? -1 : 0;
             //daca am obtinut un rezultat pozitiv adaugam 1, daca e negativ scadem 1, altfel avem 0
             //e ca un if -else if- else
 
@@ -70,7 +70,7 @@ public class LordOfJava {
 
     @Override
     public String toString() {
-        return "" + parameters + "\n" +
+        return "" + parameters + "\n" + "\n" +
                 dragons + "\n" + wargs + "\n" + mumakils;
     }
 }

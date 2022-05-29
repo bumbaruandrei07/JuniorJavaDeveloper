@@ -10,6 +10,7 @@ public class Test {
 
         // movementSound() este o metoda statica -> la suprascriere : intotdeauna se ia implementarea din obiect, mai putin pentru metodele statice
         // la metodele statice luam implementarea din clasa, identificam clasa dupa referinta!
+        //metodele statice nu pot fi suprascrise!
 
 
         tree1.movementSound();  // apelam o metoda statica din tree !
