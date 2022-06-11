@@ -9,4 +9,8 @@ public class iterativeReverseNumber {
         }
         return reverse;
     }
+
+    public static void main(String[] args){
+        System.out.println(reverseNumber(98));
+    }
 }

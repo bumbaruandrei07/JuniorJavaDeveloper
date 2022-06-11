@@ -1,10 +1,7 @@
 When we create a String object using the new() operator, it always creates a new object in heap memory.
- On the other hand, if we create an object using String literal syntax,
- it may return an existing object from the String pool, if it already exists. Otherwise,
- it will create a new String object and put in the string pool for future re-use.
+On the other hand, if we create an object using String literal syntax,
+it may return an existing object from the String pool, if it already exists. Otherwise,it will create a new String object and put in the string pool for future re-use.
 At a high level, both are the String objects, but the main difference comes from the point that new() operator always creates a new String object.
- Also, when we create a String using literal – it is interned.
-
-  new String() will always create a new object and string literal checks the string pool before creating one.
-
-  String Pool is possible only because String is immutable in Java and its implementation of String interning concept. String pool is also example of Flyweight design pattern. String pool helps in saving a lot of space for Java Runtime although it takes more time to create the String.
+Also, when we create a String using literal – it is interned.
+new String() will always create a new object and string literal checks the string pool before creating one.
+String Pool is possible only because String is immutable in Java and its implementation of String interning concept. String pool is also example of Flyweight design pattern. String pool helps in saving a lot of space for Java Runtime although it takes more time to create the String.

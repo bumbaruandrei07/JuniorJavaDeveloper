@@ -7,7 +7,7 @@ public class CarRentalSystem implements Serializable {
 
     public static CarRentalSystem myRentalCar = new CarRentalSystem();
 
-    private static Scanner sc = new Scanner(System.in);
+    private static final Scanner sc = new Scanner(System.in);
     private static final long serialVersionUID = 1L;
     private HashMap<String, String> rentedCars = //primeste 2 parametri de tip, acestia sunt amandoi de tip string, dar ei pot sa difere
             new HashMap<String, String>(100, 0.5f); //default este 0,75, il suprscrie
@@ -31,7 +31,6 @@ public class CarRentalSystem implements Serializable {
             myRentalCar.getWhoRentedCarsHashMap();
         }
     }
-
 
     private static ArrayList<String> cars = new ArrayList<>();
 
@@ -70,7 +69,6 @@ public class CarRentalSystem implements Serializable {
             newRentedCar.addCar(vehicleName);
             whoRented.put(ownerName, newRentedCar);
             System.out.println("Proprietarul a fost adaugat cu succes!");
-
         } else {
             RentedCars rentedCars2;
             rentedCars2 = whoRented.get(ownerName);
@@ -94,7 +92,6 @@ public class CarRentalSystem implements Serializable {
     private boolean isCarRent(String plateNo) {
         return rentedCars.containsKey(plateNo);
     }
-
     //cine a inchiriat masina, valoarea pentru cheie, cheia este plateNo, valoarea ownerName
     // get the value associated to a key
     private String getCarRent(String plateNo) throws RuntimeException {

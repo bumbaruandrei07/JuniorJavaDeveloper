@@ -9,7 +9,6 @@ import java.util.*;
 //un proprietar poate sa detina mai multe masini in acelasi timp
 public class RentedCars implements Serializable {
 
-    private static Scanner sc = new Scanner(System.in);
     private ArrayList<String> cars;
 
     public void addCar(String vehicleName) {
@@ -22,10 +21,6 @@ public class RentedCars implements Serializable {
 
     public RentedCars() {
         this.cars = new ArrayList<>();
-    }
-
-    public RentedCars(ArrayList<String> cars) {
-        this.cars = cars;
     }
 
     @Override

@@ -11,8 +11,14 @@ public class reverseNumberR {
         int reverse = reverseNumberR(n / 10);
 
         int mul;
-        for(mul=1; mul<=n/10; mul*=10);
+        for (mul = 1; mul <= n / 10; mul *= 10) ;
 
         return (n % 10) * mul + reverse;
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println(reverseNumberR(51));
+
     }
 }
