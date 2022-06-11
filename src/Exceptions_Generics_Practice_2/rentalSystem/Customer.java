@@ -44,10 +44,10 @@ public class Customer {
                     System.out.println("Ce tip de masina doriti sa inchiriati? Regular/Premium/Mini");
                     String carType = sc.next();
                     String newCustomer = addCustomer();
-
+                    System.out.println("Pentru cate zile doriti sa inchiriati masina?");
+                    int choseNoDays = sc.nextInt();
                     if (carType.equals("Mini")) {
-                        System.out.println("Pentru cate zile doriti sa inchiriati masina?");
-                        int choseNoDays = sc.nextInt();
+
                         int miniValueAux = 0;
                         if (choseNoDays <= 0) {
                             throw new NoDaysException("Numarul de zile pentru care se va inchiria masina trebuie sa fie o valoare pozitiva!");
@@ -58,8 +58,8 @@ public class Customer {
                             miniValue += miniValueAux;
 
                         } else {
-                            int additionalDay = choseNoDays - 3;
-                            miniValueAux += 45 + additionalDay * 10;
+                            int additionalDays = choseNoDays - 3;
+                            miniValueAux += 45 + additionalDays * 10;
                             miniValue += miniValueAux;
                         }
 
@@ -70,7 +70,23 @@ public class Customer {
 
                     }
 
-                    if (carType.equals("regular")) {
+                    if (carType.equalsIgnoreCase("regular")) {
+                        int regularValueAux = 0;
+                        if (choseNoDays <= 0) {
+                            throw new NoDaysException("Numarul de zile pentru care se va inchiria masina trebuie sa fie o valoare pozitiva!");
+                        }
+
+                        if (choseNoDays <= 2) {
+                            regularValueAux += choseNoDays * 20;
+                            regularValue += regularValueAux;
+                        } else {
+                            int additionalDays = choseNoDays - 2;
+                            regularValueAux += 40 + additionalDays * 15;
+                            regularValue += regularValueAux;
+                        }
+
+                        rentalCarsIasi.put(newCustomer, RentalSystem_IASI.Cars.Regular);
+                        System.out.printf("Clientul %s a inchiriat o masina de tipul %s la pretul de %d\n", newCustomer, RentalSystem_IASI.Cars.Mini, regularValueAux);
 
                     }
 
@@ -87,7 +103,9 @@ public class Customer {
             }
         }
         TotalIncome += miniValue;
-        System.out.printf("Total income:             %d\nMini Income:              %d", TotalIncome, miniValue);
+        TotalIncome += regularValue;
+        System.out.printf("Total income:             %d\nMini Income :              %d\n" +
+                "Regular Income :          %d", TotalIncome, miniValue, regularValue);
     }
 
 
