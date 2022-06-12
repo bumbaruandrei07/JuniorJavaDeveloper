@@ -7,7 +7,7 @@ import java.util.InputMismatchException;
 import java.util.Map;
 import java.util.Scanner;
 
-public class RentalSystem_IASI {
+public class Iasi_RentalSystem {
 
     private static final Scanner sc = new Scanner(System.in);
     private Map<String, Integer> rentalCarsIasi = new HashMap<>(100, 0.5f);
@@ -19,7 +19,7 @@ public class RentalSystem_IASI {
     private static int premiumValue;
     private static int miniValue;
     private int frequentRentalPoints;
-    private static RentalSystem_IASI rentalSystemIASI = new RentalSystem_IASI();
+    private static Iasi_RentalSystem rentalSystemIASI = new Iasi_RentalSystem();
 
 
     public String addCustomer() {
