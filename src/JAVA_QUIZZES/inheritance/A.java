@@ -7,6 +7,4 @@ public class A {
     protected void print() {
         System.out.println(b);
     }
-
-
 }

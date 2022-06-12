@@ -36,7 +36,7 @@ public class Iasi_RentalSystem {
         System.out.println("Inchideti aplicatia:     quit");
     }
 
-    public void add() throws NoDaysException {
+    public void run() throws NoDaysException {
         printOptions();
         boolean quit = false;
         while (!quit) {
@@ -48,7 +48,6 @@ public class Iasi_RentalSystem {
                     System.out.println("Ce tip de masina doriti sa inchiriati? Regular/Premium/Mini");
                     String carType = sc.next();
                     if (carType.equalsIgnoreCase("Mini")) {
-
                         System.out.println("Pentru cate zile doriti sa inchiriati masina?");
                         int choseNoDays = sc.nextInt();
                         int miniValueAux = 0;
@@ -56,9 +55,7 @@ public class Iasi_RentalSystem {
                             throw new NoDaysException("Numarul de zile pentru care se va inchiria masina trebuie sa fie o valoare pozitiva!");
                         }
                         if (choseNoDays <= 3) {
-
                             miniValueAux += choseNoDays * 15;
-
                         } else {
                             int additionalDays = choseNoDays - 3;
                             miniValueAux += 45 + additionalDays * 10;
@@ -69,7 +66,6 @@ public class Iasi_RentalSystem {
                         if (!rentalCarsIasi.containsKey(newCustomer)) {
                             frequentRentalPoints = 1;  // first rented car
                             rentalCarsIasi.put(newCustomer, frequentRentalPoints);
-
                         }
 
                         //clientul este deja inregistrat in sistem, va primi in plus un punct de loialitate
@@ -83,9 +79,7 @@ public class Iasi_RentalSystem {
                             miniValue += miniValueAux;
                         }
 
-
                         System.out.printf("Clientul %s a inchiriat o masina de tipul %s la pretul de %d, avand %d puncte de loialitate\n", newCustomer, Cars.Mini, miniValueAux, frequentRentalPoints);
-
 
                     } else if (carType.equalsIgnoreCase("Regular")) {
                         System.out.println("Pentru cate zile doriti sa inchiriati masina?");
@@ -176,6 +170,6 @@ public class Iasi_RentalSystem {
 
 
     public static void main(String[] args) throws NoDaysException {
-        rentalSystemIASI.add();
+        rentalSystemIASI.run();
     }
 }

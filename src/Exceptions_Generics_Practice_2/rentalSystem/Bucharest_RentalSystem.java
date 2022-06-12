@@ -38,7 +38,7 @@ public class Bucharest_RentalSystem {
         System.out.println("Inchideti aplicatia:     quit");
     }
 
-    public void add() throws NoDaysException, FrequentRentalPointsException {
+    public void run() throws NoDaysException, FrequentRentalPointsException {
         printOptions();
         boolean quit = false;
         while (!quit) {
@@ -153,10 +153,12 @@ public class Bucharest_RentalSystem {
 
                     if (carType.equalsIgnoreCase("Luxury")) {
 
+                        if (!rentalSystemBucharest.containsKey(newCustomer)) {
+                            System.out.println("Un client neinregistrat nu poate inchiria acest tip de masina!");
+                            continue;
+                        }
                         if (rentalSystemBucharest.get(newCustomer) < 3) {
-
                             throw new FrequentRentalPointsException("Pentru a inchiria o masina de tip Luxury trebuie sa aveti cel putin 3 puncte de fidelitate! In acest moment clientul are " + rentalSystemBucharest.get(newCustomer) + " puncte de loialitate!");
-
                         }
 
                         System.out.println("Pentru cate zile doriti sa inchiriati masina?");
@@ -167,13 +169,9 @@ public class Bucharest_RentalSystem {
                         }
                         luxuryValueAux += luxuryValueAux + choseNoDays * 70;
                         luxuryValue += luxuryValueAux;
-
                         frequentRentalPoints++;
                         rentalSystemBucharest.put(newCustomer, frequentRentalPoints);
-
                         System.out.printf("Clientul %s a inchiriat o masina de tipul %s la pretul de %d, avand %d puncte de loialitate\n", newCustomer, Cars.Luxury, luxuryValueAux, frequentRentalPoints);
-
-
                     } else {
                         System.out.println("Trebuie sa alegeti una dintre optiunile: Regular/Premium/Mini/Luxury");
                         continue;
@@ -199,6 +197,6 @@ public class Bucharest_RentalSystem {
 
 
     public static void main(String[] args) throws NoDaysException, FrequentRentalPointsException {
-        bucharest_rentalSystem.add();
+        bucharest_rentalSystem.run();
     }
 }
