@@ -1,0 +1,7 @@
+Afisarea elementelor dintr-un enum:
+
+    private static void print() {
+      for (Cars cars : Cars.values()) {
+              System.out.printf("%s            ", cars);
+       }
+   }
