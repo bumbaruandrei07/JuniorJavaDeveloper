@@ -4,16 +4,12 @@ import java.io.*;
 import java.util.Scanner;
 
 // 1.1. Modifica implementarea anterioara astfel:
-//
 //textul se va scrie in alt fisier (ex: TextOutput.txt)
 //programul nu va stoca tot textul si va face „conversia“ textului linie cu linie, urmand pasii:
 //se citeste o noua linie din fisierul de intrare
 //se inlocuieste cuvantul cheie
 //se scrie in fisierul de output linia curenta
 public class ex02 {
-
-    private static final Scanner sc = new Scanner(System.in);
-
 
     public static void main(String[] args) throws IOException {
         String fileText = "";

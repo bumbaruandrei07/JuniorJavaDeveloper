@@ -2,7 +2,8 @@ package JDBC;
 
 import java.sql.*;
 
-//TODO imbunatatirea aplicatiei consta in utilizarea  variabilelor de configurare (exprimate prin constante) si implementarea unor metode dedicate de comunicare cu baza de date.
+//TODO imbunatatirea aplicatiei consta in utilizarea variabilelor de configurare (exprimate prin constante)
+// si implementarea unor metode dedicate de comunicare cu baza de date.
 public class JDBC_CleanCode {
 
 
@@ -14,16 +15,6 @@ public class JDBC_CleanCode {
     public static final String COLUMN_LANGUAGE = "limba";
     public static final String COLUMN_AGE = "varsta";
 
-
-    private static void insertPerson(Statement statement, String name, String address,
-                                     String language, int age) throws SQLException {
-        statement.execute("INSERT INTO " + TABLE_PERSONS +
-                " (" + COLUMN_NAME + ", " +
-                COLUMN_ADDRESS + ", " +
-                COLUMN_LANGUAGE + ", " + COLUMN_AGE +
-                " ) " +
-                "VALUES('" + name + "', '" + address + "', '" + language + "', '" + age + "')");
-    }
 
     public static void main(String[] args) {
         try (Connection conn = DriverManager.getConnection(CONNECTION_STRING);
@@ -44,6 +35,7 @@ public class JDBC_CleanCode {
             insertPerson(statement, "Marta I.", "Brasov", "RO", 22);
             insertPerson(statement, "Balcan M.", "Timisoara", "RO", 47);
             insertPerson(statement, "Raveica R.", "Timis", "FR", 34);
+            insertPerson(statement, "Andrei B.", "Bucharest", "RO", 22);
 
             statement.execute("UPDATE persoane SET limba='DE' WHERE nume='Raveica R.'");
 
@@ -66,5 +58,14 @@ public class JDBC_CleanCode {
         }
     }
 
+    private static void insertPerson(Statement statement, String name, String address,
+                                     String language, int age) throws SQLException {
+        statement.execute("INSERT INTO " + TABLE_PERSONS +
+                " (" + COLUMN_NAME + ", " +
+                COLUMN_ADDRESS + ", " +
+                COLUMN_LANGUAGE + ", " + COLUMN_AGE +
+                " ) " +
+                "VALUES('" + name + "', '" + address + "', '" + language + "', '" + age + "')");
+    }
 
 }

@@ -17,7 +17,7 @@ public class TestJDBC {
              Statement statement = conn.createStatement()) {
             //cream baza de date
             statement.execute("CREATE TABLE IF NOT EXISTS persoane (nume TEXT, adresa TEXT, limba TEXT)");
-            //este o exceptie specifica operatiilor pe bazele de date
+            //este o exceptie specifica operatiilor pe bazele de date, este o exceptie checked, trebuie tratata intotdeauna
         } catch (SQLException e) {
             System.out.print("An error occured: ");
             e.printStackTrace();

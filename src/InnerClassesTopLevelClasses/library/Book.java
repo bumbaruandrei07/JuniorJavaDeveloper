@@ -6,9 +6,9 @@ import java.util.ArrayList;
 //Page exista doar daca exista un obiect de tip book
 //fiecare obiect are implementare de page
 //clasa interna depinde de obiectul din care face parte si nu poate exista in afara obiectului
-//daca acesta def a clasei o sa exista in obiecte de tip book, daca vrem sa fol. un cosntructor, trebuie sa-l accesam printr-un obiect de tip book
-// book site sa creeze , toate metodele lui page, o sa creem un obiect de acest tip
-//page un exista in alt context, decat in contextul unui obiect book
+//daca acesta def a clasei o sa exista in obiecte de tip book, daca vrem sa fol. un constructor, atunci trebuie sa-l accesam printr-un obiect de tip book
+// book site sa creeze, toate metodele lui page, o sa creem un obiect de acest tip
+//page nu exista in alt context, decat in contextul unui obiect book
 //la mostenire putea sa existe stand-alone, aici nu, depinde direct de alt obiect (book)
 //daca o declaram publica -> putem accesa
 
