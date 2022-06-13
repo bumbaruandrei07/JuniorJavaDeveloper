@@ -225,6 +225,7 @@ public class CarRentalSystem implements Serializable {
                 case "quit":
                     System.out.println("Aplicatia se inchide...");
                     quit = true;
+                    sc.close();
                     break;
                 default:
                     System.out.println("Unknown command. Choose from:");

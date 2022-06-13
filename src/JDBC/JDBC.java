@@ -15,37 +15,38 @@ public class JDBC {
             statement.execute("DROP TABLE persoane");
 
             statement.execute("CREATE TABLE IF NOT EXISTS persoane " +
-                    " (nume TEXT, adresa TEXT, limba TEXT)");
+                    " (nume TEXT, adresa TEXT, limba TEXT, varsta INT)");
 
-            statement.execute("INSERT INTO persoane (nume, adresa, limba) " +
-                    "VALUES('Popescu G.','Buhusi','RO')");
+            statement.execute("INSERT INTO persoane (nume, adresa, limba,varsta) " +
+                    "VALUES('Popescu G.','Buhusi','RO',20)");
 
-            statement.execute("INSERT INTO persoane (nume, adresa, limba) " +
-                    "VALUES('Marian V.','Cluj','EN')");
+            statement.execute("INSERT INTO persoane (nume, adresa, limba,varsta) " +
+                    "VALUES('Marian V.','Cluj','EN',30)");
 
-            statement.execute("INSERT INTO persoane (nume, adresa, limba) " +
-                    "VALUES('Marta I.','Brasov','RO')");
+            statement.execute("INSERT INTO persoane (nume, adresa, limba,varsta) " +
+                    "VALUES('Marta I.','Brasov','RO',40)");
 
-            statement.execute("INSERT INTO persoane (nume, adresa, limba) " +
-                    "VALUES('Balcan M.','Timisoara','RO')");
+            statement.execute("INSERT INTO persoane (nume, adresa, limba,varsta) " +
+                    "VALUES('Balcan M.','Timisoara','RO',20)");
 
-            statement.execute("INSERT INTO persoane (nume, adresa, limba) " +
-                    "VALUES('Raveica R.','Timis','FR')");
+            statement.execute("INSERT INTO persoane (nume, adresa, limba,varsta) " +
+                    "VALUES('Raveica R.','Timis','FR',20)");
 
-            statement.execute("INSERT INTO persoane (nume,adresa,limba)" + "VALUES ('Andrei B.','Bucuresti','RO')");
+            statement.execute("INSERT INTO persoane (nume, adresa, limba,varsta)" + "VALUES ('Andrei B.','Bucuresti','RO',22)");
 
             statement.execute("UPDATE persoane SET limba='DE' WHERE nume='Raveica R.'");
 
             statement.execute("DELETE FROM persoane WHERE limba='EN'");
 
             //ordonam alfabetic dupa nume folosind ORDER BY
-            statement.execute("SELECT * FROM persoane ORDER BY nume ");
+            statement.execute("SELECT * FROM persoane ORDER BY varsta ");
 
             ResultSet results = statement.getResultSet();
             while (results.next()) {
                 System.out.println(results.getString("nume") + " " +
                         results.getString("adresa") + " " +
-                        results.getString("limba"));
+                        results.getString("limba")+ " " +
+                        results.getInt("varsta") + " ani");
             }
 
             results.close();
