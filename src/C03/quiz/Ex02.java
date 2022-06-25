@@ -13,5 +13,8 @@ public class Ex02 {
 
     public static void main(String[] args) {
         printNumber(5);
+
+        String x = null; //obiectul acesta nu e creat, nu exista
+        String y = " "; //obiectul este creat si este vid
     }
 }
