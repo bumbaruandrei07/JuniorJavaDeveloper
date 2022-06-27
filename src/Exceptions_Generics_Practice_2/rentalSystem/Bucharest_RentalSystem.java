@@ -20,7 +20,6 @@ public class Bucharest_RentalSystem {
     private static int premiumValue;
     private static int miniValue;
     private static int luxuryValue;
-    private int frequentRentalPoints;
     private static Bucharest_RentalSystem bucharest_rentalSystem = new Bucharest_RentalSystem();
 
 
@@ -58,9 +57,7 @@ public class Bucharest_RentalSystem {
                             throw new NoDaysException("Numarul de zile pentru care se va inchiria masina trebuie sa fie o valoare pozitiva!");
                         }
                         if (choseNoDays <= 3) {
-
                             miniValueAux += choseNoDays * 22.5;
-
                         } else {
                             int additionalDays = choseNoDays - 3;
                             miniValueAux += 67.5 + additionalDays * 15;
@@ -69,15 +66,14 @@ public class Bucharest_RentalSystem {
 
                         //daca nu este inregistrat atunci va primi primul punct de loialitate
                         if (!rentalSystemBucharest.containsKey(newCustomer)) {
-                            frequentRentalPoints = 1;  // first rented car
-                            rentalSystemBucharest.put(newCustomer, frequentRentalPoints);
 
+                            rentalSystemBucharest.put(newCustomer, 1);  // first rented car
                         }
 
                         //clientul este deja inregistrat in sistem, va primi in plus un punct de loialitate
                         else {
-                            frequentRentalPoints++;
-                            rentalSystemBucharest.put(newCustomer, frequentRentalPoints);
+
+                            rentalSystemBucharest.put(newCustomer, rentalSystemBucharest.get(newCustomer) + 1);
                         }
 
                         if (rentalSystemBucharest.get(newCustomer) >= 5) {
@@ -86,7 +82,7 @@ public class Bucharest_RentalSystem {
                         }
 
 
-                        System.out.printf("Clientul %s a inchiriat o masina de tipul %s la pretul de %d EURO pentru %d zile, avand %d puncte de loialitate.\n", newCustomer, Cars.Mini, choseNoDays, miniValueAux, frequentRentalPoints);
+                        System.out.printf("Clientul %s a inchiriat o masina de tipul %s la pretul de %d EURO pentru %d zile, avand %d puncte de loialitate.\n", newCustomer, Cars.Mini, choseNoDays, miniValueAux, rentalSystemBucharest.get(newCustomer));
 
 
                     } else if (carType.equalsIgnoreCase("Regular")) {
@@ -106,17 +102,16 @@ public class Bucharest_RentalSystem {
 
                         //daca este deja inregistrat
                         if (!rentalSystemBucharest.containsKey(newCustomer)) {
-                            frequentRentalPoints = 1; // first rented car
-                            rentalSystemBucharest.put(newCustomer, frequentRentalPoints);
+                            rentalSystemBucharest.put(newCustomer, 1); // first rented car
                         } else {
-                            frequentRentalPoints++;
-                            rentalSystemBucharest.put(newCustomer, frequentRentalPoints);
+
+                            rentalSystemBucharest.put(newCustomer, rentalSystemBucharest.get(newCustomer) + 1);
                         }
                         if (rentalSystemBucharest.get(newCustomer) >= 5) {
                             regularValueAux -= 0.05 * regularValueAux;
                         }
                         regularValue += regularValueAux;
-                        System.out.printf("Clientul %s a inchiriat o masina de tipul %s pentru %d zile la pretul de %d EURO, avand %d puncte de loialitate.\n", newCustomer, Cars.Regular, choseNoDays, regularValueAux, frequentRentalPoints);
+                        System.out.printf("Clientul %s a inchiriat o masina de tipul %s pentru %d zile la pretul de %d EURO, avand %d puncte de loialitate.\n", newCustomer, Cars.Regular, choseNoDays, regularValueAux, rentalSystemBucharest.get(newCustomer));
                     } else if (carType.equalsIgnoreCase("Premium")) {
                         System.out.println("Pentru cate zile doriti sa inchiriati masina?");
                         int choseNoDays = sc.nextInt();
@@ -129,17 +124,13 @@ public class Bucharest_RentalSystem {
 
 
                         if (!rentalSystemBucharest.containsKey(newCustomer) && choseNoDays >= 2) {
-                            frequentRentalPoints = 2;
-                            rentalSystemBucharest.put(newCustomer, frequentRentalPoints);
+                            rentalSystemBucharest.put(newCustomer, 2);
                         } else if (!rentalSystemBucharest.containsKey(newCustomer) && choseNoDays < 2) {
-                            frequentRentalPoints = 1;
-                            rentalSystemBucharest.put(newCustomer, frequentRentalPoints);
+                            rentalSystemBucharest.put(newCustomer, 1);
                         } else if (rentalSystemBucharest.containsKey(newCustomer) && choseNoDays >= 2) {
-                            frequentRentalPoints += 2;
-                            rentalSystemBucharest.put(newCustomer, frequentRentalPoints);
+                            rentalSystemBucharest.put(newCustomer, 2);
                         } else {
-                            frequentRentalPoints++;
-                            rentalSystemBucharest.put(newCustomer, frequentRentalPoints);
+                            rentalSystemBucharest.put(newCustomer, 1);
                         }
 
                         if (rentalSystemBucharest.get(newCustomer) >= 5) {
@@ -147,7 +138,7 @@ public class Bucharest_RentalSystem {
                             premiumValue += premiumValueAux;
                         }
                         premiumValue += premiumValueAux;
-                        System.out.printf("Clientul %s a inchiriat o masina de tipul %s pentru %d zile la pretul de %d EURO, avand %d puncte de loialitate.\n", newCustomer, Cars.Premium, choseNoDays, premiumValueAux, frequentRentalPoints);
+                        System.out.printf("Clientul %s a inchiriat o masina de tipul %s pentru %d zile la pretul de %d EURO, avand %d puncte de loialitate.\n", newCustomer, Cars.Premium, choseNoDays, premiumValueAux, rentalSystemBucharest.get(newCustomer));
 
                     }
 
@@ -169,9 +160,12 @@ public class Bucharest_RentalSystem {
                         }
                         luxuryValueAux += luxuryValueAux + choseNoDays * 70;
                         luxuryValue += luxuryValueAux;
-                        frequentRentalPoints++;
-                        rentalSystemBucharest.put(newCustomer, frequentRentalPoints);
-                        System.out.printf("Clientul %s a inchiriat o masina de tipul %s pentru %d zile la pretul de %d EURO, avand %d puncte de loialitate.\n", newCustomer, Cars.Luxury, choseNoDays, luxuryValueAux, frequentRentalPoints);
+                        if (!rentalSystemBucharest.containsKey(newCustomer)) {
+                            rentalSystemBucharest.put(newCustomer, 1);
+                        } else {
+                            rentalSystemBucharest.put(newCustomer, rentalSystemBucharest.get(newCustomer) + 1);
+                        }
+                        System.out.printf("Clientul %s a inchiriat o masina de tipul %s pentru %d zile la pretul de %d EURO, avand %d puncte de loialitate.\n", newCustomer, Cars.Luxury, choseNoDays, luxuryValueAux, rentalSystemBucharest.get(newCustomer));
                     } else {
                         System.out.println("Trebuie sa alegeti una dintre optiunile: Regular/Premium/Mini/Luxury");
                         continue;
