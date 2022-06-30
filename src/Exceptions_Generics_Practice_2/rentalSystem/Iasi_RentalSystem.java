@@ -1,46 +1,50 @@
 package Exceptions_Generics_Practice_2.rentalSystem;
 
+import Exceptions_Generics_Practice_2.rentalSystem.exceptions.NoCustomerException;
 import Exceptions_Generics_Practice_2.rentalSystem.exceptions.NoDaysException;
 
-import java.util.HashMap;
-import java.util.InputMismatchException;
-import java.util.Map;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
-public class Iasi_RentalSystem {
+public class Iasi_RentalSystem implements Serializable {
 
     private static final Scanner sc = new Scanner(System.in);
     private Map<String, Integer> rentalCarsIasi = new HashMap<>(100, 0.5f);
 
     public enum Cars {Regular, Premium, Mini}
 
-    private static int TotalIncome;
-    private static int regularValue;
-    private static int premiumValue;
-    private static int miniValue;
-    private static Iasi_RentalSystem rentalSystemIASI = new Iasi_RentalSystem();
+    private int TotalIncome;
+    private int regularValue;
+    private int premiumValue;
+    private int miniValue;
 
+    public static final long serialVersionUID = 1L;
+//    private List<Integer> myList = new ArrayList<>();
 
     public String addCustomer() {
         System.out.println("Adaugati un client nou: ");
         String newCustomer = sc.next();
-        if (newCustomer.matches("[a-zA-Z]+")) {
+        if (!newCustomer.matches("[a-zA-Z]+")) {
             throw new InputMismatchException("Numele clientului nu poate contine decat litere!");
         }
         return newCustomer;
     }
+
 
     public String searchCustomer() {
         System.out.println("Pentru care client doriti sa aflati numarul de puncte de loialitate acumulate?");
         String newCustomer = sc.next();
-        if (newCustomer.matches("[a-zA-Z]+")) {
+        if (!newCustomer.matches("[a-zA-Z]+")) {
             throw new InputMismatchException("Numele clientului nu poate contine decat litere!");
         }
         return newCustomer;
     }
 
 
-    public int getFrequentRentalPointForCustomer(String customer) {
+    public int getFrequentRentalPointForCustomer(String customer) throws NoCustomerException {
+        if (!rentalCarsIasi.containsKey(customer)) {
+            throw new NoCustomerException("Clientul cautat nu exista in sistem!");
+        }
         return rentalCarsIasi.get(customer);
     }
 
@@ -48,9 +52,36 @@ public class Iasi_RentalSystem {
         System.out.println("Adaugati un client nou:  add");
         System.out.println("Inchideti aplicatia:     quit");
         System.out.println("Aflati numarul punctelor de loialitate pentru un anumit client: points");
+        System.out.println("Stergeti datele salvate in sistem:  reset\n");
     }
 
-    public void run() throws NoDaysException {
+    public static void writeToBinaryObject(Iasi_RentalSystem iasi_rentalSystem) throws IOException {
+        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream("customers.dat")))) {
+            objectOutputStream.writeObject(iasi_rentalSystem);
+        }
+    }
+
+    public static Iasi_RentalSystem readFromBinaryFile() throws IOException {
+        Iasi_RentalSystem iasi_rentalSystem = null;
+        try (ObjectInputStream objectInputStream = new ObjectInputStream(new BufferedInputStream(new FileInputStream("customers.dat")))) {
+            iasi_rentalSystem = (Iasi_RentalSystem) objectInputStream.readObject();
+
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return iasi_rentalSystem;
+    }
+
+    public void resetApp() {
+        rentalCarsIasi.clear();
+        miniValue = 0;
+        regularValue = 0;
+        premiumValue = 0;
+        TotalIncome = 0;
+        System.out.println("Aplicatia a fost resetata cu succes!");
+    }
+
+    public void run() throws NoDaysException, NoCustomerException {
         printOptions();
         boolean quit = false;
         while (!quit) {
@@ -164,20 +195,27 @@ public class Iasi_RentalSystem {
                 case "points":
                     System.out.println(getFrequentRentalPointForCustomer(searchCustomer()));
                     break;
+                case "reset":
+                    resetApp();
+                    break;
+                case "income":
 
                 default:
                     System.out.println("Unknown command. Choose from:");
                     printOptions();
             }
         }
-        TotalIncome += miniValue;
-        TotalIncome += regularValue;
-        TotalIncome += premiumValue;
+        TotalIncome = miniValue + regularValue + premiumValue;
         System.out.printf("Total income:             %dEUR\nMini Income:              %dEUR\nRegular Income:           %dEUR\nPremium Income:           %dEUR", TotalIncome, miniValue, regularValue, premiumValue);
+
     }
 
 
-    public static void main(String[] args) throws NoDaysException {
-        rentalSystemIASI.run();
+    public static void main(String[] args) throws NoDaysException, NoCustomerException, IOException {
+        Iasi_RentalSystem iasi_rentalSystem = new Iasi_RentalSystem();
+        iasi_rentalSystem = Iasi_RentalSystem.readFromBinaryFile();
+        iasi_rentalSystem.run();
+        Iasi_RentalSystem.writeToBinaryObject(iasi_rentalSystem);
+
     }
 }

@@ -67,7 +67,6 @@ public class DummyDatabase {
         System.out.println("The word: " + wordToSave + " has been added into the database!");
     }
 
-
     public static void main(String[] args) throws DummyDatabaseConnectionException {
 
         DummyDatabase db = new DummyDatabase();
@@ -75,6 +74,5 @@ public class DummyDatabase {
         db.connect();
 
     }
-
 }
 
